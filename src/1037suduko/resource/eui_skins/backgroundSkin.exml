@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="backgroundSkin"
+	 width="395"
+	height="404" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:tween="egret.tween.*">
+	<w:Declarations>
+		<tween:TweenGroup/>
+	</w:Declarations>
+	<w:Config id="175a8ca1856"/>
+</e:Skin>

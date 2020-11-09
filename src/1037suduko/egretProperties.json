@@ -29,5 +29,10 @@
       "name": "egretmgobe",
       "path": "./libs/egretmgobe"
     }
-  ]
+  ],
+  "eui": {
+    "exmlRoot": [
+      "resource/eui_skins"
+    ]
+  }
 }

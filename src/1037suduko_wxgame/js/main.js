@@ -322,6 +322,7 @@ var Main = (function (_super) {
         button.verticalCenter = 0;
         this.addChild(button);
         button.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onButtonClick, this);
+        this.addChild(new Startscence());
     };
     /**
      * 根据name关键字创建一个Bitmap对象。name属性请参考resources/resource.json配置文件的内容。
@@ -397,6 +398,22 @@ __reflect(DebugPlatform.prototype, "DebugPlatform", ["Platform"]);
 if (!window.platform) {
     window.platform = new DebugPlatform();
 }
+var Startscence = (function (_super) {
+    __extends(Startscence, _super);
+    function Startscence() {
+        var _this = _super.call(this) || this;
+        _this.skinName = "resource/eui_skins/myskin/StartscenseSkin.exml";
+        return _this;
+    }
+    Startscence.prototype.partAdded = function (partName, instance) {
+        _super.prototype.partAdded.call(this, partName, instance);
+    };
+    Startscence.prototype.childrenCreated = function () {
+        _super.prototype.childrenCreated.call(this);
+    };
+    return Startscence;
+}(eui.Component));
+__reflect(Startscence.prototype, "Startscence", ["eui.UIComponent", "egret.DisplayObject"]);
 //////////////////////////////////////////////////////////////////////////////////////
 //
 //  Copyright (c) 2014-present, Egret Technology.

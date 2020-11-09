@@ -1,0 +1,25 @@
+{
+  "design": {
+    "height": "1136",
+    "width": "640"
+  },
+  "175a8ca1856": {
+    "backgroundType": "user",
+    "backgroundImage": "C:\\Users\\Public\\Pictures\\Sample Pictures\\滑稽壁纸.jpg",
+    "backgroundX": 0,
+    "backgroundY": 0,
+    "backgroundWidth": 767,
+    "backgroundHeight": 802,
+    "useBgImage": true,
+    "useBgColor": false
+  },
+  "175a8fded90": {
+    "backgroundX": 0,
+    "backgroundY": 0,
+    "backgroundWidth": -1,
+    "backgroundHeight": -1,
+    "useBgImage": false,
+    "useBgColor": false,
+    "backgroundAlpha": 100
+  }
+}

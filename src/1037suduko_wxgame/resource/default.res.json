@@ -132,6 +132,11 @@
 			"name": "egret_icon_png"
 		},
 		{
+			"url": "assets/001.jpg",
+			"type": "image",
+			"name": "001_jpg"
+		},
+		{
 			"name": "description_json",
 			"type": "json",
 			"url": "config/description.json"
