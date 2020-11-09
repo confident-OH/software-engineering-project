@@ -1,0 +1,22 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "Platform",
+			"name": "platform",
+			"memberof": "Window",
+			"scope": "instance",
+			"pType": "public"
+		}
+	],
+	"function": [],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "interface",
+		"name": "Window",
+		"memberof": "",
+		"filename": "E:\\codes\\projects\\software_en\\src\\1037suduko\\src\\Platform.ts"
+	},
+	"pType": "public"
+}

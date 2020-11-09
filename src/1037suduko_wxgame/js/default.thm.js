@@ -10,7 +10,7 @@ var egret = window.egret;window.skins=window.skins||{};
                 window.generateEUI = window.generateEUI||{};
                 generateEUI.paths = generateEUI.paths||{};
                 generateEUI.styles = undefined;
-                generateEUI.skins = {"eui.Button":"resource/eui_skins/ButtonSkin.exml","eui.CheckBox":"resource/eui_skins/CheckBoxSkin.exml","eui.HScrollBar":"resource/eui_skins/HScrollBarSkin.exml","eui.HSlider":"resource/eui_skins/HSliderSkin.exml","eui.Panel":"resource/eui_skins/PanelSkin.exml","eui.TextInput":"resource/eui_skins/TextInputSkin.exml","eui.ProgressBar":"resource/eui_skins/ProgressBarSkin.exml","eui.RadioButton":"resource/eui_skins/RadioButtonSkin.exml","eui.Scroller":"resource/eui_skins/ScrollerSkin.exml","eui.ToggleSwitch":"resource/eui_skins/ToggleSwitchSkin.exml","eui.VScrollBar":"resource/eui_skins/VScrollBarSkin.exml","eui.VSlider":"resource/eui_skins/VSliderSkin.exml","eui.ItemRenderer":"resource/eui_skins/ItemRendererSkin.exml","Startscense":"resource/eui_skins/myskin/StartscenseSkin.exml"};generateEUI.paths['resource/eui_skins/backgroundSkin.exml'] = window.backgroundSkin = (function (_super) {
+                generateEUI.skins = {"eui.Button":"resource/eui_skins/ButtonSkin.exml","eui.CheckBox":"resource/eui_skins/CheckBoxSkin.exml","eui.HScrollBar":"resource/eui_skins/HScrollBarSkin.exml","eui.HSlider":"resource/eui_skins/HSliderSkin.exml","eui.Panel":"resource/eui_skins/PanelSkin.exml","eui.TextInput":"resource/eui_skins/TextInputSkin.exml","eui.ProgressBar":"resource/eui_skins/ProgressBarSkin.exml","eui.RadioButton":"resource/eui_skins/RadioButtonSkin.exml","eui.Scroller":"resource/eui_skins/ScrollerSkin.exml","eui.ToggleSwitch":"resource/eui_skins/ToggleSwitchSkin.exml","eui.VScrollBar":"resource/eui_skins/VScrollBarSkin.exml","eui.VSlider":"resource/eui_skins/VSliderSkin.exml","eui.ItemRenderer":"resource/eui_skins/ItemRendererSkin.exml","Startscense":"resource/eui_skins/myskin/StartscenseSkin.exml","Game_test":"resource/eui_skins/myskin/game_test1Skin.exml"};generateEUI.paths['resource/eui_skins/backgroundSkin.exml'] = window.backgroundSkin = (function (_super) {
 	__extends(backgroundSkin, _super);
 	function backgroundSkin() {
 		_super.call(this);
@@ -262,15 +262,53 @@ var egret = window.egret;window.skins=window.skins||{};
 		return t;
 	};
 	return ItemRendererSkin;
+})(eui.Skin);generateEUI.paths['resource/eui_skins/myskin/game_test1Skin.exml'] = window.game_test1Skin = (function (_super) {
+	__extends(game_test1Skin, _super);
+	function game_test1Skin() {
+		_super.call(this);
+		this.skinParts = ["Button_quit"];
+		
+		this.height = 1136;
+		this.width = 640;
+		this.elementsContent = [this._Label1_i(),this.Button_quit_i()];
+	}
+	var _proto = game_test1Skin.prototype;
+
+	_proto._Label1_i = function () {
+		var t = new eui.Label();
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 66;
+		t.text = "哈哈哈哈哈";
+		t.textAlign = "center";
+		t.verticalAlign = "middle";
+		t.width = 185;
+		t.x = 201;
+		t.y = 557;
+		return t;
+	};
+	_proto.Button_quit_i = function () {
+		var t = new eui.Button();
+		this.Button_quit = t;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 76;
+		t.label = "Quit";
+		t.width = 177;
+		t.x = 205;
+		t.y = 653;
+		return t;
+	};
+	return game_test1Skin;
 })(eui.Skin);generateEUI.paths['resource/eui_skins/myskin/StartscenseSkin.exml'] = window.StartscenseSkin = (function (_super) {
 	__extends(StartscenseSkin, _super);
 	function StartscenseSkin() {
 		_super.call(this);
-		this.skinParts = ["Startscence"];
+		this.skinParts = ["Startscence","StartPlay"];
 		
 		this.height = 1136;
 		this.width = 640;
-		this.elementsContent = [this.Startscence_i()];
+		this.elementsContent = [this.Startscence_i(),this.StartPlay_i()];
 	}
 	var _proto = StartscenseSkin.prototype;
 
@@ -284,6 +322,20 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.source = "resource/assets/001.jpg";
 		t.top = 0;
 		t.touchEnabled = true;
+		return t;
+	};
+	_proto.StartPlay_i = function () {
+		var t = new eui.Button();
+		this.StartPlay = t;
+		t.alpha = 0.8;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.enable = true;
+		t.height = 81;
+		t.label = "Button";
+		t.width = 146;
+		t.x = 241;
+		t.y = 532;
 		return t;
 	};
 	return StartscenseSkin;

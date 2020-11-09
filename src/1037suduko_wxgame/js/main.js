@@ -101,6 +101,25 @@ var AssetAdapter = (function () {
     return AssetAdapter;
 }());
 __reflect(AssetAdapter.prototype, "AssetAdapter", ["eui.IAssetAdapter"]);
+var Game_test = (function (_super) {
+    __extends(Game_test, _super);
+    function Game_test() {
+        var _this = _super.call(this) || this;
+        _this.skinName = "resource/eui_skins/myskin/game_test1Skin.exml";
+        return _this;
+    }
+    Game_test.prototype.partAdded = function (partName, instance) {
+        _super.prototype.partAdded.call(this, partName, instance);
+    };
+    Game_test.prototype.childrenCreated = function () {
+        _super.prototype.childrenCreated.call(this);
+        this.Button_quit.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
+            SceneManager.removeScene(new Startscence());
+        }, this);
+    };
+    return Game_test;
+}(eui.Component));
+__reflect(Game_test.prototype, "Game_test", ["eui.UIComponent", "egret.DisplayObject"]);
 //////////////////////////////////////////////////////////////////////////////////////
 //
 //  Copyright (c) 2014-present, Egret Technology.
@@ -273,56 +292,8 @@ var Main = (function (_super) {
      * Create scene interface
      */
     Main.prototype.createGameScene = function () {
-        var sky = this.createBitmapByName("bg_jpg");
-        this.addChild(sky);
-        var stageW = this.stage.stageWidth;
-        var stageH = this.stage.stageHeight;
-        sky.width = stageW;
-        sky.height = stageH;
-        var topMask = new egret.Shape();
-        topMask.graphics.beginFill(0x000000, 0.5);
-        topMask.graphics.drawRect(0, 0, stageW, 172);
-        topMask.graphics.endFill();
-        topMask.y = 33;
-        this.addChild(topMask);
-        var icon = this.createBitmapByName("egret_icon_png");
-        this.addChild(icon);
-        icon.x = 26;
-        icon.y = 33;
-        var line = new egret.Shape();
-        line.graphics.lineStyle(2, 0xffffff);
-        line.graphics.moveTo(0, 0);
-        line.graphics.lineTo(0, 117);
-        line.graphics.endFill();
-        line.x = 172;
-        line.y = 61;
-        this.addChild(line);
-        var colorLabel = new egret.TextField();
-        colorLabel.textColor = 0xffffff;
-        colorLabel.width = stageW - 172;
-        colorLabel.textAlign = "center";
-        colorLabel.text = "Hello Egret";
-        colorLabel.size = 24;
-        colorLabel.x = 172;
-        colorLabel.y = 80;
-        this.addChild(colorLabel);
-        var textfield = new egret.TextField();
-        this.addChild(textfield);
-        textfield.alpha = 0;
-        textfield.width = stageW - 172;
-        textfield.textAlign = egret.HorizontalAlign.CENTER;
-        textfield.size = 24;
-        textfield.textColor = 0xffffff;
-        textfield.x = 172;
-        textfield.y = 135;
-        this.textfield = textfield;
-        var button = new eui.Button();
-        button.label = "Click!";
-        button.horizontalCenter = 0;
-        button.verticalCenter = 0;
-        this.addChild(button);
-        button.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onButtonClick, this);
-        this.addChild(new Startscence());
+        SceneManager.stage = this.stage;
+        SceneManager.addScene(new Startscence());
     };
     /**
      * 根据name关键字创建一个Bitmap对象。name属性请参考resources/resource.json配置文件的内容。
@@ -372,6 +343,14 @@ var Main = (function (_super) {
         panel.verticalCenter = 0;
         this.addChild(panel);
     };
+    Main.prototype.ButtonReturn = function (e) {
+        //this.parent.removeChild(screen2);
+    };
+    Main.prototype.start_sce_buttonclick = function (e) {
+        var screen2 = new Startscence();
+        this.parent.addChild(screen2);
+        return;
+    };
     return Main;
 }(eui.UILayer));
 __reflect(Main.prototype, "Main");
@@ -398,6 +377,32 @@ __reflect(DebugPlatform.prototype, "DebugPlatform", ["Platform"]);
 if (!window.platform) {
     window.platform = new DebugPlatform();
 }
+var SceneManager = (function () {
+    function SceneManager() {
+    }
+    //跳转到下一页面
+    SceneManager.addScene = function (scene) {
+        this.stage.addChild(scene);
+    };
+    //跳转到上一页面
+    SceneManager.removeScene = function (scene) {
+        this.stage.removeChildren();
+        this.stage.addChild(scene);
+    };
+    return SceneManager;
+}());
+__reflect(SceneManager.prototype, "SceneManager");
+/*
+abstract class Scene extends eui.Component{
+    public constructor() {
+        super();
+        this.addEventListener(egret.Event.COMPLETE,this.onSkinLoaded,this);
+    }
+
+    //皮肤加载完成的回调
+    public abstract onSkinLoaded():void;
+}
+*/
 var Startscence = (function (_super) {
     __extends(Startscence, _super);
     function Startscence() {
@@ -410,6 +415,9 @@ var Startscence = (function (_super) {
     };
     Startscence.prototype.childrenCreated = function () {
         _super.prototype.childrenCreated.call(this);
+        this.StartPlay.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
+            SceneManager.removeScene(new Game_test());
+        }, this);
     };
     return Startscence;
 }(eui.Component));

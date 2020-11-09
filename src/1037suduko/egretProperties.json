@@ -34,5 +34,11 @@
     "exmlRoot": [
       "resource/eui_skins"
     ]
+  },
+  "targets": {
+    "android": {
+      "appname": "test",
+      "packagename": "com.companyname"
+    }
   }
 }

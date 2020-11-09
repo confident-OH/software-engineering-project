@@ -1,0 +1,33 @@
+{
+	"member": [],
+	"function": [
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "createChildren",
+			"memberof": "Main",
+			"scope": "instance",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "createGameScene",
+			"memberof": "Main",
+			"scope": "instance",
+			"description": "创建场景界面Create scene interface",
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "Main",
+		"memberof": "",
+		"filename": "E:\\codes\\projects\\software_en\\src\\1037suduko\\src\\Main.ts",
+		"description": "//////////////////////////////////////////////////////////////////////////////////////",
+		"augments": []
+	},
+	"pType": "public"
+}

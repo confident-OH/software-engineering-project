@@ -1,0 +1,44 @@
+{
+	"member": [],
+	"function": [
+		{
+			"kind": "function",
+			"name": "LoadingUI",
+			"memberof": "LoadingUI",
+			"scope": "instance",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "onProgress",
+			"memberof": "LoadingUI",
+			"scope": "instance",
+			"params": [
+				{
+					"name": "current",
+					"type": "number",
+					"description": ""
+				},
+				{
+					"name": "total",
+					"type": "number",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "LoadingUI",
+		"memberof": "",
+		"filename": "E:\\codes\\projects\\software_en\\src\\1037suduko\\src\\LoadingUI.ts",
+		"description": "//////////////////////////////////////////////////////////////////////////////////////",
+		"augments": [],
+		"implements": []
+	},
+	"pType": "public"
+}

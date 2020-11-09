@@ -1,0 +1,53 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "egret.Stage",
+			"name": "stage",
+			"memberof": "SceneManager",
+			"scope": "static",
+			"pType": "public"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "addScene",
+			"memberof": "SceneManager",
+			"scope": "static",
+			"description": "//跳转到下一页面",
+			"params": [
+				{
+					"name": "scene",
+					"type": "eui.UIComponent",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"name": "removeScene",
+			"memberof": "SceneManager",
+			"scope": "static",
+			"description": "//跳转到上一页面",
+			"params": [
+				{
+					"name": "scene",
+					"type": "eui.UIComponent",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "SceneManager",
+		"memberof": "",
+		"filename": "E:\\codes\\projects\\software_en\\src\\1037suduko\\src\\SceneManager.ts"
+	},
+	"pType": "public"
+}
