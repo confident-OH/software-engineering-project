@@ -4,5 +4,7 @@
 	height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
 	<w:Config id="175a8fded90"/>
 	<e:Image id="Startscence" source="resource/assets/001.jpg" fillMode="scale" top="0" bottom="0" left="0" right="0" touchEnabled="true"/>
-	<e:Button id="StartPlay" label="Button" x="241" y="532" anchorOffsetX="0" width="146" anchorOffsetY="0" height="81" enable="true" alpha="0.8"/>
+	<e:Button id="StartPlay" label="人机练习" x="201" y="305" anchorOffsetX="0" width="250" anchorOffsetY="0" height="81" enable="true" alpha="0.8"/>
+	<e:Button id="StartPlay1" label="匹配模式" x="201" y="503" anchorOffsetX="0" width="250" anchorOffsetY="0" height="81" alpha="0.8"/>
+	<e:Button id="StartPlay2" label="比赛" x="201" y="700" anchorOffsetX="0" width="250" anchorOffsetY="0" height="81" alpha="0.8"/>
 </e:Skin>

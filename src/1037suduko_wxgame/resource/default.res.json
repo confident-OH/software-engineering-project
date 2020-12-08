@@ -137,6 +137,21 @@
 			"name": "001_jpg"
 		},
 		{
+			"url": "assets/PC_bg.jpg",
+			"type": "image",
+			"name": "PC_bg_jpg"
+		},
+		{
+			"url": "assets/education.jpg",
+			"type": "image",
+			"name": "education_jpg"
+		},
+		{
+			"url": "assets/Competition.jpg",
+			"type": "image",
+			"name": "Competition_jpg"
+		},
+		{
 			"name": "description_json",
 			"type": "json",
 			"url": "config/description.json"

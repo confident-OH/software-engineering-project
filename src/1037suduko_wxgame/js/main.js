@@ -113,7 +113,7 @@ var Game_test = (function (_super) {
     };
     Game_test.prototype.childrenCreated = function () {
         _super.prototype.childrenCreated.call(this);
-        this.Button_quit.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
+        this.quit_to_main.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
             SceneManager.removeScene(new Startscence());
         }, this);
     };
@@ -377,6 +377,46 @@ __reflect(DebugPlatform.prototype, "DebugPlatform", ["Platform"]);
 if (!window.platform) {
     window.platform = new DebugPlatform();
 }
+var play_with_computers = (function (_super) {
+    __extends(play_with_computers, _super);
+    function play_with_computers() {
+        var _this = _super.call(this) || this;
+        _this.skinName = "resource/eui_skins/myskin/play_with_computerSkin.exml";
+        return _this;
+    }
+    play_with_computers.prototype.partAdded = function (partName, instance) {
+        _super.prototype.partAdded.call(this, partName, instance);
+    };
+    play_with_computers.prototype.childrenCreated = function () {
+        _super.prototype.childrenCreated.call(this);
+        //返回主界面
+        this.quit_to_main.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
+            SceneManager.removeScene(new Startscence());
+        }, this);
+    };
+    return play_with_computers;
+}(eui.Component));
+__reflect(play_with_computers.prototype, "play_with_computers", ["eui.UIComponent", "egret.DisplayObject"]);
+var play_with_man = (function (_super) {
+    __extends(play_with_man, _super);
+    function play_with_man() {
+        var _this = _super.call(this) || this;
+        _this.skinName = "resource/eui_skins/myskin/play_with_computerSkin.exml";
+        return _this;
+    }
+    play_with_man.prototype.partAdded = function (partName, instance) {
+        _super.prototype.partAdded.call(this, partName, instance);
+    };
+    play_with_man.prototype.childrenCreated = function () {
+        _super.prototype.childrenCreated.call(this);
+        //返回主界面
+        this.quit_to_main.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
+            SceneManager.removeScene(new Startscence());
+        }, this);
+    };
+    return play_with_man;
+}(eui.Component));
+__reflect(play_with_man.prototype, "play_with_man", ["eui.UIComponent", "egret.DisplayObject"]);
 var SceneManager = (function () {
     function SceneManager() {
     }
@@ -415,7 +455,16 @@ var Startscence = (function (_super) {
     };
     Startscence.prototype.childrenCreated = function () {
         _super.prototype.childrenCreated.call(this);
+        //进入人机练习模式
         this.StartPlay.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
+            SceneManager.removeScene(new play_with_computers());
+        }, this);
+        //进入匹配模式
+        this.StartPlay1.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
+            SceneManager.removeScene(new play_with_computers());
+        }, this);
+        //进入比赛模式
+        this.StartPlay2.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
             SceneManager.removeScene(new Game_test());
         }, this);
     };

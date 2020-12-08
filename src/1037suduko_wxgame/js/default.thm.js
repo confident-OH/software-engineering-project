@@ -10,7 +10,7 @@ var egret = window.egret;window.skins=window.skins||{};
                 window.generateEUI = window.generateEUI||{};
                 generateEUI.paths = generateEUI.paths||{};
                 generateEUI.styles = undefined;
-                generateEUI.skins = {"eui.Button":"resource/eui_skins/ButtonSkin.exml","eui.CheckBox":"resource/eui_skins/CheckBoxSkin.exml","eui.HScrollBar":"resource/eui_skins/HScrollBarSkin.exml","eui.HSlider":"resource/eui_skins/HSliderSkin.exml","eui.Panel":"resource/eui_skins/PanelSkin.exml","eui.TextInput":"resource/eui_skins/TextInputSkin.exml","eui.ProgressBar":"resource/eui_skins/ProgressBarSkin.exml","eui.RadioButton":"resource/eui_skins/RadioButtonSkin.exml","eui.Scroller":"resource/eui_skins/ScrollerSkin.exml","eui.ToggleSwitch":"resource/eui_skins/ToggleSwitchSkin.exml","eui.VScrollBar":"resource/eui_skins/VScrollBarSkin.exml","eui.VSlider":"resource/eui_skins/VSliderSkin.exml","eui.ItemRenderer":"resource/eui_skins/ItemRendererSkin.exml","Startscense":"resource/eui_skins/myskin/StartscenseSkin.exml","Game_test":"resource/eui_skins/myskin/game_test1Skin.exml"};generateEUI.paths['resource/eui_skins/backgroundSkin.exml'] = window.backgroundSkin = (function (_super) {
+                generateEUI.skins = {"eui.Button":"resource/eui_skins/ButtonSkin.exml","eui.CheckBox":"resource/eui_skins/CheckBoxSkin.exml","eui.HScrollBar":"resource/eui_skins/HScrollBarSkin.exml","eui.HSlider":"resource/eui_skins/HSliderSkin.exml","eui.Panel":"resource/eui_skins/PanelSkin.exml","eui.TextInput":"resource/eui_skins/TextInputSkin.exml","eui.ProgressBar":"resource/eui_skins/ProgressBarSkin.exml","eui.RadioButton":"resource/eui_skins/RadioButtonSkin.exml","eui.Scroller":"resource/eui_skins/ScrollerSkin.exml","eui.ToggleSwitch":"resource/eui_skins/ToggleSwitchSkin.exml","eui.VScrollBar":"resource/eui_skins/VScrollBarSkin.exml","eui.VSlider":"resource/eui_skins/VSliderSkin.exml","eui.ItemRenderer":"resource/eui_skins/ItemRendererSkin.exml","Startscense":"resource/eui_skins/myskin/StartscenseSkin.exml","Game_test":"resource/eui_skins/myskin/game_test1Skin.exml","play_with_computer":"resource/eui_skins/myskin/play_with_computerSkin.exml","play_with_man":"resource/eui_skins/myskin/play_with_manSkin.exml"};generateEUI.paths['resource/eui_skins/backgroundSkin.exml'] = window.backgroundSkin = (function (_super) {
 	__extends(backgroundSkin, _super);
 	function backgroundSkin() {
 		_super.call(this);
@@ -262,27 +262,240 @@ var egret = window.egret;window.skins=window.skins||{};
 		return t;
 	};
 	return ItemRendererSkin;
-})(eui.Skin);generateEUI.paths['resource/eui_skins/myskin/game_test1Skin.exml'] = window.game_test1Skin = (function (_super) {
-	__extends(game_test1Skin, _super);
-	function game_test1Skin() {
+})(eui.Skin);generateEUI.paths['resource/eui_skins/myskin/competationsSkin.exml'] = window.competationsSkin = (function (_super) {
+	__extends(competationsSkin, _super);
+	function competationsSkin() {
 		_super.call(this);
 		this.skinParts = [];
 		
 		this.height = 1136;
 		this.width = 640;
 	}
+	var _proto = competationsSkin.prototype;
+
+	return competationsSkin;
+})(eui.Skin);generateEUI.paths['resource/eui_skins/myskin/educationSkin.exml'] = window.educationSkin = (function (_super) {
+	__extends(educationSkin, _super);
+	function educationSkin() {
+		_super.call(this);
+		this.skinParts = [];
+		
+		this.height = 1136;
+		this.width = 640;
+	}
+	var _proto = educationSkin.prototype;
+
+	return educationSkin;
+})(eui.Skin);generateEUI.paths['resource/eui_skins/myskin/game_test1Skin.exml'] = window.game_test1Skin = (function (_super) {
+	__extends(game_test1Skin, _super);
+	function game_test1Skin() {
+		_super.call(this);
+		this.skinParts = ["quit_to_main"];
+		
+		this.height = 1136;
+		this.width = 640;
+		this.elementsContent = [this._Image1_i(),this.quit_to_main_i(),this._BitmapLabel1_i()];
+	}
 	var _proto = game_test1Skin.prototype;
 
+	_proto._Image1_i = function () {
+		var t = new eui.Image();
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 1322;
+		t.source = "education_jpg";
+		t.width = 653.635;
+		t.x = -6.635;
+		t.y = -80;
+		return t;
+	};
+	_proto.quit_to_main_i = function () {
+		var t = new eui.Button();
+		this.quit_to_main = t;
+		t.alpha = 0.8;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 57;
+		t.label = "返回";
+		t.width = 136;
+		t.x = 250;
+		t.y = 881;
+		return t;
+	};
+	_proto._BitmapLabel1_i = function () {
+		var t = new eui.BitmapLabel();
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 183;
+		t.text = "欢迎来到比赛模式！";
+		t.width = 361;
+		t.x = 137;
+		t.y = 114;
+		return t;
+	};
 	return game_test1Skin;
+})(eui.Skin);generateEUI.paths['resource/eui_skins/myskin/play_with_computerSkin.exml'] = window.play_with_computerSkin = (function (_super) {
+	__extends(play_with_computerSkin, _super);
+	function play_with_computerSkin() {
+		_super.call(this);
+		this.skinParts = ["new_man_b","randam_sb","soduko_chb","quit_to_main"];
+		
+		this.height = 1136;
+		this.width = 640;
+		this.elementsContent = [this._Image1_i(),this.new_man_b_i(),this.randam_sb_i(),this.soduko_chb_i(),this.quit_to_main_i()];
+	}
+	var _proto = play_with_computerSkin.prototype;
+
+	_proto._Image1_i = function () {
+		var t = new eui.Image();
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.fillMode = "scale";
+		t.height = 1150;
+		t.source = "PC_bg_jpg";
+		t.width = 669;
+		t.x = -11;
+		t.y = -5;
+		return t;
+	};
+	_proto.new_man_b_i = function () {
+		var t = new eui.Button();
+		this.new_man_b = t;
+		t.alpha = 0.8;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 81;
+		t.label = "新手教程";
+		t.width = 250;
+		t.x = 193;
+		t.y = 198;
+		return t;
+	};
+	_proto.randam_sb_i = function () {
+		var t = new eui.Button();
+		this.randam_sb = t;
+		t.alpha = 0.8;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 81;
+		t.label = "随机数独";
+		t.width = 250;
+		t.x = 193;
+		t.y = 422;
+		return t;
+	};
+	_proto.soduko_chb_i = function () {
+		var t = new eui.Button();
+		this.soduko_chb = t;
+		t.alpha = 0.8;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 81;
+		t.label = "数独闯关";
+		t.width = 250;
+		t.x = 193;
+		t.y = 646;
+		return t;
+	};
+	_proto.quit_to_main_i = function () {
+		var t = new eui.Button();
+		this.quit_to_main = t;
+		t.alpha = 0.8;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 57;
+		t.label = "返回";
+		t.width = 136;
+		t.x = 250;
+		t.y = 881;
+		return t;
+	};
+	return play_with_computerSkin;
+})(eui.Skin);generateEUI.paths['resource/eui_skins/myskin/play_with_manSkin.exml'] = window.play_with_manSkin = (function (_super) {
+	__extends(play_with_manSkin, _super);
+	function play_with_manSkin() {
+		_super.call(this);
+		this.skinParts = ["random_mb","open_house","rank","quit_to_main"];
+		
+		this.height = 1136;
+		this.width = 640;
+		this.elementsContent = [this._Image1_i(),this.random_mb_i(),this.open_house_i(),this.rank_i(),this.quit_to_main_i()];
+	}
+	var _proto = play_with_manSkin.prototype;
+
+	_proto._Image1_i = function () {
+		var t = new eui.Image();
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 1148;
+		t.source = "PC_bg_jpg";
+		t.width = 686;
+		t.x = -33;
+		t.y = -6;
+		return t;
+	};
+	_proto.random_mb_i = function () {
+		var t = new eui.Button();
+		this.random_mb = t;
+		t.alpha = 0.8;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 81;
+		t.label = "随机匹配";
+		t.width = 250;
+		t.x = 193;
+		t.y = 198;
+		return t;
+	};
+	_proto.open_house_i = function () {
+		var t = new eui.Button();
+		this.open_house = t;
+		t.alpha = 0.8;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 81;
+		t.label = "开房间";
+		t.width = 250;
+		t.x = 193;
+		t.y = 422;
+		return t;
+	};
+	_proto.rank_i = function () {
+		var t = new eui.Button();
+		this.rank = t;
+		t.alpha = 0.8;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 81;
+		t.label = "天梯";
+		t.width = 250;
+		t.x = 193;
+		t.y = 646;
+		return t;
+	};
+	_proto.quit_to_main_i = function () {
+		var t = new eui.Button();
+		this.quit_to_main = t;
+		t.alpha = 0.8;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 57;
+		t.label = "返回";
+		t.width = 136;
+		t.x = 250;
+		t.y = 881;
+		return t;
+	};
+	return play_with_manSkin;
 })(eui.Skin);generateEUI.paths['resource/eui_skins/myskin/StartscenseSkin.exml'] = window.StartscenseSkin = (function (_super) {
 	__extends(StartscenseSkin, _super);
 	function StartscenseSkin() {
 		_super.call(this);
-		this.skinParts = ["Startscence","StartPlay"];
+		this.skinParts = ["Startscence","StartPlay","StartPlay1","StartPlay2"];
 		
 		this.height = 1136;
 		this.width = 640;
-		this.elementsContent = [this.Startscence_i(),this.StartPlay_i()];
+		this.elementsContent = [this.Startscence_i(),this.StartPlay_i(),this.StartPlay1_i(),this.StartPlay2_i()];
 	}
 	var _proto = StartscenseSkin.prototype;
 
@@ -306,10 +519,36 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.anchorOffsetY = 0;
 		t.enable = true;
 		t.height = 81;
-		t.label = "Button";
-		t.width = 146;
-		t.x = 241;
-		t.y = 532;
+		t.label = "人机练习";
+		t.width = 250;
+		t.x = 201;
+		t.y = 305;
+		return t;
+	};
+	_proto.StartPlay1_i = function () {
+		var t = new eui.Button();
+		this.StartPlay1 = t;
+		t.alpha = 0.8;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 81;
+		t.label = "匹配模式";
+		t.width = 250;
+		t.x = 201;
+		t.y = 503;
+		return t;
+	};
+	_proto.StartPlay2_i = function () {
+		var t = new eui.Button();
+		this.StartPlay2 = t;
+		t.alpha = 0.8;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 81;
+		t.label = "比赛";
+		t.width = 250;
+		t.x = 201;
+		t.y = 700;
 		return t;
 	};
 	return StartscenseSkin;
