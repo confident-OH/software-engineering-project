@@ -1,4 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
+<<<<<<< HEAD
 <e:Skin class="game_test1Skin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui"
         xmlns:w="http://ns.egret.com/wing">
     <w:Config id="1764151273e" />
@@ -90,4 +91,9 @@
         <e:TextInput width="60" height="60" x="420" y="480" alpha="0.5" text="2" maxChars="1" />
         <e:TextInput width="60" height="60" x="480" y="480" alpha="0.5" maxChars="1" />
     </e:Group>
+=======
+<e:Skin class="game_test1Skin"
+	 width="640"
+	height="1136" xmlns:e="http://ns.egret.com/eui">
+>>>>>>> 138220c1c0217d87c3a7a4b37e7b579d02fe7021
 </e:Skin>

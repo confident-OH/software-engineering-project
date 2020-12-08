@@ -266,10 +266,11 @@ var egret = window.egret;window.skins=window.skins||{};
 	__extends(game_test1Skin, _super);
 	function game_test1Skin() {
 		_super.call(this);
-		this.skinParts = ["Button_quit"];
+		this.skinParts = [];
 		
 		this.height = 1136;
 		this.width = 640;
+<<<<<<< HEAD
 		this.elementsContent = [this._Image1_i(),this._Label1_i(),this.Button_quit_i(),this._Group1_i()];
 	}
 	var _proto = game_test1Skin.prototype;
@@ -1132,6 +1133,11 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.y = 480;
 		return t;
 	};
+=======
+	}
+	var _proto = game_test1Skin.prototype;
+
+>>>>>>> 138220c1c0217d87c3a7a4b37e7b579d02fe7021
 	return game_test1Skin;
 })(eui.Skin);generateEUI.paths['resource/eui_skins/myskin/StartscenseSkin.exml'] = window.StartscenseSkin = (function (_super) {
 	__extends(StartscenseSkin, _super);
