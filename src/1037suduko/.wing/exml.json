@@ -20,6 +20,29 @@
     "backgroundHeight": -1,
     "useBgImage": false,
     "useBgColor": false,
-    "backgroundAlpha": 100
+    "backgroundAlpha": 100,
+    "backgroundType": "null"
+  },
+  "1764132fd96": {
+    "backgroundType": "user",
+    "backgroundImage": "C:\\Users\\83753\\Desktop\\临时_待归类\\v2-282915ef915dbcb2bf94a66b210ca234_720w-2.png",
+    "backgroundX": 0,
+    "backgroundY": 0,
+    "backgroundWidth": 540,
+    "backgroundHeight": 510,
+    "useBgImage": false,
+    "useBgColor": true,
+    "backgroundAlpha": 0
+  },
+  "1764151273e": {
+    "backgroundType": "null",
+    "backgroundAlpha": 39,
+    "backgroundX": 0,
+    "backgroundY": 0,
+    "backgroundWidth": 540,
+    "backgroundHeight": 510,
+    "useBgImage": true,
+    "useBgColor": true,
+    "backgroundImage": "C:\\Users\\83753\\Desktop\\临时_待归类\\v2-282915ef915dbcb2bf94a66b210ca234_720w-2.png"
   }
 }

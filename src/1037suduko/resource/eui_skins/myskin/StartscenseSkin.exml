@@ -4,5 +4,5 @@
 	height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
 	<w:Config id="175a8fded90"/>
 	<e:Image id="Startscence" source="resource/assets/001.jpg" fillMode="scale" top="0" bottom="0" left="0" right="0" touchEnabled="true"/>
-	<e:Button id="StartPlay" label="Button" x="241" y="532" anchorOffsetX="0" width="146" anchorOffsetY="0" height="81" enable="true" alpha="0.8"/>
+	<e:Button id="StartPlay" label="Start" x="320" y="500" anchorOffsetX="120" width="240" anchorOffsetY="40" height="80" enable="true" alpha="0.8"/>
 </e:Skin>
