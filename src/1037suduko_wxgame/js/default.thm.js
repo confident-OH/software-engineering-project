@@ -441,11 +441,11 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.anchorOffsetX = 0;
 		t.anchorOffsetY = 0;
 		t.fillMode = "scale";
-		t.height = 1150;
+		t.height = 1266.891;
 		t.source = "PC_bg_jpg";
-		t.width = 669;
-		t.x = -11;
-		t.y = -5;
+		t.width = 737;
+		t.x = -47;
+		t.y = -4;
 		return t;
 	};
 	_proto.new_man_b_i = function () {
@@ -509,21 +509,10 @@ var egret = window.egret;window.skins=window.skins||{};
 		
 		this.height = 1136;
 		this.width = 640;
-		this.elementsContent = [this._Image1_i(),this.random_mb_i(),this.open_house_i(),this.rank_i(),this.quit_to_main_i()];
+		this.elementsContent = [this.random_mb_i(),this._Image1_i(),this.open_house_i(),this.rank_i(),this.quit_to_main_i()];
 	}
 	var _proto = play_with_manSkin.prototype;
 
-	_proto._Image1_i = function () {
-		var t = new eui.Image();
-		t.anchorOffsetX = 0;
-		t.anchorOffsetY = 0;
-		t.height = 1148;
-		t.source = "PC_bg_jpg";
-		t.width = 686;
-		t.x = -33;
-		t.y = -6;
-		return t;
-	};
 	_proto.random_mb_i = function () {
 		var t = new eui.Button();
 		this.random_mb = t;
@@ -535,6 +524,18 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.width = 250;
 		t.x = 193;
 		t.y = 198;
+		return t;
+	};
+	_proto._Image1_i = function () {
+		var t = new eui.Image();
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.fillMode = "scale";
+		t.height = 1266.891;
+		t.source = "PC_bg_jpg";
+		t.width = 737;
+		t.x = -47;
+		t.y = -4;
 		return t;
 	};
 	_proto.open_house_i = function () {
@@ -634,8 +635,8 @@ var egret = window.egret;window.skins=window.skins||{};
 		_super.call(this);
 		this.skinParts = ["Startscence","StartPlay","StartPlay1","StartPlay2"];
 		
-		this.height = 1136;
-		this.width = 640;
+		this.height = 1236.88;
+		this.width = 708;
 		this.elementsContent = [this.Startscence_i(),this.StartPlay_i(),this.StartPlay1_i(),this.StartPlay2_i()];
 	}
 	var _proto = StartscenseSkin.prototype;
@@ -643,7 +644,8 @@ var egret = window.egret;window.skins=window.skins||{};
 	_proto.Startscence_i = function () {
 		var t = new eui.Image();
 		this.Startscence = t;
-		t.bottom = 0;
+		t.anchorOffsetY = 0;
+		t.bottom = -44.11999999999989;
 		t.fillMode = "scale";
 		t.left = 0;
 		t.right = 0;

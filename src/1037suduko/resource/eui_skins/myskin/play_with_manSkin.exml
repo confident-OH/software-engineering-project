@@ -2,8 +2,8 @@
 <e:Skin class="play_with_manSkin"
 	 width="640"
 	height="1136" xmlns:e="http://ns.egret.com/eui">
-	<e:Image source="PC_bg_jpg" x="-33" y="-6" anchorOffsetX="0" width="686" anchorOffsetY="0" height="1148"/>
 	<e:Button id="random_mb" label="随机匹配" x="193" y="198" anchorOffsetX="0" width="250" anchorOffsetY="0" height="81" alpha="0.8"/>
+	<e:Image source="PC_bg_jpg" x="-47" y="-4" anchorOffsetX="0" width="737" anchorOffsetY="0" height="1266.891" fillMode="scale"/>
 	<e:Button id="open_house" label="开房间" x="193" y="422" anchorOffsetX="0" width="250" anchorOffsetY="0" height="81" alpha="0.8"/>
 	<e:Button id="rank" label="天梯" x="193" y="646" anchorOffsetX="0" width="250" anchorOffsetY="0" height="81" alpha="0.8"/>
 	<e:Button label="返回" x="250" y="881" anchorOffsetX="0" width="136" anchorOffsetY="0" height="57" alpha="0.8" id="quit_to_main"/>
