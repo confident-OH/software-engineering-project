@@ -17,7 +17,7 @@ class Startscence extends eui.Component implements eui.UIComponent{
         }, this)
         //进入匹配模式
         this.StartPlay1.addEventListener(egret.TouchEvent.TOUCH_TAP, ()=>{
-            SceneManager.removeScene(new play_with_computers());
+            SceneManager.removeScene(new play_with_man());
         }, this)
         //进入比赛模式
         this.StartPlay2.addEventListener(egret.TouchEvent.TOUCH_TAP, ()=>{

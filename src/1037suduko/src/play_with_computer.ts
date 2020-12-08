@@ -12,10 +12,18 @@ class play_with_computers extends eui.Component implements eui.UIComponent{
     } 
     protected childrenCreated(): void{
         super.childrenCreated();
-
         //返回主界面
         this.quit_to_main.addEventListener(egret.TouchEvent.TOUCH_TAP, ()=>{
             SceneManager.removeScene(new Startscence());
+        }, this)
+        this.new_man_b.addEventListener(egret.TouchEvent.TOUCH_TAP, ()=>{
+            SceneManager.removeScene(new education());
+        }, this)
+        this.randam_sb.addEventListener(egret.TouchEvent.TOUCH_TAP, ()=>{
+            SceneManager.removeScene(new random());
+        }, this)
+        this.soduko_chb.addEventListener(egret.TouchEvent.TOUCH_TAP, ()=>{
+            SceneManager.removeScene(new challenges());
         }, this)
     }
 }

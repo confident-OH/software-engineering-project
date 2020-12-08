@@ -152,6 +152,11 @@
 			"name": "Competition_jpg"
 		},
 		{
+			"url": "assets/soduko_bg.jpg",
+			"type": "image",
+			"name": "soduko_bg_jpg"
+		},
+		{
 			"name": "description_json",
 			"type": "json",
 			"url": "config/description.json"

@@ -5,7 +5,7 @@ class play_with_man extends eui.Component implements eui.UIComponent{
     public quit_to_main:eui.Button;
     constructor(){
         super();
-        this.skinName = "resource/eui_skins/myskin/play_with_computerSkin.exml"
+        this.skinName = "resource/eui_skins/myskin/play_with_manSkin.exml"
     }
     protected partAdded(partName: string, instance: any):void{
         super.partAdded(partName, instance);

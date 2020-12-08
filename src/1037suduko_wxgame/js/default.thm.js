@@ -10,7 +10,7 @@ var egret = window.egret;window.skins=window.skins||{};
                 window.generateEUI = window.generateEUI||{};
                 generateEUI.paths = generateEUI.paths||{};
                 generateEUI.styles = undefined;
-                generateEUI.skins = {"eui.Button":"resource/eui_skins/ButtonSkin.exml","eui.CheckBox":"resource/eui_skins/CheckBoxSkin.exml","eui.HScrollBar":"resource/eui_skins/HScrollBarSkin.exml","eui.HSlider":"resource/eui_skins/HSliderSkin.exml","eui.Panel":"resource/eui_skins/PanelSkin.exml","eui.TextInput":"resource/eui_skins/TextInputSkin.exml","eui.ProgressBar":"resource/eui_skins/ProgressBarSkin.exml","eui.RadioButton":"resource/eui_skins/RadioButtonSkin.exml","eui.Scroller":"resource/eui_skins/ScrollerSkin.exml","eui.ToggleSwitch":"resource/eui_skins/ToggleSwitchSkin.exml","eui.VScrollBar":"resource/eui_skins/VScrollBarSkin.exml","eui.VSlider":"resource/eui_skins/VSliderSkin.exml","eui.ItemRenderer":"resource/eui_skins/ItemRendererSkin.exml","Startscense":"resource/eui_skins/myskin/StartscenseSkin.exml","Game_test":"resource/eui_skins/myskin/game_test1Skin.exml","play_with_computer":"resource/eui_skins/myskin/play_with_computerSkin.exml","play_with_man":"resource/eui_skins/myskin/play_with_manSkin.exml"};generateEUI.paths['resource/eui_skins/backgroundSkin.exml'] = window.backgroundSkin = (function (_super) {
+                generateEUI.skins = {"eui.Button":"resource/eui_skins/ButtonSkin.exml","eui.CheckBox":"resource/eui_skins/CheckBoxSkin.exml","eui.HScrollBar":"resource/eui_skins/HScrollBarSkin.exml","eui.HSlider":"resource/eui_skins/HSliderSkin.exml","eui.Panel":"resource/eui_skins/PanelSkin.exml","eui.TextInput":"resource/eui_skins/TextInputSkin.exml","eui.ProgressBar":"resource/eui_skins/ProgressBarSkin.exml","eui.RadioButton":"resource/eui_skins/RadioButtonSkin.exml","eui.Scroller":"resource/eui_skins/ScrollerSkin.exml","eui.ToggleSwitch":"resource/eui_skins/ToggleSwitchSkin.exml","eui.VScrollBar":"resource/eui_skins/VScrollBarSkin.exml","eui.VSlider":"resource/eui_skins/VSliderSkin.exml","eui.ItemRenderer":"resource/eui_skins/ItemRendererSkin.exml","Startscense":"resource/eui_skins/myskin/StartscenseSkin.exml","Game_test":"resource/eui_skins/myskin/game_test1Skin.exml","play_with_computer":"resource/eui_skins/myskin/play_with_computerSkin.exml","play_with_man":"resource/eui_skins/myskin/play_with_manSkin.exml","challenge":"resource/eui_skins/myskin/challengeSkin.exml","education":"resource/eui_skins/myskin/challengeSkin.exml","competations":"resource/eui_skins/myskin/competationsSkin.exml"};generateEUI.paths['resource/eui_skins/backgroundSkin.exml'] = window.backgroundSkin = (function (_super) {
 	__extends(backgroundSkin, _super);
 	function backgroundSkin() {
 		_super.call(this);
@@ -262,6 +262,57 @@ var egret = window.egret;window.skins=window.skins||{};
 		return t;
 	};
 	return ItemRendererSkin;
+})(eui.Skin);generateEUI.paths['resource/eui_skins/myskin/challengeSkin.exml'] = window.challengeSkin = (function (_super) {
+	__extends(challengeSkin, _super);
+	function challengeSkin() {
+		_super.call(this);
+		this.skinParts = ["quit_to_PC"];
+		
+		this.height = 1136;
+		this.width = 640;
+		this.elementsContent = [this._Image1_i(),this._Label1_i(),this.quit_to_PC_i()];
+	}
+	var _proto = challengeSkin.prototype;
+
+	_proto._Image1_i = function () {
+		var t = new eui.Image();
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.fillMode = "scale";
+		t.height = 1454;
+		t.source = "soduko_bg_jpg";
+		t.width = 868.54;
+		t.x = -143.54;
+		t.y = -157;
+		return t;
+	};
+	_proto._Label1_i = function () {
+		var t = new eui.Label();
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 130;
+		t.text = "挑战模式";
+		t.textAlign = "center";
+		t.verticalAlign = "middle";
+		t.width = 204;
+		t.x = 222;
+		t.y = 204;
+		return t;
+	};
+	_proto.quit_to_PC_i = function () {
+		var t = new eui.Button();
+		this.quit_to_PC = t;
+		t.alpha = 0.8;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 57;
+		t.label = "返回";
+		t.width = 136;
+		t.x = 250;
+		t.y = 881;
+		return t;
+	};
+	return challengeSkin;
 })(eui.Skin);generateEUI.paths['resource/eui_skins/myskin/competationsSkin.exml'] = window.competationsSkin = (function (_super) {
 	__extends(competationsSkin, _super);
 	function competationsSkin() {
@@ -278,13 +329,52 @@ var egret = window.egret;window.skins=window.skins||{};
 	__extends(educationSkin, _super);
 	function educationSkin() {
 		_super.call(this);
-		this.skinParts = [];
+		this.skinParts = ["quit_to_PC"];
 		
 		this.height = 1136;
 		this.width = 640;
+		this.elementsContent = [this._Image1_i(),this._Label1_i(),this.quit_to_PC_i()];
 	}
 	var _proto = educationSkin.prototype;
 
+	_proto._Image1_i = function () {
+		var t = new eui.Image();
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.fillMode = "scale";
+		t.height = 1454;
+		t.source = "soduko_bg_jpg";
+		t.width = 868.54;
+		t.x = -143.54;
+		t.y = -157;
+		return t;
+	};
+	_proto._Label1_i = function () {
+		var t = new eui.Label();
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 130;
+		t.text = "新手教程";
+		t.textAlign = "center";
+		t.verticalAlign = "middle";
+		t.width = 204;
+		t.x = 222;
+		t.y = 204;
+		return t;
+	};
+	_proto.quit_to_PC_i = function () {
+		var t = new eui.Button();
+		this.quit_to_PC = t;
+		t.alpha = 0.8;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 57;
+		t.label = "返回";
+		t.width = 136;
+		t.x = 250;
+		t.y = 881;
+		return t;
+	};
 	return educationSkin;
 })(eui.Skin);generateEUI.paths['resource/eui_skins/myskin/game_test1Skin.exml'] = window.game_test1Skin = (function (_super) {
 	__extends(game_test1Skin, _super);
@@ -487,6 +577,57 @@ var egret = window.egret;window.skins=window.skins||{};
 		return t;
 	};
 	return play_with_manSkin;
+})(eui.Skin);generateEUI.paths['resource/eui_skins/myskin/randomSkin.exml'] = window.randomSkin = (function (_super) {
+	__extends(randomSkin, _super);
+	function randomSkin() {
+		_super.call(this);
+		this.skinParts = ["quit_to_PC"];
+		
+		this.height = 1136;
+		this.width = 640;
+		this.elementsContent = [this._Image1_i(),this._Label1_i(),this.quit_to_PC_i()];
+	}
+	var _proto = randomSkin.prototype;
+
+	_proto._Image1_i = function () {
+		var t = new eui.Image();
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.fillMode = "scale";
+		t.height = 1454;
+		t.source = "soduko_bg_jpg";
+		t.width = 868.54;
+		t.x = -143.54;
+		t.y = -157;
+		return t;
+	};
+	_proto._Label1_i = function () {
+		var t = new eui.Label();
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 130;
+		t.text = "随机数独";
+		t.textAlign = "center";
+		t.verticalAlign = "middle";
+		t.width = 204;
+		t.x = 222;
+		t.y = 204;
+		return t;
+	};
+	_proto.quit_to_PC_i = function () {
+		var t = new eui.Button();
+		this.quit_to_PC = t;
+		t.alpha = 0.8;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 57;
+		t.label = "返回";
+		t.width = 136;
+		t.x = 250;
+		t.y = 881;
+		return t;
+	};
+	return randomSkin;
 })(eui.Skin);generateEUI.paths['resource/eui_skins/myskin/StartscenseSkin.exml'] = window.StartscenseSkin = (function (_super) {
 	__extends(StartscenseSkin, _super);
 	function StartscenseSkin() {
