@@ -137,6 +137,11 @@
 			"name": "001_jpg"
 		},
 		{
+			"url": "assets/PC_bg.jpg",
+			"type": "image",
+			"name": "PC_bg_jpg"
+		},
+		{
 			"name": "description_json",
 			"type": "json",
 			"url": "config/description.json"

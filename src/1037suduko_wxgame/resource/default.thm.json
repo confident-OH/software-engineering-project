@@ -26,6 +26,7 @@
 		"resource/eui_skins/ItemRendererSkin.exml",
 		"resource/eui_skins/myskin/game_test1Skin.exml",
 		"resource/eui_skins/myskin/StartscenseSkin.exml",
+		"resource/eui_skins/myskin/table_testSkin.exml",
 		"resource/eui_skins/PanelSkin.exml",
 		"resource/eui_skins/ProgressBarSkin.exml",
 		"resource/eui_skins/RadioButtonSkin.exml",
@@ -35,5 +36,12 @@
 		"resource/eui_skins/VScrollBarSkin.exml",
 		"resource/eui_skins/VSliderSkin.exml"
 	],
-	"path": "resource/default.thm.json"
+	"path": "resource/default.thm.json",
+	"styles": {
+		"center_1": {
+			"size": "20",
+			"border": "true",
+			"horizonCenter": "true"
+		}
+	}
 }

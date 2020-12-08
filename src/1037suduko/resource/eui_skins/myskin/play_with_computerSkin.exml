@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="play_with_computerSkin"
+	 width="640"
+	height="1136" xmlns:e="http://ns.egret.com/eui">
+	<e:Image source="PC_bg_jpg" x="-11" y="-5" anchorOffsetX="0" width="669" anchorOffsetY="0" height="1150" fillMode="scale"/>
+</e:Skin>
