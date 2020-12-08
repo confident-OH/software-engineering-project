@@ -9,10 +9,7 @@
             "dom",
             "es2015.promise"
         ],
-        "types": [],
-        "typeRoots": [
-            "node_modules/@types"
-        ]
+        "types": []
     },
     "include": [
         "src",
