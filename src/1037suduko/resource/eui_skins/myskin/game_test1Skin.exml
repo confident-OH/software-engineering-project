@@ -2,6 +2,4 @@
 <e:Skin class="game_test1Skin"
 	 width="640"
 	height="1136" xmlns:e="http://ns.egret.com/eui">
-	<e:Label text="哈哈哈哈哈" x="201" y="557" anchorOffsetX="0" width="185" anchorOffsetY="0" height="66" verticalAlign="middle" textAlign="center"/>
-	<e:Button id="Button_quit" label="Quit" x="205" y="653" anchorOffsetX="0" width="177" anchorOffsetY="0" height="76"/>
 </e:Skin>

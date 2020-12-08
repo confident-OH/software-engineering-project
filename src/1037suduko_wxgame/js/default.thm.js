@@ -266,39 +266,13 @@ var egret = window.egret;window.skins=window.skins||{};
 	__extends(game_test1Skin, _super);
 	function game_test1Skin() {
 		_super.call(this);
-		this.skinParts = ["Button_quit"];
+		this.skinParts = [];
 		
 		this.height = 1136;
 		this.width = 640;
-		this.elementsContent = [this._Label1_i(),this.Button_quit_i()];
 	}
 	var _proto = game_test1Skin.prototype;
 
-	_proto._Label1_i = function () {
-		var t = new eui.Label();
-		t.anchorOffsetX = 0;
-		t.anchorOffsetY = 0;
-		t.height = 66;
-		t.text = "哈哈哈哈哈";
-		t.textAlign = "center";
-		t.verticalAlign = "middle";
-		t.width = 185;
-		t.x = 201;
-		t.y = 557;
-		return t;
-	};
-	_proto.Button_quit_i = function () {
-		var t = new eui.Button();
-		this.Button_quit = t;
-		t.anchorOffsetX = 0;
-		t.anchorOffsetY = 0;
-		t.height = 76;
-		t.label = "Quit";
-		t.width = 177;
-		t.x = 205;
-		t.y = 653;
-		return t;
-	};
 	return game_test1Skin;
 })(eui.Skin);generateEUI.paths['resource/eui_skins/myskin/StartscenseSkin.exml'] = window.StartscenseSkin = (function (_super) {
 	__extends(StartscenseSkin, _super);
