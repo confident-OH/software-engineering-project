@@ -1,6 +1,5 @@
 import * as _ from "lodash";
 import {isUndefined} from "util";
-
 import {Square} from "./Square";
 
 /**
