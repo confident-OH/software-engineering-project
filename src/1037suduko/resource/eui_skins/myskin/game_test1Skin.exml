@@ -4,7 +4,7 @@
 	height="1136" xmlns:e="http://ns.egret.com/eui">
 	<e:Image source="education_jpg" x="-6.635" y="-80" anchorOffsetX="0" width="653.635" anchorOffsetY="0" height="1322" visible="true"/>
 	<e:Button label="返回" x="320" y="881" anchorOffsetX="70" width="140" anchorOffsetY="0" height="60" alpha="0.8" id="quit_to_main"/>
-	<e:Group x="50" y="60">
+	<e:Group x="50" y="120">
 		<e:TextInput width="60" height="60" x="0" y="0" alpha="0.5" text="1" maxChars="1"/>
 		<e:TextInput width="60" height="60" x="60" y="0" alpha="0.5" maxChars="1"/>
 		<e:TextInput width="60" height="60" x="120" y="0" alpha="0.5" maxChars="1"/>
@@ -87,5 +87,5 @@
 		<e:TextInput width="60" height="60" x="420" y="480" alpha="0.5" text="2" maxChars="1"/>
 		<e:TextInput width="60" height="60" x="480" y="480" alpha="0.5" maxChars="1"/>
 	</e:Group>
-	<e:BitmapLabel width="360" height="180" y="740" anchorOffsetX="180" anchorOffsetY="90" text="欢迎来到比赛模式！" alpha="1" horizontalCenter="0"/>
+	<e:EditableText width="320" height="50" text="欢迎来到比赛模式" textAlign="center" y="20" x="320" textColor="0xFFFFFF" anchorOffsetX="160" anchorOffsetY="0" bold="true" verticalAlign="middle"/>
 </e:Skin>
