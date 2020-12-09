@@ -140,6 +140,21 @@ var education = (function (_super) {
         this.quit_to_PC.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
             SceneManager.removeScene(new play_with_computers);
         }, this);
+        var button = new eui.Button();
+        button.label = "开始!";
+        button.horizontalCenter = 0;
+        button.verticalCenter = 0;
+        this.addChild(button);
+        button.addEventListener(egret.TouchEvent.TOUCH_TAP, this.show_panal, this);
+    };
+    education.prototype.show_panal = function (e) {
+        var panel = new eui.Panel();
+        panel.title = "Title";
+        panel.horizontalCenter = 0;
+        panel.verticalCenter = 0;
+        this.addChild(panel);
+        panel.title = "欢迎来到新手教程";
+        panel.addChild(panel.closeButton);
     };
     return education;
 }(eui.Component));
@@ -339,16 +354,6 @@ var Main = (function (_super) {
         SceneManager.addScene(new Startscence());
     };
     /**
-     * 根据name关键字创建一个Bitmap对象。name属性请参考resources/resource.json配置文件的内容。
-     * Create a Bitmap object according to name keyword.As for the property of name please refer to the configuration file of resources/resource.json.
-     */
-    Main.prototype.createBitmapByName = function (name) {
-        var result = new egret.Bitmap();
-        var texture = RES.getRes(name);
-        result.texture = texture;
-        return result;
-    };
-    /**
      * 描述文件加载成功，开始播放动画
      * Description file loading is successful, start to play the animation
      */
@@ -374,25 +379,6 @@ var Main = (function (_super) {
             tw.call(change, _this);
         };
         change();
-    };
-    /**
-     * 点击按钮
-     * Click the button
-     */
-    Main.prototype.onButtonClick = function (e) {
-        var panel = new eui.Panel();
-        panel.title = "Title";
-        panel.horizontalCenter = 0;
-        panel.verticalCenter = 0;
-        this.addChild(panel);
-    };
-    Main.prototype.ButtonReturn = function (e) {
-        //this.parent.removeChild(screen2);
-    };
-    Main.prototype.start_sce_buttonclick = function (e) {
-        var screen2 = new Startscence();
-        this.parent.addChild(screen2);
-        return;
     };
     return Main;
 }(eui.UILayer));
