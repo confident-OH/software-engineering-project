@@ -142,6 +142,21 @@
 			"name": "PC_bg_jpg"
 		},
 		{
+			"url": "assets/education.jpg",
+			"type": "image",
+			"name": "education_jpg"
+		},
+		{
+			"url": "assets/Competition.jpg",
+			"type": "image",
+			"name": "Competition_jpg"
+		},
+		{
+			"url": "assets/soduko_bg.jpg",
+			"type": "image",
+			"name": "soduko_bg_jpg"
+		},
+		{
 			"name": "description_json",
 			"type": "json",
 			"url": "config/description.json"
