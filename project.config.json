@@ -1,5 +1,8 @@
 {
-  "description": "项目配置文件。",
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
   "setting": {
     "urlCheck": true,
     "es6": true,
@@ -7,7 +10,7 @@
     "postcss": true,
     "preloadBackgroundData": false,
     "minified": true,
-    "newFeature": true,
+    "newFeature": false,
     "coverView": true,
     "nodeModules": false,
     "autoAudits": false,
@@ -36,9 +39,14 @@
     "minifyWXSS": true
   },
   "compileType": "game",
-  "libVersion": "game",
+  "libVersion": "2.0.4",
   "appid": "wx4291ed97374f48d9",
-  "projectname": "1037challenge",
+  "projectname": "sudoku-game",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "scripts": {},
+  "isGameTourist": false,
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
   "condition": {
@@ -49,6 +57,12 @@
       "list": []
     },
     "game": {
+      "list": []
+    },
+    "plugin": {
+      "list": []
+    },
+    "gamePlugin": {
       "list": []
     },
     "miniprogram": {
