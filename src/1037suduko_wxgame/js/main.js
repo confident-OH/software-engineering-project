@@ -146,6 +146,11 @@ var education = (function (_super) {
         button.verticalCenter = 0;
         this.addChild(button);
         button.addEventListener(egret.TouchEvent.TOUCH_TAP, this.show_panal, this);
+        this.inputtest.addEventListener(egret.TextEvent.CHANGE, this.show_shu, this);
+    };
+    education.prototype.show_shu = function (e) {
+        this.a = this.inputtest.text;
+        egret.log(this.a);
     };
     education.prototype.show_panal = function (e) {
         var panel = new eui.Panel();

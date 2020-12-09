@@ -1,5 +1,7 @@
 class education extends eui.Component implements eui.UIComponent{
     public quit_to_PC:eui.Button;
+    public inputtest:eui.TextInput;
+    public a:string;
     constructor(){
         super();
         this.skinName = "resource/eui_skins/myskin/educationSkin.exml"
@@ -19,6 +21,12 @@ class education extends eui.Component implements eui.UIComponent{
         button.verticalCenter = 0;
         this.addChild(button);
         button.addEventListener(egret.TouchEvent.TOUCH_TAP, this.show_panal, this);
+        
+        this.inputtest.addEventListener(egret.TextEvent.CHANGE, this.show_shu, this);
+    }
+    protected show_shu(e:egret.TextEvent){
+        this.a = this.inputtest.text;
+        egret.log(this.a);
     }
     protected show_panal(e: egret.TouchEvent){
         let panel = new eui.Panel();
