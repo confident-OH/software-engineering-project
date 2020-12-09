@@ -14,7 +14,12 @@
 		"eui.VSlider": "resource/eui_skins/VSliderSkin.exml",
 		"eui.ItemRenderer": "resource/eui_skins/ItemRendererSkin.exml",
 		"Startscense": "resource/eui_skins/myskin/StartscenseSkin.exml",
-		"Game_test": "resource/eui_skins/myskin/game_test1Skin.exml"
+		"Game_test": "resource/eui_skins/myskin/game_test1Skin.exml",
+		"play_with_computer": "resource/eui_skins/myskin/play_with_computerSkin.exml",
+		"play_with_man": "resource/eui_skins/myskin/play_with_manSkin.exml",
+		"challenge": "resource/eui_skins/myskin/challengeSkin.exml",
+		"education": "resource/eui_skins/myskin/challengeSkin.exml",
+		"competations": "resource/eui_skins/myskin/competationsSkin.exml"
 	},
 	"autoGenerateExmlsList": true,
 	"exmls": [
@@ -24,7 +29,13 @@
 		"resource/eui_skins/HScrollBarSkin.exml",
 		"resource/eui_skins/HSliderSkin.exml",
 		"resource/eui_skins/ItemRendererSkin.exml",
+		"resource/eui_skins/myskin/challengeSkin.exml",
+		"resource/eui_skins/myskin/competationsSkin.exml",
+		"resource/eui_skins/myskin/educationSkin.exml",
 		"resource/eui_skins/myskin/game_test1Skin.exml",
+		"resource/eui_skins/myskin/play_with_computerSkin.exml",
+		"resource/eui_skins/myskin/play_with_manSkin.exml",
+		"resource/eui_skins/myskin/randomSkin.exml",
 		"resource/eui_skins/myskin/StartscenseSkin.exml",
 		"resource/eui_skins/PanelSkin.exml",
 		"resource/eui_skins/ProgressBarSkin.exml",

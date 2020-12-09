@@ -1,13 +1,6 @@
 var egret = window.egret;var __reflect = (this && this.__reflect) || function (p, c, t) {
     p.__class__ = c, t ? t.push(c) : t = [c], p.__types__ = p.__types__ ? t.concat(p.__types__) : t;
 };
-var __extends = this && this.__extends || function __extends(t, e) { 
- function r() { 
- this.constructor = t;
-}
-for (var i in e) e.hasOwnProperty(i) && (t[i] = e[i]);
-r.prototype = e.prototype, t.prototype = new r();
-};
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
@@ -43,6 +36,36 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
+var __extends = this && this.__extends || function __extends(t, e) { 
+ function r() { 
+ this.constructor = t;
+}
+for (var i in e) e.hasOwnProperty(i) && (t[i] = e[i]);
+r.prototype = e.prototype, t.prototype = new r();
+};
+var DebugPlatform = (function () {
+    function DebugPlatform() {
+    }
+    DebugPlatform.prototype.getUserInfo = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, { nickName: "username" }];
+            });
+        });
+    };
+    DebugPlatform.prototype.login = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/];
+            });
+        });
+    };
+    return DebugPlatform;
+}());
+__reflect(DebugPlatform.prototype, "DebugPlatform", ["Platform"]);
+if (!window.platform) {
+    window.platform = new DebugPlatform();
+}
 //////////////////////////////////////////////////////////////////////////////////////
 //
 //  Copyright (c) 2014-present, Egret Technology.
@@ -101,6 +124,26 @@ var AssetAdapter = (function () {
     return AssetAdapter;
 }());
 __reflect(AssetAdapter.prototype, "AssetAdapter", ["eui.IAssetAdapter"]);
+var education = (function (_super) {
+    __extends(education, _super);
+    function education() {
+        var _this = _super.call(this) || this;
+        _this.skinName = "resource/eui_skins/myskin/educationSkin.exml";
+        return _this;
+    }
+    education.prototype.partAdded = function (partName, instance) {
+        _super.prototype.partAdded.call(this, partName, instance);
+    };
+    education.prototype.childrenCreated = function () {
+        _super.prototype.childrenCreated.call(this);
+        //返回人机界面
+        this.quit_to_PC.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
+            SceneManager.removeScene(new play_with_computers);
+        }, this);
+    };
+    return education;
+}(eui.Component));
+__reflect(education.prototype, "education", ["eui.UIComponent", "egret.DisplayObject"]);
 var Game_test = (function (_super) {
     __extends(Game_test, _super);
     function Game_test() {
@@ -113,7 +156,7 @@ var Game_test = (function (_super) {
     };
     Game_test.prototype.childrenCreated = function () {
         _super.prototype.childrenCreated.call(this);
-        this.Button_quit.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
+        this.quit_to_main.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
             SceneManager.removeScene(new Startscence());
         }, this);
     };
@@ -354,29 +397,95 @@ var Main = (function (_super) {
     return Main;
 }(eui.UILayer));
 __reflect(Main.prototype, "Main");
-var DebugPlatform = (function () {
-    function DebugPlatform() {
+var challenges = (function (_super) {
+    __extends(challenges, _super);
+    function challenges() {
+        var _this = _super.call(this) || this;
+        _this.skinName = "resource/eui_skins/myskin/challengeSkin.exml";
+        return _this;
     }
-    DebugPlatform.prototype.getUserInfo = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, { nickName: "username" }];
-            });
-        });
+    challenges.prototype.partAdded = function (partName, instance) {
+        _super.prototype.partAdded.call(this, partName, instance);
     };
-    DebugPlatform.prototype.login = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/];
-            });
-        });
+    challenges.prototype.childrenCreated = function () {
+        _super.prototype.childrenCreated.call(this);
+        //返回人机界面
+        this.quit_to_PC.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
+            SceneManager.removeScene(new play_with_computers);
+        }, this);
     };
-    return DebugPlatform;
-}());
-__reflect(DebugPlatform.prototype, "DebugPlatform", ["Platform"]);
-if (!window.platform) {
-    window.platform = new DebugPlatform();
-}
+    return challenges;
+}(eui.Component));
+__reflect(challenges.prototype, "challenges", ["eui.UIComponent", "egret.DisplayObject"]);
+var play_with_computers = (function (_super) {
+    __extends(play_with_computers, _super);
+    function play_with_computers() {
+        var _this = _super.call(this) || this;
+        _this.skinName = "resource/eui_skins/myskin/play_with_computerSkin.exml";
+        return _this;
+    }
+    play_with_computers.prototype.partAdded = function (partName, instance) {
+        _super.prototype.partAdded.call(this, partName, instance);
+    };
+    play_with_computers.prototype.childrenCreated = function () {
+        _super.prototype.childrenCreated.call(this);
+        //返回主界面
+        this.quit_to_main.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
+            SceneManager.removeScene(new Startscence());
+        }, this);
+        this.new_man_b.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
+            SceneManager.removeScene(new education());
+        }, this);
+        this.randam_sb.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
+            SceneManager.removeScene(new random());
+        }, this);
+        this.soduko_chb.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
+            SceneManager.removeScene(new challenges());
+        }, this);
+    };
+    return play_with_computers;
+}(eui.Component));
+__reflect(play_with_computers.prototype, "play_with_computers", ["eui.UIComponent", "egret.DisplayObject"]);
+var play_with_man = (function (_super) {
+    __extends(play_with_man, _super);
+    function play_with_man() {
+        var _this = _super.call(this) || this;
+        _this.skinName = "resource/eui_skins/myskin/play_with_manSkin.exml";
+        return _this;
+    }
+    play_with_man.prototype.partAdded = function (partName, instance) {
+        _super.prototype.partAdded.call(this, partName, instance);
+    };
+    play_with_man.prototype.childrenCreated = function () {
+        _super.prototype.childrenCreated.call(this);
+        //返回主界面
+        this.quit_to_main.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
+            SceneManager.removeScene(new Startscence());
+        }, this);
+    };
+    return play_with_man;
+}(eui.Component));
+__reflect(play_with_man.prototype, "play_with_man", ["eui.UIComponent", "egret.DisplayObject"]);
+var random = (function (_super) {
+    __extends(random, _super);
+    function random() {
+        var _this = _super.call(this) || this;
+        _this.skinName = "resource/eui_skins/myskin/randomSkin.exml";
+        return _this;
+    }
+    random.prototype.partAdded = function (partName, instance) {
+        _super.prototype.partAdded.call(this, partName, instance);
+    };
+    random.prototype.childrenCreated = function () {
+        _super.prototype.childrenCreated.call(this);
+        //返回人机界面
+        this.quit_to_PC.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
+            SceneManager.removeScene(new play_with_computers);
+        }, this);
+    };
+    return random;
+}(eui.Component));
+__reflect(random.prototype, "random", ["eui.UIComponent", "egret.DisplayObject"]);
 var SceneManager = (function () {
     function SceneManager() {
     }
@@ -415,7 +524,16 @@ var Startscence = (function (_super) {
     };
     Startscence.prototype.childrenCreated = function () {
         _super.prototype.childrenCreated.call(this);
+        //进入人机练习模式
         this.StartPlay.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
+            SceneManager.removeScene(new play_with_computers());
+        }, this);
+        //进入匹配模式
+        this.StartPlay1.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
+            SceneManager.removeScene(new play_with_man());
+        }, this);
+        //进入比赛模式
+        this.StartPlay2.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
             SceneManager.removeScene(new Game_test());
         }, this);
     };
