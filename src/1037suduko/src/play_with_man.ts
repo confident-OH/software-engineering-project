@@ -1,3 +1,6 @@
+/*
+    Module:玩家匹配模块
+*/
 class play_with_man extends eui.Component implements eui.UIComponent{
     public random_mb:eui.Button;
     public open_house:eui.Button;
@@ -10,10 +13,13 @@ class play_with_man extends eui.Component implements eui.UIComponent{
     protected partAdded(partName: string, instance: any):void{
         super.partAdded(partName, instance);
     } 
+
+    /*
+        Method:返回主界面
+    */
     protected childrenCreated(): void{
         super.childrenCreated();
 
-        //返回主界面
         this.quit_to_main.addEventListener(egret.TouchEvent.TOUCH_TAP, ()=>{
             SceneManager.removeScene(new Startscence());
         }, this)

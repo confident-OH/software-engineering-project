@@ -124,15 +124,21 @@ var AssetAdapter = (function () {
     return AssetAdapter;
 }());
 __reflect(AssetAdapter.prototype, "AssetAdapter", ["eui.IAssetAdapter"]);
+/*
+    Module:新手教程模块
+*/
 var education = (function (_super) {
     __extends(education, _super);
+    // 加载相关的UI界面资源
     function education() {
         var _this = _super.call(this) || this;
         _this.edubutton = new eui.Button;
+        // UI界面大小相关设置
         _this.blocks_x = 55;
         _this.blocks_y = 55;
         _this.root_x = 20;
         _this.root_y = 40;
+        // 硬编码的9x9数独题面棋盘，a代表需要用户填的空格
         _this.sudoku = "7,3,2,6,a,a,a,a,9,a,a,a,9,a,a,2,6,3,a,a,a,1,a,a,a,5,a,9,a,a,2,3,a,7,1,a,5,7,a,4,a,a,6,a,8,4,2,1,8,a,6,a,a,5,a,6,5,3,8,a,9,7,1,3,9,7,a,1,2,4,8,a,8,1,a,a,6,9,5,a,2";
         _this.sus = _this.sudoku.split(','); // 数独题面数组
         _this.ss = new eui.ArrayCollection(); //记录各块的数据
@@ -142,23 +148,34 @@ var education = (function (_super) {
     education.prototype.partAdded = function (partName, instance) {
         _super.prototype.partAdded.call(this, partName, instance);
     };
+    /*
+        Method:添加数独边框
+    */
     education.prototype.Hline = function () {
         var shp = new egret.Shape;
         shp.graphics.lineStyle(8, 0xa78e44);
         shp.graphics.moveTo(this.root_x, this.root_y + 3 * this.blocks_y);
-        shp.graphics.lineTo(this.root_x + 9 * this.blocks_x, this.root_y + 3 * this.blocks_y); //横线1
+        // 横线1
+        shp.graphics.lineTo(this.root_x + 9 * this.blocks_x, this.root_y + 3 * this.blocks_y);
         this.sudokoTable.addChild(shp);
         shp.graphics.moveTo(this.root_x, this.root_y + 6 * this.blocks_y);
-        shp.graphics.lineTo(this.root_x + 9 * this.blocks_x, this.root_y + 6 * this.blocks_y); //横线2
+        // 横线2
+        shp.graphics.lineTo(this.root_x + 9 * this.blocks_x, this.root_y + 6 * this.blocks_y);
         this.sudokoTable.addChild(shp);
         shp.graphics.moveTo(this.root_x + 3 * this.blocks_x, this.root_y);
-        shp.graphics.lineTo(this.root_x + 3 * this.blocks_x, this.root_y + 9 * this.blocks_y); //竖线1
+        // 竖线1
+        shp.graphics.lineTo(this.root_x + 3 * this.blocks_x, this.root_y + 9 * this.blocks_y);
         this.sudokoTable.addChild(shp);
         shp.graphics.moveTo(this.root_x + 6 * this.blocks_x, this.root_y);
-        shp.graphics.lineTo(this.root_x + 6 * this.blocks_x, this.root_y + 9 * this.blocks_y); //竖线2
+        // 竖线2
+        shp.graphics.lineTo(this.root_x + 6 * this.blocks_x, this.root_y + 9 * this.blocks_y);
         this.sudokoTable.addChild(shp);
     };
+    /*
+        Method:判断提交是否正确
+    */
     education.prototype.isRight = function () {
+        // 判断每一行是否满足对应的游戏规则
         for (var i = 0; i < 9; i++) {
             var judges = new Int32Array(10);
             for (var j = 1; j <= 9; j++) {
@@ -177,6 +194,7 @@ var education = (function (_super) {
                 }
             }
         }
+        // 判断每一列是否满足对应的游戏规则
         for (var j = 0; j < 9; j++) {
             var judges = new Int32Array(10);
             for (var i = 1; i <= 9; i++) {
@@ -195,6 +213,7 @@ var education = (function (_super) {
                 }
             }
         }
+        // 判断每个小的九宫格是否满足对应的游戏规则
         for (var i = 0; i < 9; i++) {
             var judges = new Int32Array(10);
             for (var j = 1; j <= 9; j++) {
@@ -215,8 +234,12 @@ var education = (function (_super) {
         }
         return true;
     };
+    /*
+        Method:显示比对结果
+    */
     education.prototype.show_panal = function (e) {
         var panel = new eui.Panel();
+        // 用户提交的题解完全正确
         if (e == "Y") {
             panel.title = "恭喜您完成新手教程";
             panel.horizontalCenter = 0;
@@ -231,6 +254,9 @@ var education = (function (_super) {
         }
         panel.addChild(panel.closeButton);
     };
+    /*
+        Method:用户进入新手教程后的初始欢迎界面
+    */
     education.prototype.show_panal2 = function (e) {
         var panel = new eui.Panel();
         panel.title = "Title";
@@ -240,6 +266,9 @@ var education = (function (_super) {
         panel.title = "欢迎来到新手教程";
         panel.addChild(panel.closeButton);
     };
+    /*
+        Method:进入新手教程的button
+    */
     education.prototype.childrenCreated = function () {
         _super.prototype.childrenCreated.call(this);
         //返回人机界面
@@ -252,6 +281,9 @@ var education = (function (_super) {
         this.addChild(this.edubutton);
         this.edubutton.addEventListener(egret.TouchEvent.TOUCH_TAP, this.start_edu, this);
     };
+    /*
+        Method:开始进行新手教程
+    */
     education.prototype.start_edu = function () {
         var _this = this;
         this.edubutton.visible = false;
@@ -290,14 +322,20 @@ var education = (function (_super) {
     return education;
 }(eui.Component));
 __reflect(education.prototype, "education", ["eui.UIComponent", "egret.DisplayObject"]);
+/*
+    Module:游戏模块
+*/
 var Game_test = (function (_super) {
     __extends(Game_test, _super);
+    // 加载相关的UI界面资源
     function Game_test() {
         var _this = _super.call(this) || this;
+        // UI界面大小相关设置
         _this.blocks_x = 55;
         _this.blocks_y = 55;
         _this.root_x = 20;
         _this.root_y = 40;
+        // 硬编码的9x9数独题面棋盘，a代表需要用户填的空格
         _this.sudoku = "7,3,2,6,a,a,a,a,9,a,a,a,9,a,a,2,6,3,a,a,a,1,a,a,a,5,a,9,a,a,2,3,a,7,1,a,5,7,a,4,a,a,6,a,8,4,2,1,8,a,6,a,a,5,a,6,5,3,8,a,9,7,1,3,9,7,a,1,2,4,8,a,8,1,a,a,6,9,5,a,2";
         _this.sus = _this.sudoku.split(','); // 数独题面数组
         _this.ss = new eui.ArrayCollection(); //记录各块的数据
@@ -307,11 +345,9 @@ var Game_test = (function (_super) {
     Game_test.prototype.partAdded = function (partName, instance) {
         _super.prototype.partAdded.call(this, partName, instance);
     };
-    //处理函数
     /*
-    private onChang(a,b){
-        egret.log(a,b);
-    }*/
+        Method:处理函数
+    */
     Game_test.prototype.High_l = function (tx) {
         var shp = new egret.Shape;
         shp.graphics.beginFill(0xffa631);
@@ -320,23 +356,34 @@ var Game_test = (function (_super) {
         this.sudokoTable.addChildAt(shp, 0);
         this.sudokoTable.addChild(tx);
     };
+    /*
+        Method:添加数独边框
+    */
     Game_test.prototype.Hline = function () {
         var shp = new egret.Shape;
         shp.graphics.lineStyle(8, 0xa78e44);
         shp.graphics.moveTo(this.root_x, this.root_y + 3 * this.blocks_y);
-        shp.graphics.lineTo(this.root_x + 9 * this.blocks_x, this.root_y + 3 * this.blocks_y); //横线1
+        // 添加横线1
+        shp.graphics.lineTo(this.root_x + 9 * this.blocks_x, this.root_y + 3 * this.blocks_y);
         this.sudokoTable.addChild(shp);
         shp.graphics.moveTo(this.root_x, this.root_y + 6 * this.blocks_y);
-        shp.graphics.lineTo(this.root_x + 9 * this.blocks_x, this.root_y + 6 * this.blocks_y); //横线2
+        // 添加横线2
+        shp.graphics.lineTo(this.root_x + 9 * this.blocks_x, this.root_y + 6 * this.blocks_y);
         this.sudokoTable.addChild(shp);
         shp.graphics.moveTo(this.root_x + 3 * this.blocks_x, this.root_y);
-        shp.graphics.lineTo(this.root_x + 3 * this.blocks_x, this.root_y + 9 * this.blocks_y); //竖线1
+        // 添加竖线1
+        shp.graphics.lineTo(this.root_x + 3 * this.blocks_x, this.root_y + 9 * this.blocks_y);
         this.sudokoTable.addChild(shp);
         shp.graphics.moveTo(this.root_x + 6 * this.blocks_x, this.root_y);
-        shp.graphics.lineTo(this.root_x + 6 * this.blocks_x, this.root_y + 9 * this.blocks_y); //竖线2
+        // 添加竖线2
+        shp.graphics.lineTo(this.root_x + 6 * this.blocks_x, this.root_y + 9 * this.blocks_y);
         this.sudokoTable.addChild(shp);
     };
+    /*
+        Method:判断提交是否正确
+    */
     Game_test.prototype.isRight = function () {
+        // 判断每一行是否满足对应的游戏规则
         for (var i = 0; i < 9; i++) {
             var judges = new Int32Array(10);
             for (var j = 1; j <= 9; j++) {
@@ -355,6 +402,7 @@ var Game_test = (function (_super) {
                 }
             }
         }
+        // 判断每一列是否满足对应的游戏规则
         for (var j = 0; j < 9; j++) {
             var judges = new Int32Array(10);
             for (var i = 1; i <= 9; i++) {
@@ -373,6 +421,7 @@ var Game_test = (function (_super) {
                 }
             }
         }
+        // 判断每个小的九宫格是否满足对应的游戏规则
         for (var i = 0; i < 9; i++) {
             var judges = new Int32Array(10);
             for (var j = 1; j <= 9; j++) {
@@ -393,8 +442,12 @@ var Game_test = (function (_super) {
         }
         return true;
     };
+    /*
+        Method:显示比对结果
+    */
     Game_test.prototype.show_panal = function (e) {
         var panel = new eui.Panel();
+        // 用户提交的题解完全正确
         if (e == "Y") {
             panel.title = "恭喜您完成本届数独挑战";
             panel.horizontalCenter = 0;
