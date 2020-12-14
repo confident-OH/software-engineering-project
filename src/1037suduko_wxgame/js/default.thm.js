@@ -9,7 +9,11 @@ var egret = window.egret;window.skins=window.skins||{};
                 };
                 window.generateEUI = window.generateEUI||{};
                 generateEUI.paths = generateEUI.paths||{};
+<<<<<<< HEAD
                 generateEUI.styles = undefined;
+=======
+                generateEUI.styles = {"center_1":{"size":"20","border":"true","horizonCenter":"true"}};
+>>>>>>> 4366ec80cedc55813e50938a6997fda516cb367f
                 generateEUI.skins = {"eui.Button":"resource/eui_skins/ButtonSkin.exml","eui.CheckBox":"resource/eui_skins/CheckBoxSkin.exml","eui.HScrollBar":"resource/eui_skins/HScrollBarSkin.exml","eui.HSlider":"resource/eui_skins/HSliderSkin.exml","eui.Panel":"resource/eui_skins/PanelSkin.exml","eui.TextInput":"resource/eui_skins/TextInputSkin.exml","eui.ProgressBar":"resource/eui_skins/ProgressBarSkin.exml","eui.RadioButton":"resource/eui_skins/RadioButtonSkin.exml","eui.Scroller":"resource/eui_skins/ScrollerSkin.exml","eui.ToggleSwitch":"resource/eui_skins/ToggleSwitchSkin.exml","eui.VScrollBar":"resource/eui_skins/VScrollBarSkin.exml","eui.VSlider":"resource/eui_skins/VSliderSkin.exml","eui.ItemRenderer":"resource/eui_skins/ItemRendererSkin.exml","Startscense":"resource/eui_skins/myskin/StartscenseSkin.exml","Game_test":"resource/eui_skins/myskin/game_test1Skin.exml","play_with_computer":"resource/eui_skins/myskin/play_with_computerSkin.exml","play_with_man":"resource/eui_skins/myskin/play_with_manSkin.exml","challenge":"resource/eui_skins/myskin/challengeSkin.exml","education":"resource/eui_skins/myskin/challengeSkin.exml","competations":"resource/eui_skins/myskin/competationsSkin.exml"};generateEUI.paths['resource/eui_skins/backgroundSkin.exml'] = window.backgroundSkin = (function (_super) {
 	__extends(backgroundSkin, _super);
 	function backgroundSkin() {
@@ -329,11 +333,19 @@ var egret = window.egret;window.skins=window.skins||{};
 	__extends(educationSkin, _super);
 	function educationSkin() {
 		_super.call(this);
+<<<<<<< HEAD
 		this.skinParts = ["quit_to_PC","inputtest"];
 		
 		this.height = 1136;
 		this.width = 640;
 		this.elementsContent = [this._Image1_i(),this._Label1_i(),this.quit_to_PC_i(),this.inputtest_i()];
+=======
+		this.skinParts = ["quit_to_PC"];
+		
+		this.height = 1136;
+		this.width = 640;
+		this.elementsContent = [this._Image1_i(),this._Label1_i(),this.quit_to_PC_i()];
+>>>>>>> 4366ec80cedc55813e50938a6997fda516cb367f
 	}
 	var _proto = educationSkin.prototype;
 
@@ -375,6 +387,7 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.y = 881;
 		return t;
 	};
+<<<<<<< HEAD
 	_proto.inputtest_i = function () {
 		var t = new eui.TextInput();
 		this.inputtest = t;
@@ -386,16 +399,26 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.y = 352;
 		return t;
 	};
+=======
+>>>>>>> 4366ec80cedc55813e50938a6997fda516cb367f
 	return educationSkin;
 })(eui.Skin);generateEUI.paths['resource/eui_skins/myskin/game_test1Skin.exml'] = window.game_test1Skin = (function (_super) {
 	__extends(game_test1Skin, _super);
 	function game_test1Skin() {
 		_super.call(this);
+<<<<<<< HEAD
 		this.skinParts = ["quit_to_main"];
 		
 		this.height = 1136;
 		this.width = 640;
 		this.elementsContent = [this._Image1_i(),this.quit_to_main_i()];
+=======
+		this.skinParts = ["quit_to_main","sudokoTable"];
+		
+		this.height = 1136;
+		this.width = 640;
+		this.elementsContent = [this._Image1_i(),this.quit_to_main_i(),this.sudokoTable_i(),this._Label1_i()];
+>>>>>>> 4366ec80cedc55813e50938a6997fda516cb367f
 	}
 	var _proto = game_test1Skin.prototype;
 
@@ -405,6 +428,10 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.anchorOffsetY = 0;
 		t.height = 1322;
 		t.source = "education_jpg";
+<<<<<<< HEAD
+=======
+		t.visible = true;
+>>>>>>> 4366ec80cedc55813e50938a6997fda516cb367f
 		t.width = 653.635;
 		t.x = -6.635;
 		t.y = -80;
@@ -414,6 +441,7 @@ var egret = window.egret;window.skins=window.skins||{};
 		var t = new eui.Button();
 		this.quit_to_main = t;
 		t.alpha = 0.8;
+<<<<<<< HEAD
 		t.anchorOffsetX = 0;
 		t.anchorOffsetY = 0;
 		t.height = 57;
@@ -423,6 +451,848 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.y = 881;
 		return t;
 	};
+=======
+		t.anchorOffsetX = 70;
+		t.anchorOffsetY = 0;
+		t.height = 60;
+		t.label = "返回";
+		t.width = 140;
+		t.x = 320;
+		t.y = 881;
+		return t;
+	};
+	_proto.sudokoTable_i = function () {
+		var t = new eui.Group();
+		this.sudokoTable = t;
+		t.x = 50;
+		t.y = 120;
+		t.elementsContent = [this._TextInput1_i(),this._TextInput2_i(),this._TextInput3_i(),this._TextInput4_i(),this._TextInput5_i(),this._TextInput6_i(),this._TextInput7_i(),this._TextInput8_i(),this._TextInput9_i(),this._TextInput10_i(),this._TextInput11_i(),this._TextInput12_i(),this._TextInput13_i(),this._TextInput14_i(),this._TextInput15_i(),this._TextInput16_i(),this._TextInput17_i(),this._TextInput18_i(),this._TextInput19_i(),this._TextInput20_i(),this._TextInput21_i(),this._TextInput22_i(),this._TextInput23_i(),this._TextInput24_i(),this._TextInput25_i(),this._TextInput26_i(),this._TextInput27_i(),this._TextInput28_i(),this._TextInput29_i(),this._TextInput30_i(),this._TextInput31_i(),this._TextInput32_i(),this._TextInput33_i(),this._TextInput34_i(),this._TextInput35_i(),this._TextInput36_i(),this._TextInput37_i(),this._TextInput38_i(),this._TextInput39_i(),this._TextInput40_i(),this._TextInput41_i(),this._TextInput42_i(),this._TextInput43_i(),this._TextInput44_i(),this._TextInput45_i(),this._TextInput46_i(),this._TextInput47_i(),this._TextInput48_i(),this._TextInput49_i(),this._TextInput50_i(),this._TextInput51_i(),this._TextInput52_i(),this._TextInput53_i(),this._TextInput54_i(),this._TextInput55_i(),this._TextInput56_i(),this._TextInput57_i(),this._TextInput58_i(),this._TextInput59_i(),this._TextInput60_i(),this._TextInput61_i(),this._TextInput62_i(),this._TextInput63_i(),this._TextInput64_i(),this._TextInput65_i(),this._TextInput66_i(),this._TextInput67_i(),this._TextInput68_i(),this._TextInput69_i(),this._TextInput70_i(),this._TextInput71_i(),this._TextInput72_i(),this._TextInput73_i(),this._TextInput74_i(),this._TextInput75_i(),this._TextInput76_i(),this._TextInput77_i(),this._TextInput78_i(),this._TextInput79_i(),this._TextInput80_i(),this._TextInput81_i()];
+		return t;
+	};
+	_proto._TextInput1_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 0;
+		t.y = 0;
+		return t;
+	};
+	_proto._TextInput2_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 60;
+		t.y = 0;
+		return t;
+	};
+	_proto._TextInput3_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 120;
+		t.y = 0;
+		return t;
+	};
+	_proto._TextInput4_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 180;
+		t.y = 0;
+		return t;
+	};
+	_proto._TextInput5_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 240;
+		t.y = 0;
+		return t;
+	};
+	_proto._TextInput6_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 300;
+		t.y = 0;
+		return t;
+	};
+	_proto._TextInput7_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 360;
+		t.y = 0;
+		return t;
+	};
+	_proto._TextInput8_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 420;
+		t.y = 0;
+		return t;
+	};
+	_proto._TextInput9_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 480;
+		t.y = 0;
+		return t;
+	};
+	_proto._TextInput10_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 0;
+		t.y = 60;
+		return t;
+	};
+	_proto._TextInput11_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 60;
+		t.y = 60;
+		return t;
+	};
+	_proto._TextInput12_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 120;
+		t.y = 60;
+		return t;
+	};
+	_proto._TextInput13_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 180;
+		t.y = 60;
+		return t;
+	};
+	_proto._TextInput14_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 240;
+		t.y = 60;
+		return t;
+	};
+	_proto._TextInput15_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 300;
+		t.y = 60;
+		return t;
+	};
+	_proto._TextInput16_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 360;
+		t.y = 60;
+		return t;
+	};
+	_proto._TextInput17_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 420;
+		t.y = 60;
+		return t;
+	};
+	_proto._TextInput18_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 480;
+		t.y = 60;
+		return t;
+	};
+	_proto._TextInput19_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 0;
+		t.y = 120;
+		return t;
+	};
+	_proto._TextInput20_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 60;
+		t.y = 120;
+		return t;
+	};
+	_proto._TextInput21_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 120;
+		t.y = 120;
+		return t;
+	};
+	_proto._TextInput22_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 180;
+		t.y = 120;
+		return t;
+	};
+	_proto._TextInput23_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 240;
+		t.y = 120;
+		return t;
+	};
+	_proto._TextInput24_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 300;
+		t.y = 120;
+		return t;
+	};
+	_proto._TextInput25_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 360;
+		t.y = 120;
+		return t;
+	};
+	_proto._TextInput26_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 420;
+		t.y = 120;
+		return t;
+	};
+	_proto._TextInput27_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 480;
+		t.y = 120;
+		return t;
+	};
+	_proto._TextInput28_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 0;
+		t.y = 180;
+		return t;
+	};
+	_proto._TextInput29_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 60;
+		t.y = 180;
+		return t;
+	};
+	_proto._TextInput30_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 120;
+		t.y = 180;
+		return t;
+	};
+	_proto._TextInput31_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 180;
+		t.y = 180;
+		return t;
+	};
+	_proto._TextInput32_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 240;
+		t.y = 180;
+		return t;
+	};
+	_proto._TextInput33_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 300;
+		t.y = 180;
+		return t;
+	};
+	_proto._TextInput34_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 360;
+		t.y = 180;
+		return t;
+	};
+	_proto._TextInput35_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 420;
+		t.y = 180;
+		return t;
+	};
+	_proto._TextInput36_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 480;
+		t.y = 180;
+		return t;
+	};
+	_proto._TextInput37_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 0;
+		t.y = 240;
+		return t;
+	};
+	_proto._TextInput38_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 60;
+		t.y = 240;
+		return t;
+	};
+	_proto._TextInput39_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 120;
+		t.y = 240;
+		return t;
+	};
+	_proto._TextInput40_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 180;
+		t.y = 240;
+		return t;
+	};
+	_proto._TextInput41_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 240;
+		t.y = 240;
+		return t;
+	};
+	_proto._TextInput42_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 300;
+		t.y = 240;
+		return t;
+	};
+	_proto._TextInput43_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 360;
+		t.y = 240;
+		return t;
+	};
+	_proto._TextInput44_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 420;
+		t.y = 240;
+		return t;
+	};
+	_proto._TextInput45_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 480;
+		t.y = 240;
+		return t;
+	};
+	_proto._TextInput46_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 0;
+		t.y = 300;
+		return t;
+	};
+	_proto._TextInput47_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 60;
+		t.y = 300;
+		return t;
+	};
+	_proto._TextInput48_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 120;
+		t.y = 300;
+		return t;
+	};
+	_proto._TextInput49_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 180;
+		t.y = 300;
+		return t;
+	};
+	_proto._TextInput50_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 240;
+		t.y = 300;
+		return t;
+	};
+	_proto._TextInput51_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 300;
+		t.y = 300;
+		return t;
+	};
+	_proto._TextInput52_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 360;
+		t.y = 300;
+		return t;
+	};
+	_proto._TextInput53_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 420;
+		t.y = 300;
+		return t;
+	};
+	_proto._TextInput54_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 480;
+		t.y = 300;
+		return t;
+	};
+	_proto._TextInput55_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 0;
+		t.y = 360;
+		return t;
+	};
+	_proto._TextInput56_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 60;
+		t.y = 360;
+		return t;
+	};
+	_proto._TextInput57_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 120;
+		t.y = 360;
+		return t;
+	};
+	_proto._TextInput58_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 180;
+		t.y = 360;
+		return t;
+	};
+	_proto._TextInput59_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 240;
+		t.y = 360;
+		return t;
+	};
+	_proto._TextInput60_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 300;
+		t.y = 360;
+		return t;
+	};
+	_proto._TextInput61_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 360;
+		t.y = 360;
+		return t;
+	};
+	_proto._TextInput62_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 420;
+		t.y = 360;
+		return t;
+	};
+	_proto._TextInput63_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 480;
+		t.y = 360;
+		return t;
+	};
+	_proto._TextInput64_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 0;
+		t.y = 420;
+		return t;
+	};
+	_proto._TextInput65_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 60;
+		t.y = 420;
+		return t;
+	};
+	_proto._TextInput66_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 120;
+		t.y = 420;
+		return t;
+	};
+	_proto._TextInput67_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 180;
+		t.y = 420;
+		return t;
+	};
+	_proto._TextInput68_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 240;
+		t.y = 420;
+		return t;
+	};
+	_proto._TextInput69_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 300;
+		t.y = 420;
+		return t;
+	};
+	_proto._TextInput70_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 360;
+		t.y = 420;
+		return t;
+	};
+	_proto._TextInput71_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 420;
+		t.y = 420;
+		return t;
+	};
+	_proto._TextInput72_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 480;
+		t.y = 420;
+		return t;
+	};
+	_proto._TextInput73_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 0;
+		t.y = 480;
+		return t;
+	};
+	_proto._TextInput74_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 60;
+		t.y = 480;
+		return t;
+	};
+	_proto._TextInput75_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 120;
+		t.y = 480;
+		return t;
+	};
+	_proto._TextInput76_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 180;
+		t.y = 480;
+		return t;
+	};
+	_proto._TextInput77_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 240;
+		t.y = 480;
+		return t;
+	};
+	_proto._TextInput78_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 300;
+		t.y = 480;
+		return t;
+	};
+	_proto._TextInput79_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 360;
+		t.y = 480;
+		return t;
+	};
+	_proto._TextInput80_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 420;
+		t.y = 480;
+		return t;
+	};
+	_proto._TextInput81_i = function () {
+		var t = new eui.TextInput();
+		t.alpha = 0.5;
+		t.height = 60;
+		t.maxChars = 1;
+		t.width = 60;
+		t.x = 480;
+		t.y = 480;
+		return t;
+	};
+	_proto._Label1_i = function () {
+		var t = new eui.Label();
+		t.anchorOffsetX = 160;
+		t.bold = true;
+		t.height = 40;
+		t.text = "欢迎来到比赛模式";
+		t.textAlign = "center";
+		t.verticalAlign = "middle";
+		t.width = 320;
+		t.x = 320;
+		t.y = 30;
+		return t;
+	};
+>>>>>>> 4366ec80cedc55813e50938a6997fda516cb367f
 	return game_test1Skin;
 })(eui.Skin);generateEUI.paths['resource/eui_skins/myskin/play_with_computerSkin.exml'] = window.play_with_computerSkin = (function (_super) {
 	__extends(play_with_computerSkin, _super);
@@ -509,10 +1379,29 @@ var egret = window.egret;window.skins=window.skins||{};
 		
 		this.height = 1136;
 		this.width = 640;
+<<<<<<< HEAD
 		this.elementsContent = [this.random_mb_i(),this._Image1_i(),this.open_house_i(),this.rank_i(),this.quit_to_main_i()];
 	}
 	var _proto = play_with_manSkin.prototype;
 
+=======
+		this.elementsContent = [this._Image1_i(),this.random_mb_i(),this.open_house_i(),this.rank_i(),this.quit_to_main_i()];
+	}
+	var _proto = play_with_manSkin.prototype;
+
+	_proto._Image1_i = function () {
+		var t = new eui.Image();
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.fillMode = "scale";
+		t.height = 1266.891;
+		t.source = "PC_bg_jpg";
+		t.width = 737;
+		t.x = -47;
+		t.y = -4;
+		return t;
+	};
+>>>>>>> 4366ec80cedc55813e50938a6997fda516cb367f
 	_proto.random_mb_i = function () {
 		var t = new eui.Button();
 		this.random_mb = t;
@@ -526,6 +1415,7 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.y = 198;
 		return t;
 	};
+<<<<<<< HEAD
 	_proto._Image1_i = function () {
 		var t = new eui.Image();
 		t.anchorOffsetX = 0;
@@ -538,6 +1428,8 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.y = -4;
 		return t;
 	};
+=======
+>>>>>>> 4366ec80cedc55813e50938a6997fda516cb367f
 	_proto.open_house_i = function () {
 		var t = new eui.Button();
 		this.open_house = t;
@@ -695,6 +1587,82 @@ var egret = window.egret;window.skins=window.skins||{};
 		return t;
 	};
 	return StartscenseSkin;
+})(eui.Skin);generateEUI.paths['resource/eui_skins/myskin/SudokoBlank.exml'] = window.skins.TextInputSkin = (function (_super) {
+	__extends(TextInputSkin, _super);
+	function TextInputSkin() {
+		_super.call(this);
+		this.skinParts = ["textDisplay","promptDisplay"];
+		
+		this.minHeight = 40;
+		this.minWidth = 300;
+		this.elementsContent = [this._Image1_i(),this._Rect1_i(),this.textDisplay_i()];
+		this.promptDisplay_i();
+		
+		this.states = [
+			new eui.State ("normal",
+				[
+				])
+			,
+			new eui.State ("disabled",
+				[
+					new eui.SetProperty("textDisplay","textColor",0xff0000)
+				])
+			,
+			new eui.State ("normalWithPrompt",
+				[
+					new eui.AddItems("promptDisplay","",1,"")
+				])
+			,
+			new eui.State ("disabledWithPrompt",
+				[
+					new eui.AddItems("promptDisplay","",1,"")
+				])
+		];
+	}
+	var _proto = TextInputSkin.prototype;
+
+	_proto._Image1_i = function () {
+		var t = new eui.Image();
+		t.percentHeight = 100;
+		t.scale9Grid = new egret.Rectangle(1,3,8,8);
+		t.source = "button_up_png";
+		t.percentWidth = 100;
+		return t;
+	};
+	_proto._Rect1_i = function () {
+		var t = new eui.Rect();
+		t.fillColor = 0xffffff;
+		t.percentHeight = 100;
+		t.percentWidth = 100;
+		return t;
+	};
+	_proto.textDisplay_i = function () {
+		var t = new eui.EditableText();
+		this.textDisplay = t;
+		t.height = 24;
+		t.horizontalCenter = "0";
+		t.left = "10";
+		t.right = "10";
+		t.size = 20;
+		t.textColor = 0x000000;
+		t.verticalCenter = "0";
+		t.percentWidth = 100;
+		return t;
+	};
+	_proto.promptDisplay_i = function () {
+		var t = new eui.Label();
+		this.promptDisplay = t;
+		t.height = 24;
+		t.left = 10;
+		t.right = 10;
+		t.size = 20;
+		t.textColor = 0xa9a9a9;
+		t.touchEnabled = false;
+		t.verticalCenter = 0;
+		t.percentWidth = 100;
+		return t;
+	};
+	return TextInputSkin;
 })(eui.Skin);generateEUI.paths['resource/eui_skins/PanelSkin.exml'] = window.skins.PanelSkin = (function (_super) {
 	__extends(PanelSkin, _super);
 	function PanelSkin() {
@@ -951,11 +1919,12 @@ var egret = window.egret;window.skins=window.skins||{};
 		var t = new eui.EditableText();
 		this.textDisplay = t;
 		t.height = 24;
+		t.horizontalCenter = "1";
 		t.left = "10";
 		t.right = "10";
 		t.size = 20;
 		t.textColor = 0x000000;
-		t.verticalCenter = "0";
+		t.verticalCenter = "1";
 		t.percentWidth = 100;
 		return t;
 	};

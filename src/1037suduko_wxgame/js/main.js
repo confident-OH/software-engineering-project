@@ -140,6 +140,7 @@ var education = (function (_super) {
         this.quit_to_PC.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
             SceneManager.removeScene(new play_with_computers);
         }, this);
+<<<<<<< HEAD
         var button = new eui.Button();
         button.label = "开始!";
         button.horizontalCenter = 0;
@@ -160,6 +161,8 @@ var education = (function (_super) {
         this.addChild(panel);
         panel.title = "欢迎来到新手教程";
         panel.addChild(panel.closeButton);
+=======
+>>>>>>> 4366ec80cedc55813e50938a6997fda516cb367f
     };
     return education;
 }(eui.Component));
@@ -174,11 +177,19 @@ var Game_test = (function (_super) {
     Game_test.prototype.partAdded = function (partName, instance) {
         _super.prototype.partAdded.call(this, partName, instance);
     };
+    //处理函数
+    Game_test.prototype.onChang = function (a, b) {
+        egret.log(a, b);
+    };
     Game_test.prototype.childrenCreated = function () {
         _super.prototype.childrenCreated.call(this);
         this.quit_to_main.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
             SceneManager.removeScene(new Startscence());
         }, this);
+        //添加监听，监听用户的输入
+        this.sudokoTable.getElementAt(0).addEventListener(egret.Event.CHANGE, this.onChang.bind(this, 1, 1, false), this);
+        this.sudokoTable.getElementAt(1).addEventListener(egret.Event.CHANGE, this.onChang.bind(this, 1, 2, false), this);
+        this.sudokoTable.getElementAt(9).addEventListener(egret.Event.CHANGE, this.onChang.bind(this, 2, 1, false), this);
     };
     return Game_test;
 }(eui.Component));
