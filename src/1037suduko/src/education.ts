@@ -122,7 +122,7 @@ class education extends eui.Component implements eui.UIComponent{
     }
 
     /*
-        Method:根据用户的提交结果给予一定的反馈
+        Method:显示比对结果
     */
     private show_panal(e: string):void{
         let panel = new eui.Panel();
@@ -179,7 +179,7 @@ class education extends eui.Component implements eui.UIComponent{
     private start_edu():void{
         this.edubutton.visible = false;
         this.submit.visible = true;
-        
+
         //加载数独题
         this.sudokoTable.width = 360;
         this.sudokoTable.height = 360;
