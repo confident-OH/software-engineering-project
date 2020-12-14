@@ -183,11 +183,10 @@ var Game_test = (function (_super) {
     };
     Game_test.prototype.layTxBg = function (tx) {
         var shp = new egret.Shape;
-        shp.graphics.beginFill(0x000000);
+        shp.graphics.beginFill(0x993366);
         shp.graphics.drawRect(tx.x, tx.y, tx.width, tx.height);
         shp.graphics.endFill();
         this.sudokoTable.addChildAt(shp, 0);
-        tx.text = "1111";
         tx.textColor = 0xffffff;
         this.sudokoTable.addChild(tx);
     };
@@ -197,12 +196,16 @@ var Game_test = (function (_super) {
             SceneManager.removeScene(new Startscence());
         }, this);
         //添加监听，监听用户的输入
+        this.sudokoTable.width = 360;
+        this.sudokoTable.height = 360;
         var ss = new eui.ArrayCollection();
         for (var i = 0; i < 9; i++) {
             var s1 = new egret.TextField();
             s1.type = egret.TextFieldType.INPUT;
-            s1.width = 25;
-            s1.height = 25;
+            s1.textAlign = egret.HorizontalAlign.CENTER;
+            s1.textAlign = egret.VerticalAlign.MIDDLE;
+            s1.width = 40;
+            s1.height = 40;
             s1.text = "1";
             ss.addItemAt(s1, i);
             this.layTxBg(ss.getItemAt(i));
