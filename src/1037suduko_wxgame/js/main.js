@@ -255,10 +255,10 @@ var Game_test = (function (_super) {
                 judges[j] = 0;
             }
             for (var j = 0; j < 9; j++) {
-                var item = this.ss.getItemAt(((i % 3) * 3 + Math.ceil(j / 3) * 3) * 9 + Math.ceil(i / 3) * 3 + j % 3);
+                var item = this.ss.getItemAt(((i % 3) * 3 + Math.floor(j / 3)) * 9 + Math.floor(i / 3) * 3 + j % 3);
                 var cnum = parseInt(item.text);
                 if (cnum > 9 || cnum < 1 || judges[cnum] != 0) {
-                    egret.log("Error3: ");
+                    egret.log("Error3: ", cnum, (i % 3) * 3, Math.ceil(j / 3), Math.ceil(i / 3) * 3, j % 3);
                     egret.log(i, j);
                     return false;
                 }
