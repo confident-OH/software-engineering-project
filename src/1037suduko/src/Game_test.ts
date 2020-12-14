@@ -9,9 +9,23 @@ class Game_test extends eui.Component implements eui.UIComponent{
     protected partAdded(partName: string, instance: any): void{
         super.partAdded(partName, instance);
     }
+    protected readsoduko(){
+        this.sudoku
+    }
     //处理函数
     private onChang(a,b){
         egret.log(a,b);
+    }
+    private layTxBg(tx:egret.TextField):void {
+        var shp:egret.Shape = new egret.Shape;
+        shp.graphics.beginFill(0x000000);
+        shp.graphics.drawRect(tx.x, tx.y, tx.width, tx.height);
+        shp.graphics.endFill();
+        this.sudokoTable.addChildAt(shp, 0);
+        tx.text = "1111";
+        tx.textColor = 0xffffff;
+        this.sudokoTable.addChild(tx);
+
     }
     protected childrenCreated(): void{
         super.childrenCreated();
@@ -19,9 +33,10 @@ class Game_test extends eui.Component implements eui.UIComponent{
             SceneManager.removeScene(new Startscence());
         }, this)
         //添加监听，监听用户的输入
-        this.sudokoTable.getElementAt(0).addEventListener(egret.Event.CHANGE,this.onChang.bind(this,1,1,false),this);
-        this.sudokoTable.getElementAt(1).addEventListener(egret.Event.CHANGE,this.onChang.bind(this,1,2,false),this);
-        this.sudokoTable.getElementAt(9).addEventListener(egret.Event.CHANGE,this.onChang.bind(this,2,1,false),this);
-        
+        let s1 = new egret.TextField();
+        s1.type = egret.TextFieldType.INPUT;
+        s1.width = 10;
+        s1.height = 10;
+        this.layTxBg(s1);
     }
 }

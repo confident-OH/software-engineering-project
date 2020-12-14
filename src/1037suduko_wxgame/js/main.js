@@ -174,9 +174,22 @@ var Game_test = (function (_super) {
     Game_test.prototype.partAdded = function (partName, instance) {
         _super.prototype.partAdded.call(this, partName, instance);
     };
+    Game_test.prototype.readsoduko = function () {
+        this.sudoku;
+    };
     //处理函数
     Game_test.prototype.onChang = function (a, b) {
         egret.log(a, b);
+    };
+    Game_test.prototype.layTxBg = function (tx) {
+        var shp = new egret.Shape;
+        shp.graphics.beginFill(0x000000);
+        shp.graphics.drawRect(tx.x, tx.y, tx.width, tx.height);
+        shp.graphics.endFill();
+        this.sudokoTable.addChildAt(shp, 0);
+        tx.text = "1111";
+        tx.textColor = 0xffffff;
+        this.sudokoTable.addChild(tx);
     };
     Game_test.prototype.childrenCreated = function () {
         _super.prototype.childrenCreated.call(this);
@@ -184,9 +197,11 @@ var Game_test = (function (_super) {
             SceneManager.removeScene(new Startscence());
         }, this);
         //添加监听，监听用户的输入
-        this.sudokoTable.getElementAt(0).addEventListener(egret.Event.CHANGE, this.onChang.bind(this, 1, 1, false), this);
-        this.sudokoTable.getElementAt(1).addEventListener(egret.Event.CHANGE, this.onChang.bind(this, 1, 2, false), this);
-        this.sudokoTable.getElementAt(9).addEventListener(egret.Event.CHANGE, this.onChang.bind(this, 2, 1, false), this);
+        var s1 = new egret.TextField();
+        s1.type = egret.TextFieldType.INPUT;
+        s1.width = 10;
+        s1.height = 10;
+        this.layTxBg(s1);
     };
     return Game_test;
 }(eui.Component));
