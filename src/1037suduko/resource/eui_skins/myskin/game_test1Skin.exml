@@ -2,8 +2,9 @@
 <e:Skin class="game_test1Skin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui">
     <e:Image source="education_jpg" x="-6.635" y="-80" anchorOffsetX="0" width="653.635" anchorOffsetY="0" height="1322"
              visible="true" />
-    <e:Button label="返回" x="320" y="881" anchorOffsetX="70" width="140" anchorOffsetY="0" height="60" alpha="0.8"
+    <e:Button label="返回" x="320" y="887" anchorOffsetX="70" width="140" anchorOffsetY="0" height="60" alpha="0.8"
               id="quit_to_main" />
+	<e:Button label="提交题解" y="803" anchorOffsetX="108.5" width="217" anchorOffsetY="0" height="63" alpha="0.8" id="submit" horizontalCenter="0"/>
     <e:Group x="50" y="120" id="sudokoTable">
     </e:Group>
     <e:Label text="欢迎来到比赛模式" x="320" y="30" width="320" textAlign="center" bold="true" verticalAlign="middle"

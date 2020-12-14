@@ -21,7 +21,6 @@ class education extends eui.Component implements eui.UIComponent{
         button.verticalCenter = 0;
         this.addChild(button);
         button.addEventListener(egret.TouchEvent.TOUCH_TAP, this.show_panal, this);
-        
         this.inputtest.addEventListener(egret.TextEvent.CHANGE, this.show_shu, this);
     }
     protected show_shu(e:egret.TextEvent){

@@ -391,11 +391,11 @@ var egret = window.egret;window.skins=window.skins||{};
 	__extends(game_test1Skin, _super);
 	function game_test1Skin() {
 		_super.call(this);
-		this.skinParts = ["quit_to_main","sudokoTable"];
+		this.skinParts = ["quit_to_main","submit","sudokoTable"];
 		
 		this.height = 1136;
 		this.width = 640;
-		this.elementsContent = [this._Image1_i(),this.quit_to_main_i(),this.sudokoTable_i(),this._Label1_i()];
+		this.elementsContent = [this._Image1_i(),this.quit_to_main_i(),this.submit_i(),this.sudokoTable_i(),this._Label1_i()];
 	}
 	var _proto = game_test1Skin.prototype;
 
@@ -421,7 +421,20 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.label = "返回";
 		t.width = 140;
 		t.x = 320;
-		t.y = 881;
+		t.y = 887;
+		return t;
+	};
+	_proto.submit_i = function () {
+		var t = new eui.Button();
+		this.submit = t;
+		t.alpha = 0.8;
+		t.anchorOffsetX = 108.5;
+		t.anchorOffsetY = 0;
+		t.height = 63;
+		t.horizontalCenter = 0;
+		t.label = "提交题解";
+		t.width = 217;
+		t.y = 803;
 		return t;
 	};
 	_proto.sudokoTable_i = function () {
