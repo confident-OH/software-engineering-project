@@ -128,6 +128,7 @@ var education = (function (_super) {
     __extends(education, _super);
     function education() {
         var _this = _super.call(this) || this;
+        _this.edubutton = new eui.Button;
         _this.blocks_x = 55;
         _this.blocks_y = 55;
         _this.root_x = 20;

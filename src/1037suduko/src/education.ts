@@ -1,6 +1,6 @@
 class education extends eui.Component implements eui.UIComponent{
     public quit_to_PC:eui.Button;
-    public edubutton:eui.Button;
+    public edubutton:eui.Button = new eui.Button;
     public submit:eui.Button;
     public sudokoTable:eui.Group;
     public a:string;
