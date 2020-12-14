@@ -33,10 +33,15 @@ class Game_test extends eui.Component implements eui.UIComponent{
             SceneManager.removeScene(new Startscence());
         }, this)
         //添加监听，监听用户的输入
-        let s1 = new egret.TextField();
-        s1.type = egret.TextFieldType.INPUT;
-        s1.width = 10;
-        s1.height = 10;
-        this.layTxBg(s1);
+        var ss = new eui.ArrayCollection();
+        for(var i = 0; i<9; i++){
+            let s1 = new egret.TextField();
+            s1.type = egret.TextFieldType.INPUT;
+            s1.width = 25;
+            s1.height = 25;
+            s1.text = "1";
+            ss.addItemAt(s1, i);
+            this.layTxBg(ss.getItemAt(i));
+        }
     }
 }

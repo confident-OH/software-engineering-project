@@ -197,11 +197,16 @@ var Game_test = (function (_super) {
             SceneManager.removeScene(new Startscence());
         }, this);
         //添加监听，监听用户的输入
-        var s1 = new egret.TextField();
-        s1.type = egret.TextFieldType.INPUT;
-        s1.width = 10;
-        s1.height = 10;
-        this.layTxBg(s1);
+        var ss = new eui.ArrayCollection();
+        for (var i = 0; i < 9; i++) {
+            var s1 = new egret.TextField();
+            s1.type = egret.TextFieldType.INPUT;
+            s1.width = 25;
+            s1.height = 25;
+            s1.text = "1";
+            ss.addItemAt(s1, i);
+            this.layTxBg(ss.getItemAt(i));
+        }
     };
     return Game_test;
 }(eui.Component));
