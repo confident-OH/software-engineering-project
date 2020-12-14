@@ -67,10 +67,10 @@ class Game_test extends eui.Component implements eui.UIComponent{
                 }else{
                     let s1 = new egret.TextField();
                     s1.maxChars = 1;
-                    s1.x = 20+j*40;
-                    s1.y = 40+i*40;
-                    s1.width = 40;
-                    s1.height = 40;
+                    s1.x = this.root_x+j*this.blocks_x;
+                    s1.y = this.root_y+i*this.blocks_y;
+                    s1.width = this.blocks_x;
+                    s1.height = this.blocks_y;
                     s1.text = sus[9*i+j];
                     s1.textAlign = egret.HorizontalAlign.CENTER;
                     s1.textAlign = egret.VerticalAlign.MIDDLE;
