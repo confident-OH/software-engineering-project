@@ -158,7 +158,7 @@ class education extends eui.Component implements eui.UIComponent{
     }
 
     /*
-        Method:进入新手教程的button
+        Method:进入新手教程
     */
     protected childrenCreated(): void{
         super.childrenCreated();
