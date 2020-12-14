@@ -138,9 +138,8 @@ var education = (function (_super) {
         _super.prototype.childrenCreated.call(this);
         //返回人机界面
         this.quit_to_PC.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
-            SceneManager.removeScene(new play_with_computers);
+            SceneManager.removeScene(new play_with_computers());
         }, this);
-<<<<<<< HEAD
         var button = new eui.Button();
         button.label = "开始!";
         button.horizontalCenter = 0;
@@ -161,8 +160,6 @@ var education = (function (_super) {
         this.addChild(panel);
         panel.title = "欢迎来到新手教程";
         panel.addChild(panel.closeButton);
-=======
->>>>>>> 4366ec80cedc55813e50938a6997fda516cb367f
     };
     return education;
 }(eui.Component));
