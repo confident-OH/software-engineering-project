@@ -1003,13 +1003,10 @@ var egret = window.egret;window.skins=window.skins||{};
 		
 		this.minHeight = 40;
 		this.minWidth = 300;
-		this.elementsContent = [this._Image1_i(),this._Rect1_i(),this.textDisplay_i()];
-		this.promptDisplay_i();
-		
+		this.elementsContent = [this._Image1_i(),this._Rect1_i(),this.textDisplay_i(),this.promptDisplay_i()];
 		this.states = [
 			new eui.State ("normal",
 				[
-					new eui.AddItems("promptDisplay","",1,"")
 				])
 			,
 			new eui.State ("disabled",
@@ -1019,12 +1016,10 @@ var egret = window.egret;window.skins=window.skins||{};
 			,
 			new eui.State ("normalWithPrompt",
 				[
-					new eui.AddItems("promptDisplay","",1,"")
 				])
 			,
 			new eui.State ("disabledWithPrompt",
 				[
-					new eui.AddItems("promptDisplay","",1,"")
 				])
 		];
 	}
@@ -1068,7 +1063,7 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.height = 24;
 		t.left = 10;
 		t.right = 10;
-		t.size = 20;
+		t.size = 50;
 		t.textAlign = "center";
 		t.textColor = 0xa9a9a9;
 		t.touchEnabled = false;
