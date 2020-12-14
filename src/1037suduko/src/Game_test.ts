@@ -16,13 +16,12 @@ class Game_test extends eui.Component implements eui.UIComponent{
     protected partAdded(partName: string, instance: any): void{
         super.partAdded(partName, instance);
     }
-    protected readsoduko(){
-        this.sudoku
-    }
+    
     //处理函数
+    /*
     private onChang(a,b){
         egret.log(a,b);
-    }
+    }*/
     private High_l(tx:eui.TextInput):void {
         var shp:egret.Shape = new egret.Shape;
         shp.graphics.beginFill(0xffa631);
@@ -138,7 +137,6 @@ class Game_test extends eui.Component implements eui.UIComponent{
             egret.log(this.sudoku);
         }, null);
         */
-        
         for(var i = 0; i<9; i++){
             for(var j = 0; j<9; j++){
                 var s2 = new eui.TextInput();  
@@ -157,11 +155,12 @@ class Game_test extends eui.Component implements eui.UIComponent{
                 this.ss.addItemAt(s2, i*9+j);
             }
         }
+        /*//点击测试
         for(var i = 0; i<9; i++){
             for(var j = 0; j < 9; j++){
                 this.sudokoTable.getElementAt(9*i+j).addEventListener(egret.Event.CHANGING, this.onChang.bind(this,i,j,false), this);
             }
-        }
+        }*/
         this.Hline();
         this.submit.addEventListener(egret.TouchEvent.TOUCH_TAP, ()=>{
             if(this.isRight()){

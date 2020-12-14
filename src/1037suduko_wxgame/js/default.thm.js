@@ -329,11 +329,11 @@ var egret = window.egret;window.skins=window.skins||{};
 	__extends(educationSkin, _super);
 	function educationSkin() {
 		_super.call(this);
-		this.skinParts = ["quit_to_PC","inputtest"];
+		this.skinParts = ["quit_to_PC","sudokoTable","submit"];
 		
 		this.height = 1136;
 		this.width = 640;
-		this.elementsContent = [this._Image1_i(),this._Label1_i(),this.quit_to_PC_i(),this.inputtest_i()];
+		this.elementsContent = [this._Image1_i(),this.quit_to_PC_i(),this._Label1_i(),this.sudokoTable_i(),this.submit_i()];
 	}
 	var _proto = educationSkin.prototype;
 
@@ -349,19 +349,6 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.y = -157;
 		return t;
 	};
-	_proto._Label1_i = function () {
-		var t = new eui.Label();
-		t.anchorOffsetX = 0;
-		t.anchorOffsetY = 0;
-		t.height = 130;
-		t.text = "新手教程";
-		t.textAlign = "center";
-		t.verticalAlign = "middle";
-		t.width = 204;
-		t.x = 222;
-		t.y = 204;
-		return t;
-	};
 	_proto.quit_to_PC_i = function () {
 		var t = new eui.Button();
 		this.quit_to_PC = t;
@@ -375,15 +362,38 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.y = 881;
 		return t;
 	};
-	_proto.inputtest_i = function () {
-		var t = new eui.TextInput();
-		this.inputtest = t;
-		t.anchorOffsetX = 0;
+	_proto._Label1_i = function () {
+		var t = new eui.Label();
+		t.anchorOffsetX = 160;
+		t.bold = true;
+		t.height = 40;
+		t.text = "新手教程";
+		t.textAlign = "center";
+		t.verticalAlign = "middle";
+		t.width = 320;
+		t.x = 320;
+		t.y = 30;
+		return t;
+	};
+	_proto.sudokoTable_i = function () {
+		var t = new eui.Group();
+		this.sudokoTable = t;
+		t.x = 50;
+		t.y = 120;
+		return t;
+	};
+	_proto.submit_i = function () {
+		var t = new eui.Button();
+		this.submit = t;
+		t.alpha = 0.8;
+		t.anchorOffsetX = 108.5;
 		t.anchorOffsetY = 0;
-		t.height = 73;
-		t.width = 237;
-		t.x = 192;
-		t.y = 352;
+		t.height = 63;
+		t.horizontalCenter = 0;
+		t.label = "提交题解";
+		t.visible = false;
+		t.width = 217;
+		t.y = 803;
 		return t;
 	};
 	return educationSkin;
@@ -449,7 +459,7 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.anchorOffsetX = 160;
 		t.bold = true;
 		t.height = 40;
-		t.text = "欢迎来到比赛模式";
+		t.text = "首届挑战赛";
 		t.textAlign = "center";
 		t.verticalAlign = "middle";
 		t.width = 320;
