@@ -1062,6 +1062,7 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.bold = true;
 		t.height = 24;
 		t.left = 10;
+		t.maxChars = 1;
 		t.right = 10;
 		t.size = 50;
 		t.textAlign = "center";
