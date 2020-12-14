@@ -89,7 +89,7 @@ class Game_test extends eui.Component implements eui.UIComponent{
                 judges[j] = 0;
             }
             for(var j = 0; j<9; j++){
-                var item:eui.TextInput = this.ss.getItemAt(((i%3) * 3 + Math.ceil(j/3))*9 +  Math.ceil(i/3) * 3 + j%3);
+                var item:eui.TextInput = this.ss.getItemAt(((i%3) * 3 + Math.ceil(j/3)*3)*9 +  Math.ceil(i/3) * 3 + j%3);
                 var cnum = parseInt(item.text);
                 if(cnum>9||cnum<1||judges[cnum] != 0){
                     egret.log("Error3: ");
@@ -105,18 +105,16 @@ class Game_test extends eui.Component implements eui.UIComponent{
     private show_panal(e: string):void{
         let panel = new eui.Panel();
         if(e == "Y"){
-            panel.title = "恭喜！！";
+            panel.title = "恭喜您完成本届数独挑战";
             panel.horizontalCenter = 0;
             panel.verticalCenter = 0;
             this.addChild(panel);
-            panel.title = "恭喜您完成本届数独挑战";
         }
         else{
             panel.title = "数独错误";
             panel.horizontalCenter = 0;
             panel.verticalCenter = 0;
             this.addChild(panel);
-            panel.title = "您可以重新尝试";
         }
         panel.addChild(panel.closeButton);
     }
