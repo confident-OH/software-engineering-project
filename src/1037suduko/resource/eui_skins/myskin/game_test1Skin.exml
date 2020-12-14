@@ -1,91 +1,92 @@
 <?xml version='1.0' encoding='utf-8'?>
-<e:Skin class="game_test1Skin"
-	 width="640"
-	height="1136" xmlns:e="http://ns.egret.com/eui">
-	<e:Image source="education_jpg" x="-6.635" y="-80" anchorOffsetX="0" width="653.635" anchorOffsetY="0" height="1322" visible="true"/>
-	<e:Button label="返回" x="320" y="881" anchorOffsetX="70" width="140" anchorOffsetY="0" height="60" alpha="0.8" id="quit_to_main"/>
-	<e:Group x="50" y="120">
-		<e:TextInput width="60" height="60" x="0" y="0" alpha="0.5" text="1" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="60" y="0" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="120" y="0" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="180" y="0" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="240" y="0" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="300" y="0" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="0" y="60" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="60" y="60" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="120" y="60" alpha="0.5" text="3" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="180" y="60" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="240" y="60" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="300" y="60" alpha="0.5" text="8" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="0" y="120" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="60" y="120" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="120" y="120" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="180" y="120" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="240" y="120" alpha="0.5" text="4" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="300" y="120" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="360" y="0" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="420" y="0" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="480" y="0" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="360" y="60" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="420" y="60" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="480" y="60" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="360" y="120" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="420" y="120" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="480" y="120" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="0" y="180" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="60" y="180" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="120" y="180" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="180" y="180" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="240" y="180" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="300" y="180" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="0" y="240" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="60" y="240" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="120" y="240" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="180" y="240" alpha="0.5" text="5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="240" y="240" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="300" y="240" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="0" y="300" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="60" y="300" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="120" y="300" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="180" y="300" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="240" y="300" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="300" y="300" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="360" y="180" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="420" y="180" alpha="0.5" text="9" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="480" y="180" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="360" y="240" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="420" y="240" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="480" y="240" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="360" y="300" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="420" y="300" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="480" y="300" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="0" y="360" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="60" y="360" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="120" y="360" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="180" y="360" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="240" y="360" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="300" y="360" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="0" y="420" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="60" y="420" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="120" y="420" alpha="0.5" text="1" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="180" y="420" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="240" y="420" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="300" y="420" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="0" y="480" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="60" y="480" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="120" y="480" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="180" y="480" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="240" y="480" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="300" y="480" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="360" y="360" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="420" y="360" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="480" y="360" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="360" y="420" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="420" y="420" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="480" y="420" alpha="0.5" maxChars="1"/>
-		<e:TextInput width="60" height="60" y="480" alpha="0.5" maxChars="1" x="360"/>
-		<e:TextInput width="60" height="60" x="420" y="480" alpha="0.5" text="2" maxChars="1"/>
-		<e:TextInput width="60" height="60" x="480" y="480" alpha="0.5" maxChars="1"/>
-	</e:Group>
-	<e:EditableText width="320" height="50" text="欢迎来到比赛模式" textAlign="center" y="20" x="320" textColor="0xFFFFFF" anchorOffsetX="160" anchorOffsetY="0" bold="true" verticalAlign="middle"/>
+<e:Skin class="game_test1Skin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui">
+    <e:Image source="education_jpg" x="-6.635" y="-80" anchorOffsetX="0" width="653.635" anchorOffsetY="0" height="1322"
+             visible="true" />
+    <e:Button label="返回" x="320" y="881" anchorOffsetX="70" width="140" anchorOffsetY="0" height="60" alpha="0.8"
+              id="quit_to_main" />
+    <e:Group x="50" y="120" id="sudokoTable">
+        <e:TextInput width="60" height="60" x="0" y="0" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="60" y="0" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="120" y="0" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="180" y="0" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="240" y="0" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="300" y="0" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="360" y="0" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="420" y="0" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="480" y="0" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="0" y="60" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="60" y="60" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="120" y="60" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="180" y="60" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="240" y="60" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="300" y="60" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="360" y="60" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="420" y="60" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="480" y="60" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="0" y="120" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="60" y="120" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="120" y="120" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="180" y="120" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="240" y="120" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="300" y="120" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="360" y="120" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="420" y="120" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="480" y="120" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="0" y="180" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="60" y="180" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="120" y="180" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="180" y="180" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="240" y="180" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="300" y="180" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="360" y="180" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="420" y="180" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="480" y="180" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="0" y="240" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="60" y="240" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="120" y="240" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="180" y="240" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="240" y="240" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="300" y="240" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="360" y="240" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="420" y="240" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="480" y="240" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="0" y="300" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="60" y="300" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="120" y="300" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="180" y="300" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="240" y="300" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="300" y="300" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="360" y="300" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="420" y="300" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="480" y="300" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="0" y="360" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="60" y="360" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="120" y="360" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="180" y="360" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="240" y="360" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="300" y="360" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="360" y="360" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="420" y="360" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="480" y="360" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="0" y="420" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="60" y="420" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="120" y="420" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="180" y="420" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="240" y="420" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="300" y="420" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="360" y="420" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="420" y="420" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="480" y="420" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="0" y="480" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="60" y="480" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="120" y="480" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="180" y="480" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="240" y="480" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="300" y="480" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="360" y="480" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="420" y="480" alpha="0.5" maxChars="1" />
+        <e:TextInput width="60" height="60" x="480" y="480" alpha="0.5" maxChars="1" />
+    </e:Group>
+    <e:Label text="欢迎来到比赛模式" x="320" y="30" width="320" textAlign="center" bold="true" verticalAlign="middle"
+             height="40" anchorOffsetX="160" />
 </e:Skin>
