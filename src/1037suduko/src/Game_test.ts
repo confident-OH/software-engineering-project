@@ -22,5 +22,6 @@ class Game_test extends eui.Component implements eui.UIComponent{
         this.sudokoTable.getElementAt(0).addEventListener(egret.Event.CHANGE,this.onChang.bind(this,1,1,false),this);
         this.sudokoTable.getElementAt(1).addEventListener(egret.Event.CHANGE,this.onChang.bind(this,1,2,false),this);
         this.sudokoTable.getElementAt(9).addEventListener(egret.Event.CHANGE,this.onChang.bind(this,2,1,false),this);
+        
     }
 }
