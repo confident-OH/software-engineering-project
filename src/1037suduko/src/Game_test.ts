@@ -1,6 +1,7 @@
 class Game_test extends eui.Component implements eui.UIComponent{
     public quit_to_main:eui.Button;
     public sudokoTable:eui.Group;
+    public sudoku:string;
     constructor(){
         super();
         this.skinName = "resource/eui_skins/myskin/game_test1Skin.exml";
