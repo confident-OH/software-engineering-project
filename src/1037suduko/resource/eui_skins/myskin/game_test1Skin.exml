@@ -7,6 +7,6 @@
 	<e:Button label="提交题解" y="803" anchorOffsetX="108.5" width="217" anchorOffsetY="0" height="63" alpha="0.8" id="submit" horizontalCenter="0"/>
     <e:Group x="50" y="120" id="sudokoTable">
     </e:Group>
-    <e:Label text="欢迎来到比赛模式" x="320" y="30" width="320" textAlign="center" bold="true" verticalAlign="middle"
+    <e:Label text="首届挑战赛" x="320" y="30" width="320" textAlign="center" bold="true" verticalAlign="middle"
              height="40" anchorOffsetX="160" />
 </e:Skin>
