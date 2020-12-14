@@ -168,6 +168,8 @@ var Game_test = (function (_super) {
     __extends(Game_test, _super);
     function Game_test() {
         var _this = _super.call(this) || this;
+        _this.blocks_x = 55;
+        _this.blocks_y = 55;
         _this.sudoku = "7,3,2,6,a,a,a,a,9,a,a,a,9,a,a,2,6,3,a,a,a,1,a,a,a,5,a,9,a,a,2,3,a,7,1,a,5,7,a,4,a,a,6,a,8,4,2,1,8,a,6,a,a,5,a,6,5,3,8,a,9,7,1,3,9,7,a,1,2,4,8,a,8,1,a,a,6,9,5,a,2";
         _this.skinName = "resource/eui_skins/myskin/game_test1Skin.exml";
         return _this;
@@ -214,18 +216,32 @@ var Game_test = (function (_super) {
         var ss = new eui.ArrayCollection();
         for (var i = 0; i < 9; i++) {
             for (var j = 0; j < 9; j++) {
-                var s1 = new egret.TextField();
+                var s2 = new eui.TextInput();
+                s2.maxChars = 1;
+                s2.x = 20 + j * this.blocks_x;
+                s2.y = 40 + i * this.blocks_y;
+                s2.width = this.blocks_x;
+                s2.height = this.blocks_y;
+                if (sus[9 * i + j] != 'a') {
+                    s2.text = sus[9 * i + j];
+                }
+                this.sudokoTable.addChild(s2);
+                ss.addItemAt(s2, i * 9 + j);
+                /*let s1 = new egret.TextField();
                 s1.type = egret.TextFieldType.INPUT;
-                s1.x = 20 + j * 40;
-                s1.y = 40 + i * 40;
+                s1.maxChars = 1;
+                s1.x = 20+j*40;
+                s1.y = 40+i*40;
                 s1.width = 40;
                 s1.height = 40;
-                s1.text = sus[2 * (9 * i + j)];
+                if(sus[9*i+j] != 'a'){
+                    s1.text = sus[9*i+j];
+                }
                 s1.textAlign = egret.HorizontalAlign.CENTER;
                 s1.textAlign = egret.VerticalAlign.MIDDLE;
                 s1.bold = true;
-                ss.addItemAt(s1, i * 9 + j);
-                this.layTxBg(ss.getItemAt(i * 9 + j));
+                ss.addItemAt(s1, i*9+j);
+                this.layTxBg(ss.getItemAt(i*9+j));*/
             }
         }
     };

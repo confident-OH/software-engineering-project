@@ -1009,6 +1009,7 @@ var egret = window.egret;window.skins=window.skins||{};
 		this.states = [
 			new eui.State ("normal",
 				[
+					new eui.AddItems("promptDisplay","",1,"")
 				])
 			,
 			new eui.State ("disabled",
@@ -1039,8 +1040,10 @@ var egret = window.egret;window.skins=window.skins||{};
 	};
 	_proto._Rect1_i = function () {
 		var t = new eui.Rect();
-		t.fillColor = 0xffffff;
+		t.fillColor = 0x3D5D98;
 		t.percentHeight = 100;
+		t.strokeColor = 0xFFFFFF;
+		t.strokeWeight = 2;
 		t.percentWidth = 100;
 		return t;
 	};
@@ -1060,12 +1063,16 @@ var egret = window.egret;window.skins=window.skins||{};
 	_proto.promptDisplay_i = function () {
 		var t = new eui.Label();
 		this.promptDisplay = t;
+		t.alpha = 0.8;
+		t.bold = true;
 		t.height = 24;
 		t.left = 10;
 		t.right = 10;
 		t.size = 20;
+		t.textAlign = "center";
 		t.textColor = 0xa9a9a9;
 		t.touchEnabled = false;
+		t.verticalAlign = "middle";
 		t.verticalCenter = 0;
 		t.percentWidth = 100;
 		return t;
