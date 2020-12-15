@@ -10,9 +10,9 @@ class education extends eui.Component implements eui.UIComponent{
     public a:string;
 
     // UI界面大小相关设置
-    public blocks_x = 55;
-    public blocks_y = 55;
-    public root_x = 20;
+    public blocks_x = 60;
+    public blocks_y = 60;
+    public root_x = 0;
     public root_y = 40;
 
     // 硬编码的9x9数独题面棋盘，a代表需要用户填的空格

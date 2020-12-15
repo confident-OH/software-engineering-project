@@ -134,9 +134,9 @@ var education = (function (_super) {
         var _this = _super.call(this) || this;
         _this.edubutton = new eui.Button;
         // UI界面大小相关设置
-        _this.blocks_x = 55;
-        _this.blocks_y = 55;
-        _this.root_x = 20;
+        _this.blocks_x = 60;
+        _this.blocks_y = 60;
+        _this.root_x = 0;
         _this.root_y = 40;
         // 硬编码的9x9数独题面棋盘，a代表需要用户填的空格
         _this.sudoku = "7,3,2,6,a,a,a,a,9,a,a,a,9,a,a,2,6,3,a,a,a,1,a,a,a,5,a,9,a,a,2,3,a,7,1,a,5,7,a,4,a,a,6,a,8,4,2,1,8,a,6,a,a,5,a,6,5,3,8,a,9,7,1,3,9,7,a,1,2,4,8,a,8,1,a,a,6,9,5,a,2";
@@ -267,7 +267,7 @@ var education = (function (_super) {
         panel.addChild(panel.closeButton);
     };
     /*
-        Method:进入新手教程的button
+        Method:进入新手教程
     */
     education.prototype.childrenCreated = function () {
         _super.prototype.childrenCreated.call(this);
@@ -330,10 +330,10 @@ var Game_test = (function (_super) {
     // 加载相关的UI界面资源
     function Game_test() {
         var _this = _super.call(this) || this;
-        // UI界面大小相关设置
-        _this.blocks_x = 55;
-        _this.blocks_y = 55;
-        _this.root_x = 20;
+        // 数独块UI界面大小相关设置
+        _this.blocks_x = 60;
+        _this.blocks_y = 60;
+        _this.root_x = 0;
         _this.root_y = 40;
         // 硬编码的9x9数独题面棋盘，a代表需要用户填的空格
         _this.sudoku = "7,3,2,6,a,a,a,a,9,a,a,a,9,a,a,2,6,3,a,a,a,1,a,a,a,5,a,9,a,a,2,3,a,7,1,a,5,7,a,4,a,a,6,a,8,4,2,1,8,a,6,a,a,5,a,6,5,3,8,a,9,7,1,3,9,7,a,1,2,4,8,a,8,1,a,a,6,9,5,a,2";
@@ -744,6 +744,9 @@ var challenges = (function (_super) {
     return challenges;
 }(eui.Component));
 __reflect(challenges.prototype, "challenges", ["eui.UIComponent", "egret.DisplayObject"]);
+/*
+    Module:人机对抗模块
+*/
 var play_with_computers = (function (_super) {
     __extends(play_with_computers, _super);
     function play_with_computers() {
@@ -754,9 +757,11 @@ var play_with_computers = (function (_super) {
     play_with_computers.prototype.partAdded = function (partName, instance) {
         _super.prototype.partAdded.call(this, partName, instance);
     };
+    /*
+        Method:返回主界面
+    */
     play_with_computers.prototype.childrenCreated = function () {
         _super.prototype.childrenCreated.call(this);
-        //返回主界面
         this.quit_to_main.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
             SceneManager.removeScene(new Startscence());
         }, this);
@@ -773,6 +778,9 @@ var play_with_computers = (function (_super) {
     return play_with_computers;
 }(eui.Component));
 __reflect(play_with_computers.prototype, "play_with_computers", ["eui.UIComponent", "egret.DisplayObject"]);
+/*
+    Module:玩家匹配模块
+*/
 var play_with_man = (function (_super) {
     __extends(play_with_man, _super);
     function play_with_man() {
@@ -783,9 +791,11 @@ var play_with_man = (function (_super) {
     play_with_man.prototype.partAdded = function (partName, instance) {
         _super.prototype.partAdded.call(this, partName, instance);
     };
+    /*
+        Method:返回主界面
+    */
     play_with_man.prototype.childrenCreated = function () {
         _super.prototype.childrenCreated.call(this);
-        //返回主界面
         this.quit_to_main.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
             SceneManager.removeScene(new Startscence());
         }, this);
