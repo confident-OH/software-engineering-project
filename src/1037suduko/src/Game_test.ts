@@ -186,6 +186,7 @@ class Game_test extends eui.Component implements eui.UIComponent{
         }
         //生成数独边框线
         this.Hline();
+        this.test_user_input();
     }
 
     /**
@@ -207,6 +208,44 @@ class Game_test extends eui.Component implements eui.UIComponent{
         */
     }
 
+    private is_input_error(i:number, j:number, sudoku_a:eui.ArrayCollection, scene:egret.Stage):void{
+        var x:number = i, y:number = j;
+        egret.log(x);
+        egret.log(y);
+        var item:eui.TextInput = sudoku_a.getItemAt(x*9+y);
+        egret.log(item.text);
+        if(!((item.text[0]>='1'&&item.text[0]<='9')||item.text.length == 0)){
+            item.textColor = 0xDC143C;
+            let error_p:eui.Panel = new eui.Panel;
+            error_p.title = "非法输入，请输入数字1~9";
+            error_p.horizontalCenter = 0;
+            error_p.verticalCenter = 0;
+            scene.addChild(error_p);
+            error_p.addChild(error_p.closeButton);
+        }else{
+            item.textColor = 0xffffff;
+        }
+    }
+
+    /**
+     * 显示比对结果
+     * 
+     * show the comparing result
+     */
+    private test_user_input():void{
+        for(var i = 0; i<9; i++){
+            for(var j = 0; j<9; j++){
+                var block_i = this.ss.getItemAt(i*9+j);
+                block_i.addEventListener(egret.Event.CHANGE, this.is_input_error.bind(egret.Event.CHANGE, i, j, this.ss, this, this), this);
+            }
+        }
+    }
+
+    /**
+     * 主函数
+     * 
+     * Main
+     */
     protected childrenCreated(): void{
         super.childrenCreated();
         this.quit_to_main.addEventListener(egret.TouchEvent.TOUCH_TAP, ()=>{
@@ -220,6 +259,7 @@ class Game_test extends eui.Component implements eui.UIComponent{
         timer.start();
         this.read_from_file();
         this.gensudoko();
+        
         this.submit.addEventListener(egret.TouchEvent.TOUCH_TAP, ()=>{
             if(this.isRight()){
                 this.show_panal("Y");

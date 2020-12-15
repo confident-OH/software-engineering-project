@@ -619,6 +619,7 @@ var Game_test = (function (_super) {
         }
         //生成数独边框线
         this.Hline();
+        this.test_user_input();
     };
     /**
      * 从文件中读取数独
@@ -638,6 +639,43 @@ var Game_test = (function (_super) {
         }, null);
         */
     };
+    Game_test.prototype.is_input_error = function (i, j, sudoku_a, scene) {
+        var x = i, y = j;
+        egret.log(x);
+        egret.log(y);
+        var item = sudoku_a.getItemAt(x * 9 + y);
+        egret.log(item.text);
+        if (!((item.text[0] >= '1' && item.text[0] <= '9') || item.text.length == 0)) {
+            item.textColor = 0xDC143C;
+            var error_p = new eui.Panel;
+            error_p.title = "非法输入，请输入数字1~9";
+            error_p.horizontalCenter = 0;
+            error_p.verticalCenter = 0;
+            scene.addChild(error_p);
+            error_p.addChild(error_p.closeButton);
+        }
+        else {
+            item.textColor = 0xffffff;
+        }
+    };
+    /**
+     * 显示比对结果
+     *
+     * show the comparing result
+     */
+    Game_test.prototype.test_user_input = function () {
+        for (var i = 0; i < 9; i++) {
+            for (var j = 0; j < 9; j++) {
+                var block_i = this.ss.getItemAt(i * 9 + j);
+                block_i.addEventListener(egret.Event.CHANGE, this.is_input_error.bind(egret.Event.CHANGE, i, j, this.ss, this, this), this);
+            }
+        }
+    };
+    /**
+     * 主函数
+     *
+     * Main
+     */
     Game_test.prototype.childrenCreated = function () {
         var _this = this;
         _super.prototype.childrenCreated.call(this);
