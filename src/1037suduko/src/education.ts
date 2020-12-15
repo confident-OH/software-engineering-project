@@ -1,11 +1,12 @@
 /**
- * 新手教程模块
- * Newbie Guide Module
+ * 新手教程类
+ * 
+ * Newbie Guide Class
  */
 class education extends eui.Component implements eui.UIComponent{
     // UI界面相关对象初始化
     public quit_to_PC:eui.Button;
-    public edubutton:eui.Button = new eui.Button;
+    public edubutton:eui.Button;
     public easy:eui.Button;
     public medium:eui.Button;
     public hard:eui.Button;
@@ -54,6 +55,7 @@ class education extends eui.Component implements eui.UIComponent{
 
     /**
      * 添加数独边框
+     * 
      * Add Sudoku margins
      */
     private Hline():void{
@@ -84,6 +86,7 @@ class education extends eui.Component implements eui.UIComponent{
 
     /**
      * 判断提交是否正确
+     * 
      * Judge the answer
      */
     private isRight():Boolean{
@@ -148,6 +151,7 @@ class education extends eui.Component implements eui.UIComponent{
 
     /**
      * 显示比对结果
+     * 
      * Show the comparing result
      */
     private show_panal(e: string):void{
@@ -170,9 +174,11 @@ class education extends eui.Component implements eui.UIComponent{
         panel.addChild(panel.closeButton);
     }
 
-    /*
-        Method:用户进入新手教程后的初始欢迎界面
-    */
+    /**
+     * 用户进入新手教程后的初始欢迎界面
+     * 
+     * Welcome UI
+     */
     private show_panal2(e: egret.TouchEvent){
         let panel = new eui.Panel();
         panel.title = "Title";
@@ -182,9 +188,14 @@ class education extends eui.Component implements eui.UIComponent{
         panel.title = "欢迎来到新手教程";
         panel.addChild(panel.closeButton);
     }
-    /*
-        Method: 生成随机数
-    */
+
+    /**
+     * 生成随机数
+     * 
+     * Generate a random number
+     * @param min 随机数的最小值
+     * @param max 随机数的最大值
+     */
     private random_num(min:number,max:number){
         let Range = max - min;  
         let Rand = Math.random();  
@@ -193,6 +204,7 @@ class education extends eui.Component implements eui.UIComponent{
 
     /**
      * 生成数独
+     * 
      * Generate a Sudoku
      */
     private gen_sudoko():void{
@@ -278,6 +290,7 @@ class education extends eui.Component implements eui.UIComponent{
     }
     /**
      * 进入新手教程
+     * 
      * Enter the Newbie Guide
      */
     protected childrenCreated(): void{
@@ -285,18 +298,19 @@ class education extends eui.Component implements eui.UIComponent{
         //返回人机界面
         this.quit_to_PC.addEventListener(egret.TouchEvent.TOUCH_TAP, ()=>{
             SceneManager.removeScene(new play_with_computers());
-        }, this)
-        this.edubutton.label = "开始!";
-        this.edubutton.scaleX = 2;
-        this.edubutton.scaleY = 2;
-        this.edubutton.horizontalCenter = 0;
-        this.edubutton.verticalCenter = 0;
-        this.addChild(this.edubutton);
+        }, this);
+        //this.edubutton.label = "开始!";
+        //this.edubutton.scaleX = 2;
+        //this.edubutton.scaleY = 2;
+        //this.edubutton.horizontalCenter = 0;
+        //this.edubutton.verticalCenter = 0;
+        //this.addChild(this.edubutton);
         this.edubutton.addEventListener(egret.TouchEvent.TOUCH_TAP, this.start_edu, this);
     }
 
     /**
      * 开始进行新手教程
+     * 
      * Start the Newbie Guide
      */
     private start_edu():void{
