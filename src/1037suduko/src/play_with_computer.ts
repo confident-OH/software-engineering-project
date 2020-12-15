@@ -1,6 +1,7 @@
 /**
- * 随机数独模块
- * Random Sudoku Module
+ * 随机数独类
+ * 
+ * Random Sudoku Class
  */
 class play_with_computers extends eui.Component implements eui.UIComponent{
     public new_man_b:eui.Button;
@@ -17,6 +18,7 @@ class play_with_computers extends eui.Component implements eui.UIComponent{
 
     /**
      * 返回主界面
+     * 
      * Go back to the main menu
      */
     protected childrenCreated(): void{
