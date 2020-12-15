@@ -3,6 +3,6 @@
 	 width="640"
 	height="1136" xmlns:e="http://ns.egret.com/eui">
 	<e:Image source="soduko_bg_jpg" x="-143.54" y="-157" anchorOffsetX="0" width="868.54" anchorOffsetY="0" height="1454" fillMode="scale"/>
-	<e:Label text="挑战模式" x="222" y="204" anchorOffsetX="0" width="204" anchorOffsetY="0" height="130" textAlign="center" verticalAlign="middle"/>
-	<e:Button label="返回" x="250" y="881" anchorOffsetX="0" width="136" anchorOffsetY="0" height="57" alpha="0.8" id="quit_to_PC"/>
+	<e:Image x="320" y="40" width="300" height="100" anchorOffsetX="150" source="chanllenge_title"/>
+	<e:Button label="&lt;" x="30" y="30" anchorOffsetX="0" width="40" anchorOffsetY="0" height="40" alpha="0.8" id="quit_to_PC" scaleX="2" scaleY="2"/>
 </e:Skin>

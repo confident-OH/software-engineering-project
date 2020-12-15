@@ -4,8 +4,8 @@
 	height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
 	<w:Config id="175a8fded90"/>
 	<e:Image x="320" y="640" visible="true" fillMode="scale" width="720" height="1280" anchorOffsetX="360" anchorOffsetY="640" source="start_background"/>
-	<e:Button id="StartPlay" label="人机练习" x="320" y="660" anchorOffsetX="160" width="320" anchorOffsetY="0" height="80" enable="true" alpha="0.8"/>
-	<e:Button id="StartPlay1" label="匹配模式" x="320" y="780" anchorOffsetX="160" width="320" anchorOffsetY="0" height="80" alpha="0.8"/>
-	<e:Button id="StartPlay2" label="比赛" x="320" y="900" anchorOffsetX="160" width="320" anchorOffsetY="0" height="80" alpha="0.8"/>
+	<e:Button id="StartPlay" label="人机练习" x="320" y="660" anchorOffsetX="80" width="160" anchorOffsetY="0" height="40" enable="true" alpha="0.8" scaleX="2" scaleY="2"/>
+	<e:Button id="StartPlay1" label="匹配模式" x="320" y="780" anchorOffsetX="80" width="160" anchorOffsetY="0" height="40" alpha="0.8" scaleX="2" scaleY="2"/>
+	<e:Button id="StartPlay2" label="比赛" x="320" y="900" anchorOffsetX="80" width="160" anchorOffsetY="0" height="40" alpha="0.8" scaleX="2" scaleY="2"/>
 	<e:Image source="start_icon" x="320" y="300" width="540" height="540" anchorOffsetX="270" anchorOffsetY="270" visible="true"/>
 </e:Skin>
