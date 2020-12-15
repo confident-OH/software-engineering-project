@@ -2,8 +2,8 @@
 <e:Skin class="randomSkin"
 	 width="640"
 	height="1136" xmlns:e="http://ns.egret.com/eui">
-	<e:Image source="soduko_bg_jpg" x="-143.54" y="-157" anchorOffsetX="0" width="868.54" anchorOffsetY="0" height="1454" fillMode="scale"/>
 	<e:Button label="返回" x="250" y="881" anchorOffsetX="0" width="136" anchorOffsetY="0" height="57" alpha="0.8" id="quit_to_PC"/>
+	<e:Image x="320" y="-80" anchorOffsetX="360" width="720" anchorOffsetY="0" height="1280" visible="true" source="game_background"/>
 	<e:Button label="提交题解" y="803" anchorOffsetX="108.5" width="217" anchorOffsetY="0" height="63" alpha="0.8" id="submit1" horizontalCenter="0" visible="true"/>
 	<e:Label id="mode_id" text="模式：简单" x="457.374" y="127.928" anchorOffsetX="0" width="149" anchorOffsetY="0" height="61" verticalAlign="middle" textAlign="left" size="25" visible="true"/>
 	<e:Group x="47" y="202" id="sudokoTable1" visible="true"/>

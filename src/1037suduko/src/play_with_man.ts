@@ -1,8 +1,6 @@
-/*
- * 模块名：play_with_man
- * 功能：提供匹配子模式的跳转页面
- * 
- * 
+/**
+ * 玩家匹配模块
+ * Player VS Player Module
  */
 class play_with_man extends eui.Component implements eui.UIComponent{
     public random_mb:eui.Button;
@@ -17,9 +15,10 @@ class play_with_man extends eui.Component implements eui.UIComponent{
         super.partAdded(partName, instance);
     } 
 
-    /*
-        Method:返回主界面
-    */
+    /**
+     * 返回主菜单
+     * Go back to the main menu
+     */
     protected childrenCreated(): void{
         super.childrenCreated();
 

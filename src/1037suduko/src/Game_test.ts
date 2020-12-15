@@ -1,6 +1,7 @@
-/*
-    Module:挑战赛模块
-*/
+/**
+ * 排位赛模块
+ * Challenge Competition Module
+ */
 class Game_test extends eui.Component implements eui.UIComponent{
     // UI界面相关对象初始化
     public quit_to_main:eui.Button;
@@ -29,9 +30,10 @@ class Game_test extends eui.Component implements eui.UIComponent{
         super.partAdded(partName, instance);
     }
     
-    /*
-        Method:处理函数
-    */
+    /**
+     * 处理用户操作函数
+     * Deal with operations
+     */
     private High_l(tx:eui.TextInput):void {
         var shp:egret.Shape = new egret.Shape;
         shp.graphics.beginFill(0xffa631);
@@ -41,9 +43,10 @@ class Game_test extends eui.Component implements eui.UIComponent{
         this.sudokoTable.addChild(tx);
     }
 
-    /*
-        Method:添加数独边框
-    */
+    /**
+     * 添加数独边框
+     * Add a Sudoku margins
+     */
     private Hline():void{
         var shp:egret.Shape = new egret.Shape;
         shp.graphics.lineStyle(8, 0xa78e44);
@@ -70,9 +73,10 @@ class Game_test extends eui.Component implements eui.UIComponent{
         
     }
 
-    /*
-        Method:判断提交是否正确
-    */
+    /**
+     * 判断提交是否正确
+     * judge the answer
+     */
     private isRight():Boolean{
         // 判断每一行是否满足对应的游戏规则
         for(var i = 0; i<9; i++){
@@ -133,9 +137,10 @@ class Game_test extends eui.Component implements eui.UIComponent{
         return true;
     }
 
-    /*
-        Method:显示比对结果
-    */
+    /**
+     * 显示比对结果
+     * show the comparing result
+     */
     private show_panal(e: string):void{
         let panel = new eui.Panel();
 
@@ -217,6 +222,5 @@ class Game_test extends eui.Component implements eui.UIComponent{
         }, this);
         var timer:egret.Timer = new egret.Timer(500,5);
         //注册事件侦听器
-        
     }
 }

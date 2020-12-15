@@ -2,14 +2,14 @@
 <e:Skin class="educationSkin"
 	 width="640"
 	height="1136" xmlns:e="http://ns.egret.com/eui">
-	<e:Image source="soduko_bg_jpg" x="-143.54" y="-157" anchorOffsetX="0" width="868.54" anchorOffsetY="0" height="1454" fillMode="scale"/>
-	<e:Button label="&lt;" x="30" y="30" anchorOffsetX="0" width="40" anchorOffsetY="0" height="40" alpha="0.8" id="quit_to_PC" scaleX="2" scaleY="2"/>
+	<e:Image x="-143.54" y="-157" anchorOffsetX="0" width="868.54" anchorOffsetY="0" height="1454" fillMode="scale" source="game_background"/>
 	<e:Image x="320" y="40" width="300" height="100" anchorOffsetX="150" source="education_title"/>
-	<e:Group x="50" y="120" id="sudokoTable" visible="false"/>
-	<e:Button label="提交题解" y="803" anchorOffsetX="108.5" width="217" anchorOffsetY="0" height="63" alpha="0.8" id="submit" horizontalCenter="0" visible="false"/>
-	<e:Button id="easy" label="简单" x="133" y="113" visible="false"/>
-	<e:Button id="medium" label="中等" y="113" x="271" visible="false"/>
-	<e:Button id="hard" label="困难" x="409" y="113" skinName="skins.ButtonSkin" visible="false">
+	<e:Button label="&lt;" x="30" y="30" anchorOffsetX="0" width="40" anchorOffsetY="0" height="40" alpha="0.8" id="quit_to_PC" scaleX="2" scaleY="2"/>
+	<e:Group x="50" y="240" id="sudokoTable" visible="true"/>
+	<e:Button label="提交题解" y="1000" anchorOffsetX="55" width="110" anchorOffsetY="0" height="35" alpha="0.8" id="submit" horizontalCenter="0" visible="true" scaleX="1.5" scaleY="1.5" x="320"/>
+	<e:Button id="easy" label="简单" x="160" y="170" visible="true" anchorOffsetX="50"/>
+	<e:Button id="medium" label="中等" y="170" x="320" visible="true" anchorOffsetX="50"/>
+	<e:Button id="hard" label="困难" y="170" skinName="skins.ButtonSkin" visible="true" anchorOffsetX="50" x="480">
 	</e:Button>
-	<e:Label id="mode_id" text="模式：简单" x="454" y="48" anchorOffsetX="0" width="149" anchorOffsetY="0" height="61" verticalAlign="middle" textAlign="left" size="25" visible="false"/>
+	<e:Label id="mode_id" text="模式：简单" x="480" y="80" anchorOffsetX="0" width="150" anchorOffsetY="0" height="60" verticalAlign="middle" textAlign="left" size="25" visible="true"/>
 </e:Skin>

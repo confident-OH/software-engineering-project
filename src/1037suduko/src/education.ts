@@ -1,6 +1,7 @@
-/*
-    Module:新手教程模块
-*/
+/**
+ * 新手教程模块
+ * Newbie Guide Module
+ */
 class education extends eui.Component implements eui.UIComponent{
     // UI界面相关对象初始化
     public quit_to_PC:eui.Button;
@@ -51,9 +52,10 @@ class education extends eui.Component implements eui.UIComponent{
         super.partAdded(partName, instance);
     }
 
-    /*
-        Method:添加数独边框
-    */
+    /**
+     * 添加数独边框
+     * Add Sudoku margins
+     */
     private Hline():void{
         var shp:egret.Shape = new egret.Shape;
         shp.graphics.lineStyle(8, 0xa78e44);
@@ -80,9 +82,10 @@ class education extends eui.Component implements eui.UIComponent{
         
     }
 
-    /*
-        Method:判断提交是否正确
-    */
+    /**
+     * 判断提交是否正确
+     * Judge the answer
+     */
     private isRight():Boolean{
         // 判断每一行是否满足对应的游戏规则
         for(var i = 0; i<9; i++){
@@ -143,9 +146,10 @@ class education extends eui.Component implements eui.UIComponent{
         return true;
     }
 
-    /*
-        Method:显示比对结果
-    */
+    /**
+     * 显示比对结果
+     * Show the comparing result
+     */
     private show_panal(e: string):void{
         let panel = new eui.Panel();
 
@@ -187,9 +191,10 @@ class education extends eui.Component implements eui.UIComponent{
         return (min + Math.round(Rand * Range));  
     }
 
-    /*
-        Method: 生成数独
-    */
+    /**
+     * 生成数独
+     * Generate a Sudoku
+     */
     private gen_sudoko():void{
         if(this.a_lable){
             this.sudokoTable.width = 9*this.blocks_x;
@@ -271,9 +276,10 @@ class education extends eui.Component implements eui.UIComponent{
             }
         }
     }
-    /*
-        Method:进入新手教程
-    */
+    /**
+     * 进入新手教程
+     * Enter the Newbie Guide
+     */
     protected childrenCreated(): void{
         super.childrenCreated();
         //返回人机界面
@@ -281,15 +287,18 @@ class education extends eui.Component implements eui.UIComponent{
             SceneManager.removeScene(new play_with_computers());
         }, this)
         this.edubutton.label = "开始!";
+        this.edubutton.scaleX = 2;
+        this.edubutton.scaleY = 2;
         this.edubutton.horizontalCenter = 0;
         this.edubutton.verticalCenter = 0;
         this.addChild(this.edubutton);
         this.edubutton.addEventListener(egret.TouchEvent.TOUCH_TAP, this.start_edu, this);
     }
 
-    /*
-        Method:开始进行新手教程
-    */
+    /**
+     * 开始进行新手教程
+     * Start the Newbie Guide
+     */
     private start_edu():void{
         this.edubutton.visible = false;
         this.submit.visible = true;

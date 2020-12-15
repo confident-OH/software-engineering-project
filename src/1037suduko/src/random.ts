@@ -50,9 +50,11 @@ class random extends eui.Component implements eui.UIComponent{
     protected partAdded(partName: string, instance: any):void{
         super.partAdded(partName, instance);
     } 
-    /*
-        Method:添加数独边框
-    */
+    
+    /**
+     * 添加数独边框
+     * Add Sudoku margins
+     */
     private Hline():void{
         var shp:egret.Shape = new egret.Shape;
         shp.graphics.lineStyle(8, 0xa78e44);
@@ -79,9 +81,10 @@ class random extends eui.Component implements eui.UIComponent{
         
     }
 
-    /*
-        Method:判断提交是否正确
-    */
+    /**
+     * 判断提交是否正确
+     * Judge the answer
+     */
     private isRight():Boolean{
         // 判断每一行是否满足对应的游戏规则
         for(var i = 0; i<9; i++){
@@ -142,9 +145,10 @@ class random extends eui.Component implements eui.UIComponent{
         return true;
     }
 
-    /*
-        Method:显示比对结果
-    */
+    /**
+     * 显示比对结果
+     * Show the comparing result
+     */
     private show_panal(e: string):void{
         let panel = new eui.Panel();
 
@@ -164,18 +168,23 @@ class random extends eui.Component implements eui.UIComponent{
         }
         panel.addChild(panel.closeButton);
     }
-    /*
-        Method: 生成随机数
-    */
+
+    /**
+     * 生成随机数
+     * Generate a random number
+     * @param min 随机数的最小值
+     * @param max 随机数的最大值
+     */
     private random_num(min:number,max:number){
         let Range = max - min;  
         let Rand = Math.random();  
         return (min + Math.round(Rand * Range));  
     }
 
-    /*
-        Method: 生成数独
-    */
+    /**
+     * 生成数独
+     * Generate a Sudoku
+     */
     private gen_sudoko():void{
         if(this.a_lable){
             this.sudokoTable1.width = 9*this.blocks_x;
@@ -257,6 +266,11 @@ class random extends eui.Component implements eui.UIComponent{
             }
         }
     }
+    
+    /**
+     * 随机数独模块整体控制
+     * Random Sudoku Control
+     */
     protected childrenCreated(): void{
         super.childrenCreated();
         //返回人机界面

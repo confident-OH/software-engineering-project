@@ -1,8 +1,6 @@
-/*
- * 模块名：play_with_computers
- * 功能：单人数独解题模式
- * 
- * 
+/**
+ * 随机数独模块
+ * Random Sudoku Module
  */
 class play_with_computers extends eui.Component implements eui.UIComponent{
     public new_man_b:eui.Button;
@@ -17,9 +15,10 @@ class play_with_computers extends eui.Component implements eui.UIComponent{
         super.partAdded(partName, instance);
     }
 
-    /*
-        Method:返回主界面
-    */
+    /**
+     * 返回主界面
+     * Go back to the main menu
+     */
     protected childrenCreated(): void{
         super.childrenCreated();
         
