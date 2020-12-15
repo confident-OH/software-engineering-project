@@ -468,11 +468,11 @@ var egret = window.egret;window.skins=window.skins||{};
 	__extends(game_test1Skin, _super);
 	function game_test1Skin() {
 		_super.call(this);
-		this.skinParts = ["quit_to_main","submit","sudokoTable"];
+		this.skinParts = ["quit_to_main","submit","sudokoTable","timeout"];
 		
 		this.height = 1136;
 		this.width = 640;
-		this.elementsContent = [this._Image1_i(),this.quit_to_main_i(),this.submit_i(),this.sudokoTable_i(),this._Image2_i(),this._Label1_i()];
+		this.elementsContent = [this._Image1_i(),this.quit_to_main_i(),this.submit_i(),this.sudokoTable_i(),this._Image2_i(),this.timeout_i()];
 	}
 	var _proto = game_test1Skin.prototype;
 
@@ -535,8 +535,9 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.y = 40;
 		return t;
 	};
-	_proto._Label1_i = function () {
+	_proto.timeout_i = function () {
 		var t = new eui.Label();
+		this.timeout = t;
 		t.anchorOffsetX = 0;
 		t.anchorOffsetY = 0;
 		t.bold = true;

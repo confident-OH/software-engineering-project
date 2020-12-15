@@ -1,6 +1,7 @@
-/*
-    Module:玩家匹配模块
-*/
+/**
+ * 玩家匹配模块
+ * Player VS Player Module
+ */
 class play_with_man extends eui.Component implements eui.UIComponent{
     public random_mb:eui.Button;
     public open_house:eui.Button;
@@ -14,9 +15,10 @@ class play_with_man extends eui.Component implements eui.UIComponent{
         super.partAdded(partName, instance);
     } 
 
-    /*
-        Method:返回主界面
-    */
+    /**
+     * 返回主菜单
+     * Go back to the main menu
+     */
     protected childrenCreated(): void{
         super.childrenCreated();
 
