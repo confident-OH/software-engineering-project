@@ -1,6 +1,7 @@
 /**
- * 排位赛模块
- * Challenge Competition Module
+ * 排位赛类
+ * 
+ * Challenge Competition Class
  */
 class Game_test extends eui.Component implements eui.UIComponent{
     // UI界面相关对象初始化
@@ -31,7 +32,8 @@ class Game_test extends eui.Component implements eui.UIComponent{
     }
     
     /**
-     * 处理用户操作函数
+     * 处理用户操作
+     * 
      * Deal with operations
      */
     private High_l(tx:eui.TextInput):void {
@@ -45,6 +47,7 @@ class Game_test extends eui.Component implements eui.UIComponent{
 
     /**
      * 添加数独边框
+     * 
      * Add a Sudoku margins
      */
     private Hline():void{
@@ -75,6 +78,7 @@ class Game_test extends eui.Component implements eui.UIComponent{
 
     /**
      * 判断提交是否正确
+     * 
      * judge the answer
      */
     private isRight():Boolean{
@@ -139,6 +143,7 @@ class Game_test extends eui.Component implements eui.UIComponent{
 
     /**
      * 显示比对结果
+     * 
      * show the comparing result
      */
     private show_panal(e: string):void{
