@@ -134,7 +134,6 @@ var education = (function (_super) {
     // 加载相关的UI界面资源
     function education() {
         var _this = _super.call(this) || this;
-        _this.edubutton = new eui.Button;
         _this.a_lable = true;
         _this.nums_t = 4;
         // UI界面大小相关设置
@@ -438,12 +437,12 @@ var education = (function (_super) {
         this.quit_to_PC.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
             SceneManager.removeScene(new play_with_computers());
         }, this);
-        this.edubutton.label = "开始!";
-        this.edubutton.scaleX = 2;
-        this.edubutton.scaleY = 2;
-        this.edubutton.horizontalCenter = 0;
-        this.edubutton.verticalCenter = 0;
-        this.addChild(this.edubutton);
+        //this.edubutton.label = "开始!";
+        //this.edubutton.scaleX = 2;
+        //this.edubutton.scaleY = 2;
+        //this.edubutton.horizontalCenter = 0;
+        //this.edubutton.verticalCenter = 0;
+        //this.addChild(this.edubutton);
         this.edubutton.addEventListener(egret.TouchEvent.TOUCH_TAP, this.start_edu, this);
     };
     /**
