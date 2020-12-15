@@ -568,18 +568,25 @@ var Game_test = (function (_super) {
         panel.addChild(panel.closeButton);
     };
     Game_test.prototype.printtime = function () {
+        this.endtime = new Date;
+        this.timeout.text = "距离挑战结束还剩: " + (24 - 1 - this.endtime.getHours()).toString() + "时 " +
+            (60 - 1 - this.endtime.getMinutes()).toString() + "分 " + (60 - 1 - this.endtime.getSeconds()).toString() + "秒";
     };
     Game_test.prototype.childrenCreated = function () {
         var _this = this;
         _super.prototype.childrenCreated.call(this);
         this.quit_to_main.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
+            timer.stop();
             SceneManager.removeScene(new Startscence());
         }, this);
-        var timer = new egret.Timer(1000, 1000000); //1s执行1次
+        var timer = new egret.Timer(300, 0); //0.3s执行1次
         timer.addEventListener(egret.TimerEvent.TIMER, function () {
             _this.printtime();
         }, this);
         timer.start();
+        timer.addEventListener(egret.Event.CHANGE, function () {
+            _this.printtime();
+        }, this);
         //添加监听，监听用户的输入
         this.sudokoTable.width = 360;
         this.sudokoTable.height = 360;
