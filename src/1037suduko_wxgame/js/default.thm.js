@@ -10,7 +10,7 @@ var egret = window.egret;window.skins=window.skins||{};
                 window.generateEUI = window.generateEUI||{};
                 generateEUI.paths = generateEUI.paths||{};
                 generateEUI.styles = {"center_1":{"size":"20","border":"true","horizonCenter":"true"}};
-                generateEUI.skins = {"eui.Button":"resource/eui_skins/ButtonSkin.exml","eui.CheckBox":"resource/eui_skins/CheckBoxSkin.exml","eui.HScrollBar":"resource/eui_skins/HScrollBarSkin.exml","eui.HSlider":"resource/eui_skins/HSliderSkin.exml","eui.Panel":"resource/eui_skins/PanelSkin.exml","eui.TextInput":"resource/eui_skins/TextInputSkin.exml","eui.ProgressBar":"resource/eui_skins/ProgressBarSkin.exml","eui.RadioButton":"resource/eui_skins/RadioButtonSkin.exml","eui.Scroller":"resource/eui_skins/ScrollerSkin.exml","eui.ToggleSwitch":"resource/eui_skins/ToggleSwitchSkin.exml","eui.VScrollBar":"resource/eui_skins/VScrollBarSkin.exml","eui.VSlider":"resource/eui_skins/VSliderSkin.exml","eui.ItemRenderer":"resource/eui_skins/ItemRendererSkin.exml","Startscense":"resource/eui_skins/myskin/StartscenseSkin.exml","Game_test":"resource/eui_skins/myskin/game_test1Skin.exml","play_with_computer":"resource/eui_skins/myskin/play_with_computerSkin.exml","play_with_man":"resource/eui_skins/myskin/play_with_manSkin.exml","challenge":"resource/eui_skins/myskin/challengeSkin.exml","education":"resource/eui_skins/myskin/challengeSkin.exml","competations":"resource/eui_skins/myskin/competationsSkin.exml"};generateEUI.paths['resource/eui_skins/backgroundSkin.exml'] = window.backgroundSkin = (function (_super) {
+                generateEUI.skins = {"eui.Button":"resource/eui_skins/ButtonSkin.exml","eui.CheckBox":"resource/eui_skins/CheckBoxSkin.exml","eui.HScrollBar":"resource/eui_skins/HScrollBarSkin.exml","eui.HSlider":"resource/eui_skins/HSliderSkin.exml","eui.Panel":"resource/eui_skins/PanelSkin.exml","eui.TextInput":"resource/eui_skins/TextInputSkin.exml","eui.ProgressBar":"resource/eui_skins/ProgressBarSkin.exml","eui.RadioButton":"resource/eui_skins/RadioButtonSkin.exml","eui.Scroller":"resource/eui_skins/ScrollerSkin.exml","eui.ToggleSwitch":"resource/eui_skins/ToggleSwitchSkin.exml","eui.VScrollBar":"resource/eui_skins/VScrollBarSkin.exml","eui.VSlider":"resource/eui_skins/VSliderSkin.exml","eui.ItemRenderer":"resource/eui_skins/ItemRendererSkin.exml","Startscense":"resource/eui_skins/myskin/StartscenseSkin.exml","Game_test":"resource/eui_skins/myskin/game_test1Skin.exml","play_with_computer":"resource/eui_skins/myskin/play_with_computerSkin.exml","play_with_man":"resource/eui_skins/myskin/play_with_manSkin.exml","challenge":"resource/eui_skins/myskin/challengeSkin.exml","education":"resource/eui_skins/myskin/challengeSkin.exml","competations":"resource/eui_skins/myskin/competationsSkin.exml","buttonPx40":"resource/eui_skins/myskin/ButtonPx40Skin.exml"};generateEUI.paths['resource/eui_skins/backgroundSkin.exml'] = window.backgroundSkin = (function (_super) {
 	__extends(backgroundSkin, _super);
 	function backgroundSkin() {
 		_super.call(this);
@@ -72,6 +72,7 @@ var egret = window.egret;window.skins=window.skins||{};
 	_proto.labelDisplay_i = function () {
 		var t = new eui.Label();
 		this.labelDisplay = t;
+		t.bold = true;
 		t.bottom = 8;
 		t.left = 8;
 		t.right = 8;
@@ -280,6 +281,156 @@ var egret = window.egret;window.skins=window.skins||{};
 		return t;
 	};
 	return ItemRendererSkin;
+})(eui.Skin);generateEUI.paths['resource/eui_skins/myskin/ButtonPx30Skin.exml'] = window.ButtonPx30Skin = (function (_super) {
+	__extends(ButtonPx30Skin, _super);
+	function ButtonPx30Skin() {
+		_super.call(this);
+		this.skinParts = ["image_u","labelDisplay","iconDisplay","image_d"];
+		
+		this.minHeight = 50;
+		this.minWidth = 100;
+		this.elementsContent = [this.labelDisplay_i(),this.iconDisplay_i()];
+		this.image_u_i();
+		
+		this.image_d_i();
+		
+		this.states = [
+			new eui.State ("up",
+				[
+					new eui.AddItems("image_u","",0,"")
+				])
+			,
+			new eui.State ("down",
+				[
+					new eui.AddItems("image_d","",1,""),
+					new eui.SetProperty("image_u","source","button_down_png")
+				])
+			,
+			new eui.State ("disabled",
+				[
+					new eui.SetProperty("image_u","alpha",0.5)
+				])
+		];
+	}
+	var _proto = ButtonPx30Skin.prototype;
+
+	_proto.image_u_i = function () {
+		var t = new eui.Image();
+		this.image_u = t;
+		t.percentHeight = 100;
+		t.scale9Grid = new egret.Rectangle(1,3,8,8);
+		t.source = "button_up_png";
+		t.percentWidth = 100;
+		return t;
+	};
+	_proto.labelDisplay_i = function () {
+		var t = new eui.Label();
+		this.labelDisplay = t;
+		t.bottom = 8;
+		t.left = 8;
+		t.right = 8;
+		t.size = 30;
+		t.textAlign = "center";
+		t.textColor = 0xFFFFFF;
+		t.top = 8;
+		t.verticalAlign = "middle";
+		return t;
+	};
+	_proto.iconDisplay_i = function () {
+		var t = new eui.Image();
+		this.iconDisplay = t;
+		t.horizontalCenter = 0;
+		t.verticalCenter = 0;
+		return t;
+	};
+	_proto.image_d_i = function () {
+		var t = new eui.Image();
+		this.image_d = t;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.percentHeight = 100;
+		t.source = "mine_select_down_png";
+		t.percentWidth = 100;
+		t.x = 0;
+		t.y = 0;
+		return t;
+	};
+	return ButtonPx30Skin;
+})(eui.Skin);generateEUI.paths['resource/eui_skins/myskin/ButtonPx40Skin.exml'] = window.ButtonPx40Skin = (function (_super) {
+	__extends(ButtonPx40Skin, _super);
+	function ButtonPx40Skin() {
+		_super.call(this);
+		this.skinParts = ["image_u","labelDisplay","iconDisplay","image_d"];
+		
+		this.minHeight = 50;
+		this.minWidth = 100;
+		this.elementsContent = [this.labelDisplay_i(),this.iconDisplay_i()];
+		this.image_u_i();
+		
+		this.image_d_i();
+		
+		this.states = [
+			new eui.State ("up",
+				[
+					new eui.AddItems("image_u","",0,"")
+				])
+			,
+			new eui.State ("down",
+				[
+					new eui.AddItems("image_d","",1,""),
+					new eui.SetProperty("image_u","source","button_down_png")
+				])
+			,
+			new eui.State ("disabled",
+				[
+					new eui.SetProperty("image_u","alpha",0.5)
+				])
+		];
+	}
+	var _proto = ButtonPx40Skin.prototype;
+
+	_proto.image_u_i = function () {
+		var t = new eui.Image();
+		this.image_u = t;
+		t.percentHeight = 100;
+		t.scale9Grid = new egret.Rectangle(1,3,8,8);
+		t.source = "button_up_png";
+		t.percentWidth = 100;
+		return t;
+	};
+	_proto.labelDisplay_i = function () {
+		var t = new eui.Label();
+		this.labelDisplay = t;
+		t.bottom = 8;
+		t.left = 8;
+		t.right = 8;
+		t.size = 40;
+		t.textAlign = "center";
+		t.textColor = 0xFFFFFF;
+		t.top = 8;
+		t.verticalAlign = "middle";
+		return t;
+	};
+	_proto.iconDisplay_i = function () {
+		var t = new eui.Image();
+		this.iconDisplay = t;
+		t.horizontalCenter = 0;
+		t.verticalCenter = 0;
+		return t;
+	};
+	_proto.image_d_i = function () {
+		var t = new eui.Image();
+		this.image_d = t;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.percentHeight = 100;
+		t.source = "mine_select_down_png";
+		t.percentWidth = 100;
+		t.x = 0;
+		t.y = 0;
+		return t;
+	};
+	return ButtonPx40Skin;
 })(eui.Skin);generateEUI.paths['resource/eui_skins/myskin/challengeSkin.exml'] = window.challengeSkin = (function (_super) {
 	__extends(challengeSkin, _super);
 	function challengeSkin() {
@@ -320,11 +471,10 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.alpha = 0.8;
 		t.anchorOffsetX = 0;
 		t.anchorOffsetY = 0;
-		t.height = 40;
+		t.height = 80;
 		t.label = "<";
-		t.scaleX = 2;
-		t.scaleY = 2;
-		t.width = 40;
+		t.skinName = "ButtonPx40Skin";
+		t.width = 80;
 		t.x = 30;
 		t.y = 30;
 		return t;
@@ -346,24 +496,24 @@ var egret = window.egret;window.skins=window.skins||{};
 	__extends(educationSkin, _super);
 	function educationSkin() {
 		_super.call(this);
-		this.skinParts = ["quit_to_PC","sudokoTable","submit","easy","medium","hard","mode_id"];
+		this.skinParts = ["quit_to_PC","sudokoTable","submit","easy","medium","hard","mode_id","edubutton"];
 		
 		this.height = 1136;
 		this.width = 640;
-		this.elementsContent = [this._Image1_i(),this._Image2_i(),this.quit_to_PC_i(),this.sudokoTable_i(),this.submit_i(),this.easy_i(),this.medium_i(),this.hard_i(),this.mode_id_i()];
+		this.elementsContent = [this._Image1_i(),this._Image2_i(),this.quit_to_PC_i(),this.sudokoTable_i(),this.submit_i(),this.easy_i(),this.medium_i(),this.hard_i(),this.mode_id_i(),this.edubutton_i()];
 	}
 	var _proto = educationSkin.prototype;
 
 	_proto._Image1_i = function () {
 		var t = new eui.Image();
-		t.anchorOffsetX = 0;
+		t.anchorOffsetX = 360;
 		t.anchorOffsetY = 0;
-		t.fillMode = "scale";
-		t.height = 1454;
+		t.height = 1280;
 		t.source = "game_background";
-		t.width = 868.54;
-		t.x = -143.54;
-		t.y = -157;
+		t.visible = true;
+		t.width = 720;
+		t.x = 320;
+		t.y = -80;
 		return t;
 	};
 	_proto._Image2_i = function () {
@@ -382,11 +532,10 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.alpha = 0.8;
 		t.anchorOffsetX = 0;
 		t.anchorOffsetY = 0;
-		t.height = 40;
+		t.height = 80;
 		t.label = "<";
-		t.scaleX = 2;
-		t.scaleY = 2;
-		t.width = 40;
+		t.skinName = "ButtonPx40Skin";
+		t.width = 80;
 		t.x = 30;
 		t.y = 30;
 		return t;
@@ -403,15 +552,16 @@ var egret = window.egret;window.skins=window.skins||{};
 		var t = new eui.Button();
 		this.submit = t;
 		t.alpha = 0.8;
-		t.anchorOffsetX = 55;
+		t.anchorOffsetX = 90;
 		t.anchorOffsetY = 0;
-		t.height = 35;
+		t.height = 70;
 		t.horizontalCenter = 0;
 		t.label = "提交题解";
-		t.scaleX = 1.5;
-		t.scaleY = 1.5;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.skinName = "ButtonPx30Skin";
 		t.visible = true;
-		t.width = 110;
+		t.width = 180;
 		t.x = 320;
 		t.y = 1000;
 		return t;
@@ -463,6 +613,19 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.y = 80;
 		return t;
 	};
+	_proto.edubutton_i = function () {
+		var t = new eui.Button();
+		this.edubutton = t;
+		t.anchorOffsetX = 80;
+		t.anchorOffsetY = 0;
+		t.height = 80;
+		t.label = "  开始！";
+		t.skinName = "ButtonPx40Skin";
+		t.width = 160;
+		t.x = 320;
+		t.y = 580;
+		return t;
+	};
 	return educationSkin;
 })(eui.Skin);generateEUI.paths['resource/eui_skins/myskin/game_test1Skin.exml'] = window.game_test1Skin = (function (_super) {
 	__extends(game_test1Skin, _super);
@@ -494,11 +657,10 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.alpha = 0.8;
 		t.anchorOffsetX = 0;
 		t.anchorOffsetY = 0;
-		t.height = 30;
+		t.height = 80;
 		t.label = "<";
-		t.scaleX = 2;
-		t.scaleY = 2;
-		t.width = 30;
+		t.skinName = "ButtonPx40Skin";
+		t.width = 80;
 		t.x = 40;
 		t.y = 40;
 		return t;
@@ -606,13 +768,12 @@ var egret = window.egret;window.skins=window.skins||{};
 		var t = new eui.Button();
 		this.new_man_b = t;
 		t.alpha = 0.8;
-		t.anchorOffsetX = 75;
-		t.anchorOffsetY = 20;
-		t.height = 40;
+		t.anchorOffsetX = 150;
+		t.anchorOffsetY = 40;
+		t.height = 80;
 		t.label = "新手教程";
-		t.scaleX = 2;
-		t.scaleY = 2;
-		t.width = 150;
+		t.skinName = "ButtonPx40Skin";
+		t.width = 300;
 		t.x = 320;
 		t.y = 580;
 		return t;
@@ -621,13 +782,12 @@ var egret = window.egret;window.skins=window.skins||{};
 		var t = new eui.Button();
 		this.randam_sb = t;
 		t.alpha = 0.8;
-		t.anchorOffsetX = 75;
-		t.anchorOffsetY = 20;
-		t.height = 40;
+		t.anchorOffsetX = 150;
+		t.anchorOffsetY = 40;
+		t.height = 80;
 		t.label = "随机数独";
-		t.scaleX = 2;
-		t.scaleY = 2;
-		t.width = 150;
+		t.skinName = "ButtonPx40Skin";
+		t.width = 300;
 		t.x = 320;
 		t.y = 740;
 		return t;
@@ -636,13 +796,12 @@ var egret = window.egret;window.skins=window.skins||{};
 		var t = new eui.Button();
 		this.soduko_chb = t;
 		t.alpha = 0.8;
-		t.anchorOffsetX = 75;
-		t.anchorOffsetY = 20;
-		t.height = 40;
+		t.anchorOffsetX = 150;
+		t.anchorOffsetY = 40;
+		t.height = 80;
 		t.label = "数独闯关";
-		t.scaleX = 2;
-		t.scaleY = 2;
-		t.width = 150;
+		t.skinName = "ButtonPx40Skin";
+		t.width = 300;
 		t.x = 320;
 		t.y = 900;
 		return t;
@@ -653,11 +812,10 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.alpha = 0.8;
 		t.anchorOffsetX = 0;
 		t.anchorOffsetY = 0;
-		t.height = 40;
+		t.height = 80;
 		t.label = "<";
-		t.scaleX = 2;
-		t.scaleY = 2;
-		t.width = 40;
+		t.skinName = "ButtonPx40Skin";
+		t.width = 80;
 		t.x = 30;
 		t.y = 30;
 		return t;
@@ -706,13 +864,12 @@ var egret = window.egret;window.skins=window.skins||{};
 		var t = new eui.Button();
 		this.random_mb = t;
 		t.alpha = 0.8;
-		t.anchorOffsetX = 75;
-		t.anchorOffsetY = 20;
-		t.height = 40;
+		t.anchorOffsetX = 150;
+		t.anchorOffsetY = 40;
+		t.height = 80;
 		t.label = "随机匹配";
-		t.scaleX = 2;
-		t.scaleY = 2;
-		t.width = 150;
+		t.skinName = "ButtonPx40Skin";
+		t.width = 300;
 		t.x = 320;
 		t.y = 580;
 		return t;
@@ -721,13 +878,12 @@ var egret = window.egret;window.skins=window.skins||{};
 		var t = new eui.Button();
 		this.open_house = t;
 		t.alpha = 0.8;
-		t.anchorOffsetX = 75;
-		t.anchorOffsetY = 20;
-		t.height = 40;
+		t.anchorOffsetX = 150;
+		t.anchorOffsetY = 40;
+		t.height = 80;
 		t.label = "开房间";
-		t.scaleX = 2;
-		t.scaleY = 2;
-		t.width = 150;
+		t.skinName = "ButtonPx40Skin";
+		t.width = 300;
 		t.x = 320;
 		t.y = 740;
 		return t;
@@ -736,13 +892,12 @@ var egret = window.egret;window.skins=window.skins||{};
 		var t = new eui.Button();
 		this.rank = t;
 		t.alpha = 0.8;
-		t.anchorOffsetX = 75;
-		t.anchorOffsetY = 20;
-		t.height = 40;
+		t.anchorOffsetX = 150;
+		t.anchorOffsetY = 40;
+		t.height = 80;
 		t.label = "天梯模式";
-		t.scaleX = 2;
-		t.scaleY = 2;
-		t.width = 150;
+		t.skinName = "ButtonPx40Skin";
+		t.width = 300;
 		t.x = 320;
 		t.y = 900;
 		return t;
@@ -753,11 +908,10 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.alpha = 0.8;
 		t.anchorOffsetX = 0;
 		t.anchorOffsetY = 0;
-		t.height = 40;
+		t.height = 80;
 		t.label = "<";
-		t.scaleX = 2;
-		t.scaleY = 2;
-		t.width = 40;
+		t.skinName = "ButtonPx40Skin";
+		t.width = 80;
 		t.x = 30;
 		t.y = 30;
 		return t;
@@ -820,6 +974,7 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.height = 63;
 		t.horizontalCenter = 0;
 		t.label = "提交题解";
+		t.skinName = "ButtonPx30Skin";
 		t.visible = true;
 		t.width = 217;
 		t.y = 803;
@@ -883,11 +1038,10 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.alpha = 0.8;
 		t.anchorOffsetX = 0;
 		t.anchorOffsetY = 0;
-		t.height = 40;
+		t.height = 80;
 		t.label = "<";
-		t.scaleX = 2;
-		t.scaleY = 2;
-		t.width = 40;
+		t.skinName = "ButtonPx40Skin";
+		t.width = 80;
 		t.x = 30;
 		t.y = 30;
 		return t;
@@ -932,14 +1086,12 @@ var egret = window.egret;window.skins=window.skins||{};
 		var t = new eui.Button();
 		this.StartPlay = t;
 		t.alpha = 0.8;
-		t.anchorOffsetX = 80;
+		t.anchorOffsetX = 160;
 		t.anchorOffsetY = 0;
-		t.enable = true;
-		t.height = 40;
+		t.height = 80;
 		t.label = "人机练习";
-		t.scaleX = 2;
-		t.scaleY = 2;
-		t.width = 160;
+		t.skinName = "ButtonPx40Skin";
+		t.width = 320;
 		t.x = 320;
 		t.y = 660;
 		return t;
@@ -948,13 +1100,12 @@ var egret = window.egret;window.skins=window.skins||{};
 		var t = new eui.Button();
 		this.StartPlay1 = t;
 		t.alpha = 0.8;
-		t.anchorOffsetX = 80;
+		t.anchorOffsetX = 160;
 		t.anchorOffsetY = 0;
-		t.height = 40;
+		t.height = 80;
 		t.label = "匹配模式";
-		t.scaleX = 2;
-		t.scaleY = 2;
-		t.width = 160;
+		t.skinName = "ButtonPx40Skin";
+		t.width = 320;
 		t.x = 320;
 		t.y = 780;
 		return t;
@@ -963,13 +1114,12 @@ var egret = window.egret;window.skins=window.skins||{};
 		var t = new eui.Button();
 		this.StartPlay2 = t;
 		t.alpha = 0.8;
-		t.anchorOffsetX = 80;
+		t.anchorOffsetX = 160;
 		t.anchorOffsetY = 0;
-		t.height = 40;
+		t.height = 80;
 		t.label = "比赛";
-		t.scaleX = 2;
-		t.scaleY = 2;
-		t.width = 160;
+		t.skinName = "ButtonPx40Skin";
+		t.width = 320;
 		t.x = 320;
 		t.y = 900;
 		return t;

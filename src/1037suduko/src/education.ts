@@ -6,7 +6,7 @@
 class education extends eui.Component implements eui.UIComponent{
     // UI界面相关对象初始化
     public quit_to_PC:eui.Button;
-    public edubutton:eui.Button = new eui.Button;
+    public edubutton:eui.Button;
     public easy:eui.Button;
     public medium:eui.Button;
     public hard:eui.Button;
@@ -297,13 +297,13 @@ class education extends eui.Component implements eui.UIComponent{
         //返回人机界面
         this.quit_to_PC.addEventListener(egret.TouchEvent.TOUCH_TAP, ()=>{
             SceneManager.removeScene(new play_with_computers());
-        }, this)
-        this.edubutton.label = "开始!";
-        this.edubutton.scaleX = 2;
-        this.edubutton.scaleY = 2;
-        this.edubutton.horizontalCenter = 0;
-        this.edubutton.verticalCenter = 0;
-        this.addChild(this.edubutton);
+        }, this);
+        //this.edubutton.label = "开始!";
+        //this.edubutton.scaleX = 2;
+        //this.edubutton.scaleY = 2;
+        //this.edubutton.horizontalCenter = 0;
+        //this.edubutton.verticalCenter = 0;
+        //this.addChild(this.edubutton);
         this.edubutton.addEventListener(egret.TouchEvent.TOUCH_TAP, this.start_edu, this);
     }
 
