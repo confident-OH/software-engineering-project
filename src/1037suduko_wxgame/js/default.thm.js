@@ -31,32 +31,38 @@ var egret = window.egret;window.skins=window.skins||{};
 	__extends(ButtonSkin, _super);
 	function ButtonSkin() {
 		_super.call(this);
-		this.skinParts = ["labelDisplay","iconDisplay"];
+		this.skinParts = ["image_u","labelDisplay","iconDisplay","image_d"];
 		
 		this.minHeight = 50;
 		this.minWidth = 100;
-		this.elementsContent = [this._Image1_i(),this.labelDisplay_i(),this.iconDisplay_i()];
+		this.elementsContent = [this.labelDisplay_i(),this.iconDisplay_i()];
+		this.image_u_i();
+		
+		this.image_d_i();
+		
 		this.states = [
 			new eui.State ("up",
 				[
+					new eui.AddItems("image_u","",0,"")
 				])
 			,
 			new eui.State ("down",
 				[
-					new eui.SetProperty("_Image1","source","button_down_png")
+					new eui.AddItems("image_d","",1,""),
+					new eui.SetProperty("image_u","source","button_down_png")
 				])
 			,
 			new eui.State ("disabled",
 				[
-					new eui.SetProperty("_Image1","alpha",0.5)
+					new eui.SetProperty("image_u","alpha",0.5)
 				])
 		];
 	}
 	var _proto = ButtonSkin.prototype;
 
-	_proto._Image1_i = function () {
+	_proto.image_u_i = function () {
 		var t = new eui.Image();
-		this._Image1 = t;
+		this.image_u = t;
 		t.percentHeight = 100;
 		t.scale9Grid = new egret.Rectangle(1,3,8,8);
 		t.source = "button_up_png";
@@ -81,6 +87,18 @@ var egret = window.egret;window.skins=window.skins||{};
 		this.iconDisplay = t;
 		t.horizontalCenter = 0;
 		t.verticalCenter = 0;
+		return t;
+	};
+	_proto.image_d_i = function () {
+		var t = new eui.Image();
+		this.image_d = t;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.percentHeight = 100;
+		t.source = "mine_select_down_png";
+		t.percentWidth = 100;
+		t.x = 0;
+		t.y = 0;
 		return t;
 	};
 	return ButtonSkin;
@@ -329,11 +347,11 @@ var egret = window.egret;window.skins=window.skins||{};
 	__extends(educationSkin, _super);
 	function educationSkin() {
 		_super.call(this);
-		this.skinParts = ["quit_to_PC","sudokoTable","submit"];
+		this.skinParts = ["quit_to_PC","sudokoTable","submit","easy","medium","hard","mode_id"];
 		
 		this.height = 1136;
 		this.width = 640;
-		this.elementsContent = [this._Image1_i(),this.quit_to_PC_i(),this._Label1_i(),this.sudokoTable_i(),this.submit_i()];
+		this.elementsContent = [this._Image1_i(),this.quit_to_PC_i(),this._Label1_i(),this.sudokoTable_i(),this.submit_i(),this.easy_i(),this.medium_i(),this.hard_i(),this.mode_id_i()];
 	}
 	var _proto = educationSkin.prototype;
 
@@ -378,6 +396,7 @@ var egret = window.egret;window.skins=window.skins||{};
 	_proto.sudokoTable_i = function () {
 		var t = new eui.Group();
 		this.sudokoTable = t;
+		t.visible = false;
 		t.x = 50;
 		t.y = 120;
 		return t;
@@ -394,6 +413,50 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.visible = false;
 		t.width = 217;
 		t.y = 803;
+		return t;
+	};
+	_proto.easy_i = function () {
+		var t = new eui.Button();
+		this.easy = t;
+		t.label = "简单";
+		t.visible = false;
+		t.x = 134;
+		t.y = 103;
+		return t;
+	};
+	_proto.medium_i = function () {
+		var t = new eui.Button();
+		this.medium = t;
+		t.label = "中等";
+		t.visible = false;
+		t.x = 272;
+		t.y = 103;
+		return t;
+	};
+	_proto.hard_i = function () {
+		var t = new eui.Button();
+		this.hard = t;
+		t.label = "困难";
+		t.skinName = "skins.ButtonSkin";
+		t.visible = false;
+		t.x = 410;
+		t.y = 103;
+		return t;
+	};
+	_proto.mode_id_i = function () {
+		var t = new eui.Label();
+		this.mode_id = t;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 61;
+		t.size = 25;
+		t.text = "模式：简单";
+		t.textAlign = "left";
+		t.verticalAlign = "middle";
+		t.visible = false;
+		t.width = 149;
+		t.x = 454;
+		t.y = 48;
 		return t;
 	};
 	return educationSkin;
@@ -677,65 +740,65 @@ var egret = window.egret;window.skins=window.skins||{};
 	__extends(StartscenseSkin, _super);
 	function StartscenseSkin() {
 		_super.call(this);
-		this.skinParts = ["Startscence","StartPlay","StartPlay1","StartPlay2"];
+		this.skinParts = ["StartPlay","StartPlay1","StartPlay2"];
 		
-		this.height = 1236.88;
-		this.width = 708;
-		this.elementsContent = [this.Startscence_i(),this.StartPlay_i(),this.StartPlay1_i(),this.StartPlay2_i()];
+		this.height = 1136;
+		this.width = 640;
+		this.elementsContent = [this._Image1_i(),this.StartPlay_i(),this.StartPlay1_i(),this.StartPlay2_i()];
 	}
 	var _proto = StartscenseSkin.prototype;
 
-	_proto.Startscence_i = function () {
+	_proto._Image1_i = function () {
 		var t = new eui.Image();
-		this.Startscence = t;
-		t.anchorOffsetY = 0;
-		t.bottom = -44.11999999999989;
+		t.anchorOffsetX = 360;
+		t.anchorOffsetY = 640;
 		t.fillMode = "scale";
-		t.left = 0;
-		t.right = 0;
-		t.source = "resource/assets/001.jpg";
-		t.top = 0;
-		t.touchEnabled = true;
+		t.height = 1280;
+		t.source = "start_image";
+		t.visible = true;
+		t.width = 720;
+		t.x = 320;
+		t.y = 640;
 		return t;
 	};
 	_proto.StartPlay_i = function () {
 		var t = new eui.Button();
 		this.StartPlay = t;
 		t.alpha = 0.8;
-		t.anchorOffsetX = 0;
+		t.anchorOffsetX = 160;
 		t.anchorOffsetY = 0;
 		t.enable = true;
-		t.height = 81;
-		t.horizontalCenter = 0;
+		t.height = 80;
 		t.label = "人机练习";
-		t.width = 250;
-		t.y = 456;
+		t.width = 320;
+		t.x = 320;
+		t.y = 660;
 		return t;
 	};
 	_proto.StartPlay1_i = function () {
 		var t = new eui.Button();
 		this.StartPlay1 = t;
 		t.alpha = 0.8;
-		t.anchorOffsetX = 0;
+		t.anchorOffsetX = 160;
 		t.anchorOffsetY = 0;
-		t.height = 81;
-		t.horizontalCenter = 0;
+		t.height = 80;
 		t.label = "匹配模式";
-		t.width = 250;
-		t.y = 654;
+		t.width = 320;
+		t.x = 320;
+		t.y = 780;
 		return t;
 	};
 	_proto.StartPlay2_i = function () {
 		var t = new eui.Button();
 		this.StartPlay2 = t;
 		t.alpha = 0.8;
-		t.anchorOffsetX = 0;
+		t.anchorOffsetX = 160;
 		t.anchorOffsetY = 0;
-		t.height = 81;
-		t.horizontalCenter = 0;
+		t.height = 80;
 		t.label = "比赛";
-		t.width = 250;
-		t.y = 851;
+		t.width = 320;
+		t.x = 320;
+		t.y = 900;
 		return t;
 	};
 	return StartscenseSkin;
