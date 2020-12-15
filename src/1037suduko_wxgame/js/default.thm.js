@@ -616,12 +616,12 @@ var egret = window.egret;window.skins=window.skins||{};
 	_proto.edubutton_i = function () {
 		var t = new eui.Button();
 		this.edubutton = t;
-		t.anchorOffsetX = 80;
+		t.anchorOffsetX = 100;
 		t.anchorOffsetY = 0;
 		t.height = 80;
 		t.label = "  开始！";
 		t.skinName = "ButtonPx40Skin";
-		t.width = 160;
+		t.width = 200;
 		t.x = 320;
 		t.y = 580;
 		return t;
@@ -1137,17 +1137,15 @@ var egret = window.egret;window.skins=window.skins||{};
 		return t;
 	};
 	return StartscenseSkin;
-})(eui.Skin);generateEUI.paths['resource/eui_skins/myskin/SudokoBlank.exml'] = window.skins.TextInputSkin = (function (_super) {
-	__extends(TextInputSkin, _super);
-	function TextInputSkin() {
+})(eui.Skin);generateEUI.paths['resource/eui_skins/myskin/SudokoBlankSkin.exml'] = window.sudokoBlank = (function (_super) {
+	__extends(sudokoBlank, _super);
+	function sudokoBlank() {
 		_super.call(this);
 		this.skinParts = ["textDisplay","promptDisplay"];
 		
 		this.minHeight = 40;
 		this.minWidth = 300;
-		this.elementsContent = [this._Image1_i(),this._Rect1_i(),this.textDisplay_i()];
-		this.promptDisplay_i();
-		
+		this.elementsContent = [this._Image1_i(),this._Rect1_i(),this.textDisplay_i(),this.promptDisplay_i()];
 		this.states = [
 			new eui.State ("normal",
 				[
@@ -1160,29 +1158,31 @@ var egret = window.egret;window.skins=window.skins||{};
 			,
 			new eui.State ("normalWithPrompt",
 				[
-					new eui.AddItems("promptDisplay","",1,"")
 				])
 			,
 			new eui.State ("disabledWithPrompt",
 				[
-					new eui.AddItems("promptDisplay","",1,"")
 				])
 		];
 	}
-	var _proto = TextInputSkin.prototype;
+	var _proto = sudokoBlank.prototype;
 
 	_proto._Image1_i = function () {
 		var t = new eui.Image();
 		t.percentHeight = 100;
 		t.scale9Grid = new egret.Rectangle(1,3,8,8);
-		t.source = "button_up_png";
+		t.source = "mine_select_down_png";
 		t.percentWidth = 100;
 		return t;
 	};
 	_proto._Rect1_i = function () {
 		var t = new eui.Rect();
-		t.fillColor = 0xffffff;
+		t.fillAlpha = 0;
+		t.fillColor = 0x3D5D98;
 		t.percentHeight = 100;
+		t.strokeColor = 0xFFFFFF;
+		t.strokeWeight = 2;
+		t.visible = true;
 		t.percentWidth = 100;
 		return t;
 	};
@@ -1190,29 +1190,34 @@ var egret = window.egret;window.skins=window.skins||{};
 		var t = new eui.EditableText();
 		this.textDisplay = t;
 		t.height = 24;
-		t.horizontalCenter = "0";
+		t.horizontalCenter = "1";
 		t.left = "10";
 		t.right = "10";
 		t.size = 20;
 		t.textColor = 0x000000;
-		t.verticalCenter = "0";
+		t.verticalCenter = "1";
 		t.percentWidth = 100;
 		return t;
 	};
 	_proto.promptDisplay_i = function () {
 		var t = new eui.Label();
 		this.promptDisplay = t;
+		t.alpha = 0.8;
+		t.bold = true;
 		t.height = 24;
 		t.left = 10;
+		t.maxChars = 1;
 		t.right = 10;
-		t.size = 20;
+		t.size = 50;
+		t.textAlign = "center";
 		t.textColor = 0xa9a9a9;
 		t.touchEnabled = false;
+		t.verticalAlign = "middle";
 		t.verticalCenter = 0;
 		t.percentWidth = 100;
 		return t;
 	};
-	return TextInputSkin;
+	return sudokoBlank;
 })(eui.Skin);generateEUI.paths['resource/eui_skins/PanelSkin.exml'] = window.skins.PanelSkin = (function (_super) {
 	__extends(PanelSkin, _super);
 	function PanelSkin() {

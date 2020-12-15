@@ -12,5 +12,5 @@
 	<e:Button id="hard" label="困难" y="170" skinName="skins.ButtonSkin" visible="true" anchorOffsetX="50" x="480">
 	</e:Button>
 	<e:Label id="mode_id" text="模式：简单" x="480" y="80" anchorOffsetX="0" width="150" anchorOffsetY="0" height="60" verticalAlign="middle" textAlign="left" size="25" visible="true"/>
-	<e:Button id="edubutton" label="  开始！" x="320" y="580" skinName="ButtonPx40Skin" anchorOffsetX="80" width="160" anchorOffsetY="0" height="80"/>
+	<e:Button id="edubutton" label="  开始！" x="320" y="580" skinName="ButtonPx40Skin" anchorOffsetX="100" width="200" anchorOffsetY="0" height="80"/>
 </e:Skin>
