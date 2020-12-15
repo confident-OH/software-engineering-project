@@ -30,20 +30,6 @@ class Game_test extends eui.Component implements eui.UIComponent{
     protected partAdded(partName: string, instance: any): void{
         super.partAdded(partName, instance);
     }
-    
-    /**
-     * 处理用户操作
-     * 
-     * Deal with operations
-     */
-    private High_l(tx:eui.TextInput):void {
-        var shp:egret.Shape = new egret.Shape;
-        shp.graphics.beginFill(0xffa631);
-        shp.graphics.drawRect(tx.x, tx.y, tx.width, tx.height);
-        shp.graphics.endFill();
-        this.sudokoTable.addChildAt(shp, 0);
-        this.sudokoTable.addChild(tx);
-    }
 
     /**
      * 添加数独边框
@@ -172,6 +158,11 @@ class Game_test extends eui.Component implements eui.UIComponent{
                     (60-1-this.endtime.getMinutes()).toString() + "分 " + (60-1-this.endtime.getSeconds()).toString() + "秒";
     }
 
+    /**
+     * 生成数独框图
+     * 
+     * generate the sudoku
+     */
     private gensudoko():void{
         this.sudokoTable.width = 360;
         this.sudokoTable.height = 360;
@@ -197,6 +188,11 @@ class Game_test extends eui.Component implements eui.UIComponent{
         this.Hline();
     }
 
+    /**
+     * 从文件中读取数独
+     * 
+     * read the sudoku from a text file
+     */
     private read_from_file():void{
         /*
         var url = "resource/texts/s_answer.txt";

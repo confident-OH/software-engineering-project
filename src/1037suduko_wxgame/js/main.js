@@ -475,19 +475,6 @@ var Game_test = (function (_super) {
         _super.prototype.partAdded.call(this, partName, instance);
     };
     /**
-     * 处理用户操作
-     *
-     * Deal with operations
-     */
-    Game_test.prototype.High_l = function (tx) {
-        var shp = new egret.Shape;
-        shp.graphics.beginFill(0xffa631);
-        shp.graphics.drawRect(tx.x, tx.y, tx.width, tx.height);
-        shp.graphics.endFill();
-        this.sudokoTable.addChildAt(shp, 0);
-        this.sudokoTable.addChild(tx);
-    };
-    /**
      * 添加数独边框
      *
      * Add a Sudoku margins
@@ -604,6 +591,11 @@ var Game_test = (function (_super) {
         this.timeout.text = "距离挑战结束还剩: " + (24 - 1 - this.endtime.getHours()).toString() + "时 " +
             (60 - 1 - this.endtime.getMinutes()).toString() + "分 " + (60 - 1 - this.endtime.getSeconds()).toString() + "秒";
     };
+    /**
+     * 生成数独框图
+     *
+     * generate the sudoku
+     */
     Game_test.prototype.gensudoko = function () {
         this.sudokoTable.width = 360;
         this.sudokoTable.height = 360;
@@ -625,8 +617,14 @@ var Game_test = (function (_super) {
                 this.ss.addItemAt(s2, i * 9 + j);
             }
         }
+        //生成数独边框线
         this.Hline();
     };
+    /**
+     * 从文件中读取数独
+     *
+     * read the sudoku from a text file
+     */
     Game_test.prototype.read_from_file = function () {
         /*
         var url = "resource/texts/s_answer.txt";
