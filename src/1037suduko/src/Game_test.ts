@@ -1,11 +1,12 @@
 /*
-    Module:游戏模块
+    Module:挑战赛模块
 */
 class Game_test extends eui.Component implements eui.UIComponent{
     // UI界面相关对象初始化
     public quit_to_main:eui.Button;
     public sudokoTable:eui.Group;
     public submit:eui.Button;
+    public endtime:Date = new Date();
 
     // 数独块UI界面大小相关设置
     public blocks_x = 60;
@@ -154,11 +155,20 @@ class Game_test extends eui.Component implements eui.UIComponent{
         panel.addChild(panel.closeButton);
     }
 
+    private printtime():void{
+        
+    }
     protected childrenCreated(): void{
         super.childrenCreated();
         this.quit_to_main.addEventListener(egret.TouchEvent.TOUCH_TAP, ()=>{
             SceneManager.removeScene(new Startscence());
-        }, this)
+        }, this);
+        var timer:egret.Timer = new egret.Timer(1000, 1000000);    //1s执行1次
+        timer.addEventListener(egret.TimerEvent.TIMER, ()=>{ 
+            this.printtime();
+        }, this);
+        timer.start();
+
         //添加监听，监听用户的输入
         this.sudokoTable.width = 360;
         this.sudokoTable.height = 360;
@@ -191,12 +201,6 @@ class Game_test extends eui.Component implements eui.UIComponent{
                 this.ss.addItemAt(s2, i*9+j);
             }
         }
-        /*//点击测试
-        for(var i = 0; i<9; i++){
-            for(var j = 0; j < 9; j++){
-                this.sudokoTable.getElementAt(9*i+j).addEventListener(egret.Event.CHANGING, this.onChang.bind(this,i,j,false), this);
-            }
-        }*/
         this.Hline();
         this.submit.addEventListener(egret.TouchEvent.TOUCH_TAP, ()=>{
             if(this.isRight()){
@@ -204,6 +208,9 @@ class Game_test extends eui.Component implements eui.UIComponent{
             }else{
                 this.show_panal("N");
             }
-        }, this)
+        }, this);
+        var timer:egret.Timer = new egret.Timer(500,5);
+        //注册事件侦听器
+        
     }
 }

@@ -418,8 +418,8 @@ var egret = window.egret;window.skins=window.skins||{};
 		this.easy = t;
 		t.label = "简单";
 		t.visible = false;
-		t.x = 134;
-		t.y = 103;
+		t.x = 133;
+		t.y = 113;
 		return t;
 	};
 	_proto.medium_i = function () {
@@ -427,8 +427,8 @@ var egret = window.egret;window.skins=window.skins||{};
 		this.medium = t;
 		t.label = "中等";
 		t.visible = false;
-		t.x = 272;
-		t.y = 103;
+		t.x = 271;
+		t.y = 113;
 		return t;
 	};
 	_proto.hard_i = function () {
@@ -437,8 +437,8 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.label = "困难";
 		t.skinName = "skins.ButtonSkin";
 		t.visible = false;
-		t.x = 410;
-		t.y = 103;
+		t.x = 409;
+		t.y = 113;
 		return t;
 	};
 	_proto.mode_id_i = function () {
@@ -466,7 +466,7 @@ var egret = window.egret;window.skins=window.skins||{};
 		
 		this.height = 1136;
 		this.width = 640;
-		this.elementsContent = [this._Image1_i(),this.quit_to_main_i(),this.submit_i(),this.sudokoTable_i(),this._Image2_i()];
+		this.elementsContent = [this._Image1_i(),this.quit_to_main_i(),this.submit_i(),this.sudokoTable_i(),this._Image2_i(),this._Label1_i()];
 	}
 	var _proto = game_test1Skin.prototype;
 
@@ -516,7 +516,7 @@ var egret = window.egret;window.skins=window.skins||{};
 		var t = new eui.Group();
 		this.sudokoTable = t;
 		t.x = 50;
-		t.y = 120;
+		t.y = 142;
 		return t;
 	};
 	_proto._Image2_i = function () {
@@ -527,6 +527,21 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.width = 370;
 		t.x = 320;
 		t.y = 40;
+		return t;
+	};
+	_proto._Label1_i = function () {
+		var t = new eui.Label();
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.bold = true;
+		t.height = 33;
+		t.right = 0;
+		t.size = 15;
+		t.text = "距离结束还剩: xx时 xx分 xx秒";
+		t.textAlign = "left";
+		t.verticalAlign = "middle";
+		t.width = 238;
+		t.y = 142.065;
 		return t;
 	};
 	return game_test1Skin;
@@ -756,11 +771,11 @@ var egret = window.egret;window.skins=window.skins||{};
 	__extends(randomSkin, _super);
 	function randomSkin() {
 		_super.call(this);
-		this.skinParts = ["quit_to_PC"];
+		this.skinParts = ["quit_to_PC","submit1","mode_id","sudokoTable1","easy","medium","hard"];
 		
 		this.height = 1136;
 		this.width = 640;
-		this.elementsContent = [this._Image1_i(),this.quit_to_PC_i(),this._Image2_i()];
+		this.elementsContent = [this._Image1_i(),this.quit_to_PC_i(),this.submit1_i(),this.mode_id_i(),this.sudokoTable1_i(),this.easy_i(),this.medium_i(),this.hard_i(),this.quit_to_PC_i(),this._Image2_i()];
 	}
 	var _proto = randomSkin.prototype;
 
@@ -774,6 +789,85 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.width = 868.54;
 		t.x = -143.54;
 		t.y = -157;
+		return t;
+	};
+	_proto.quit_to_PC_i = function () {
+		var t = new eui.Button();
+		this.quit_to_PC = t;
+		t.alpha = 0.8;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 57;
+		t.label = "返回";
+		t.width = 136;
+		t.x = 250;
+		t.y = 881;
+		return t;
+	};
+	_proto.submit1_i = function () {
+		var t = new eui.Button();
+		this.submit1 = t;
+		t.alpha = 0.8;
+		t.anchorOffsetX = 108.5;
+		t.anchorOffsetY = 0;
+		t.height = 63;
+		t.horizontalCenter = 0;
+		t.label = "提交题解";
+		t.visible = true;
+		t.width = 217;
+		t.y = 803;
+		return t;
+	};
+	_proto.mode_id_i = function () {
+		var t = new eui.Label();
+		this.mode_id = t;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 61;
+		t.size = 25;
+		t.text = "模式：简单";
+		t.textAlign = "left";
+		t.verticalAlign = "middle";
+		t.visible = true;
+		t.width = 149;
+		t.x = 457.374;
+		t.y = 127.928;
+		return t;
+	};
+	_proto.sudokoTable1_i = function () {
+		var t = new eui.Group();
+		this.sudokoTable1 = t;
+		t.visible = true;
+		t.x = 47;
+		t.y = 202;
+		return t;
+	};
+	_proto.easy_i = function () {
+		var t = new eui.Button();
+		this.easy = t;
+		t.label = "简单";
+		t.visible = true;
+		t.x = 133;
+		t.y = 184;
+		return t;
+	};
+	_proto.medium_i = function () {
+		var t = new eui.Button();
+		this.medium = t;
+		t.label = "中等";
+		t.visible = true;
+		t.x = 271;
+		t.y = 184;
+		return t;
+	};
+	_proto.hard_i = function () {
+		var t = new eui.Button();
+		this.hard = t;
+		t.label = "困难";
+		t.skinName = "skins.ButtonSkin";
+		t.visible = true;
+		t.x = 409;
+		t.y = 184;
 		return t;
 	};
 	_proto.quit_to_PC_i = function () {

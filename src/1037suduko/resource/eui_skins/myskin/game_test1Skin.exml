@@ -5,7 +5,8 @@
     <e:Button label="&lt;" x="40" y="40" anchorOffsetX="0" width="30" anchorOffsetY="0" height="30" alpha="0.8"
               id="quit_to_main"  scaleX="2" scaleY="2"/>
 	<e:Button label="提交题解" y="960" anchorOffsetX="55" width="110" anchorOffsetY="20" height="40" alpha="0.8" id="submit" horizontalCenter="0" scaleX="1.5" scaleY="1.5"/>
-    <e:Group x="50" y="120" id="sudokoTable">
+    <e:Group x="50" y="142" id="sudokoTable">
     </e:Group>
 	<e:Image x="320" y="40" width="370" height="100" anchorOffsetX="185" source="championship_title"/>
+	<e:Label text="距离结束还剩: xx时 xx分 xx秒" y="142.065" anchorOffsetX="0" width="238" anchorOffsetY="0" height="33" verticalAlign="middle" size="15" bold="true" textAlign="left" right="0"/>
 </e:Skin>
