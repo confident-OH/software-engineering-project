@@ -5,6 +5,7 @@ class Game_test extends eui.Component implements eui.UIComponent{
     // UI界面相关对象初始化
     public quit_to_main:eui.Button;
     public sudokoTable:eui.Group;
+    public timeout:eui.Label;
     public submit:eui.Button;
     public endtime:Date = new Date();
 
@@ -156,19 +157,24 @@ class Game_test extends eui.Component implements eui.UIComponent{
     }
 
     private printtime():void{
-        
+        this.endtime = new Date;
+        this.timeout.text = "距离挑战结束还剩: "+ (24-1-this.endtime.getHours()).toString() + "时 " + 
+                            (60-1-this.endtime.getMinutes()).toString() + "分 " + (60-1-this.endtime.getSeconds()).toString() + "秒";
     }
     protected childrenCreated(): void{
         super.childrenCreated();
         this.quit_to_main.addEventListener(egret.TouchEvent.TOUCH_TAP, ()=>{
+            timer.stop();
             SceneManager.removeScene(new Startscence());
         }, this);
-        var timer:egret.Timer = new egret.Timer(1000, 1000000);    //1s执行1次
+        var timer:egret.Timer = new egret.Timer(300, 0);    //0.3s执行1次
         timer.addEventListener(egret.TimerEvent.TIMER, ()=>{ 
             this.printtime();
         }, this);
         timer.start();
-
+        timer.addEventListener(egret.Event.CHANGE, ()=>{ 
+            this.printtime();
+        }, this);
         //添加监听，监听用户的输入
         this.sudokoTable.width = 360;
         this.sudokoTable.height = 360;
