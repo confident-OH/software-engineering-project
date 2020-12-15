@@ -421,6 +421,7 @@ var education = (function (_super) {
      */
     education.prototype.start_edu = function () {
         var _this = this;
+        // 显示出数独游戏框图
         this.edubutton.visible = false;
         this.submit.visible = true;
         this.easy.visible = true;
@@ -621,7 +622,7 @@ var Game_test = (function (_super) {
         this.Hline();
     };
     /**
-     * 从文件中读取数独
+     * 从文件中读取数独(待完成)
      *
      * read the sudoku from a text file
      */
@@ -658,9 +659,9 @@ var Game_test = (function (_super) {
         }
     };
     /**
-     * 显示比对结果
+     * 判断用户是否出现非法输入
      *
-     * show the comparing result
+     * judge the user input.
      */
     Game_test.prototype.test_user_input = function () {
         for (var i = 0; i < 9; i++) {
@@ -730,6 +731,11 @@ __reflect(Game_test.prototype, "Game_test", ["eui.UIComponent", "egret.DisplayOb
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
+/**
+ * UI资源加载
+ *
+ * Load resource for UI
+ */
 var LoadingUI = (function (_super) {
     __extends(LoadingUI, _super);
     function LoadingUI() {
@@ -907,6 +913,11 @@ var Main = (function (_super) {
     return Main;
 }(eui.UILayer));
 __reflect(Main.prototype, "Main");
+/**
+ * 排位赛类
+ *
+ * Challenge Class
+ */
 var challenges = (function (_super) {
     __extends(challenges, _super);
     function challenges() {
@@ -1127,6 +1138,7 @@ var random = (function (_super) {
     };
     /**
      * 显示比对结果
+     *
      * Show the comparing result
      */
     random.prototype.show_panal = function (e) {
@@ -1148,6 +1160,7 @@ var random = (function (_super) {
     };
     /**
      * 生成随机数
+     *
      * Generate a random number
      * @param min 随机数的最小值
      * @param max 随机数的最大值
@@ -1159,6 +1172,7 @@ var random = (function (_super) {
     };
     /**
      * 生成数独
+     *
      * Generate a Sudoku
      */
     random.prototype.gen_sudoko = function () {
@@ -1300,10 +1314,9 @@ var SceneManager = (function () {
 }());
 __reflect(SceneManager.prototype, "SceneManager");
 /*
- * 模块名：Startscence
- * 功能：提供进入页面
- *
- *
+ * 进入页面类
+ 
+ * Startscence Class
  */
 var Startscence = (function (_super) {
     __extends(Startscence, _super);
