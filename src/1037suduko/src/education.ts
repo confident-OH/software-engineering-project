@@ -313,6 +313,7 @@ class education extends eui.Component implements eui.UIComponent{
      * Start the Newbie Guide
      */
     private start_edu():void{
+        // 显示出数独游戏框图
         this.edubutton.visible = false;
         this.submit.visible = true;
         this.easy.visible = true;
@@ -334,6 +335,6 @@ class education extends eui.Component implements eui.UIComponent{
             }else{
                 this.show_panal("N");
             }
-        }, this)
+        }, this);
     }
 }

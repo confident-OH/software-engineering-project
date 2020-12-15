@@ -186,11 +186,10 @@ class Game_test extends eui.Component implements eui.UIComponent{
         }
         //生成数独边框线
         this.Hline();
-        this.test_user_input();
     }
 
     /**
-     * 从文件中读取数独
+     * 从文件中读取数独(待完成)
      * 
      * read the sudoku from a text file
      */
@@ -228,15 +227,16 @@ class Game_test extends eui.Component implements eui.UIComponent{
     }
 
     /**
-     * 显示比对结果
+     * 判断用户是否出现非法输入
      * 
-     * show the comparing result
+     * judge the user input.
      */
     private test_user_input():void{
         for(var i = 0; i<9; i++){
             for(var j = 0; j<9; j++){
                 var block_i = this.ss.getItemAt(i*9+j);
-                block_i.addEventListener(egret.Event.CHANGE, this.is_input_error.bind(egret.Event.CHANGE, i, j, this.ss, this, this), this);
+                block_i.addEventListener(egret.Event.CHANGE, 
+                    this.is_input_error.bind(egret.Event.CHANGE, i, j, this.ss, this, this), this);
             }
         }
     }
@@ -259,7 +259,7 @@ class Game_test extends eui.Component implements eui.UIComponent{
         timer.start();
         this.read_from_file();
         this.gensudoko();
-        
+        this.test_user_input();
         this.submit.addEventListener(egret.TouchEvent.TOUCH_TAP, ()=>{
             if(this.isRight()){
                 this.show_panal("Y");

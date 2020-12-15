@@ -619,7 +619,6 @@ var Game_test = (function (_super) {
         }
         //生成数独边框线
         this.Hline();
-        this.test_user_input();
     };
     /**
      * 从文件中读取数独
@@ -690,6 +689,7 @@ var Game_test = (function (_super) {
         timer.start();
         this.read_from_file();
         this.gensudoko();
+        this.test_user_input();
         this.submit.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
             if (_this.isRight()) {
                 _this.show_panal("Y");
