@@ -57,7 +57,7 @@
 			"name": "radiobutton_select_up_png"
 		},
 		{
-			"url": "assets/coolHue-FCCF31-F55555.png",
+			"url": "assets/button_touched.png",
 			"type": "image",
 			"name": "mine_select_down_png"
 		},
@@ -127,16 +127,6 @@
 			"name": "track_sb_png"
 		},
 		{
-			"url": "assets/game_background.jpg",
-			"type": "image",
-			"name": "game_background"
-		},
-		{
-			"url": "assets/soduko_bg.jpg",
-			"type": "image",
-			"name": "soduko_bg_jpg"
-		},
-		{
 			"url": "assets/main_icon.png",
 			"type": "image",
 			"name": "start_icon"
@@ -147,11 +137,17 @@
 			"name": "start_background"
 		},
 		{
+			"url": "assets/game_background.jpg",
+			"type": "image",
+			"name": "game_background"
+		},
+		{
 			"url": "assets/PVP_title.png",
 			"type": "image",
 			"name": "PVP_title"
 		},
 		{
+			
 			"url": "assets/PVE_title.png",
 			"type": "image",
 			"name": "PVE_title"
@@ -175,11 +171,6 @@
 			"url": "assets/education_title.png",
 			"type": "image",
 			"name": "education_title"
-		},
-		{
-			"url": "assets/menu_background.jpg",
-			"type": "image",
-			"name": "menu_background"
 		},
 		{
 			"name": "description_json",

@@ -124,9 +124,10 @@ var AssetAdapter = (function () {
     return AssetAdapter;
 }());
 __reflect(AssetAdapter.prototype, "AssetAdapter", ["eui.IAssetAdapter"]);
-/*
-    Module:新手教程模块
-*/
+/**
+ * 新手教程模块
+ * Newbie Guide Module
+ */
 var education = (function (_super) {
     __extends(education, _super);
     // 加载相关的UI界面资源
@@ -166,9 +167,10 @@ var education = (function (_super) {
     education.prototype.partAdded = function (partName, instance) {
         _super.prototype.partAdded.call(this, partName, instance);
     };
-    /*
-        Method:添加数独边框
-    */
+    /**
+     * 添加数独边框
+     * Add Sudoku margins
+     */
     education.prototype.Hline = function () {
         var shp = new egret.Shape;
         shp.graphics.lineStyle(8, 0xa78e44);
@@ -189,9 +191,10 @@ var education = (function (_super) {
         shp.graphics.lineTo(this.root_x + 6 * this.blocks_x, this.root_y + 9 * this.blocks_y);
         this.sudokoTable.addChild(shp);
     };
-    /*
-        Method:判断提交是否正确
-    */
+    /**
+     * 判断提交是否正确
+     * Judge the answer
+     */
     education.prototype.isRight = function () {
         // 判断每一行是否满足对应的游戏规则
         for (var i = 0; i < 9; i++) {
@@ -252,9 +255,10 @@ var education = (function (_super) {
         }
         return true;
     };
-    /*
-        Method:显示比对结果
-    */
+    /**
+     * 显示比对结果
+     * Show the comparing result
+     */
     education.prototype.show_panal = function (e) {
         var panel = new eui.Panel();
         // 用户提交的题解完全正确
@@ -292,9 +296,10 @@ var education = (function (_super) {
         var Rand = Math.random();
         return (min + Math.round(Rand * Range));
     };
-    /*
-        Method: 生成数独
-    */
+    /**
+     * 生成数独
+     * Generate a Sudoku
+     */
     education.prototype.gen_sudoko = function () {
         if (this.a_lable) {
             this.sudokoTable.width = 9 * this.blocks_x;
@@ -379,9 +384,10 @@ var education = (function (_super) {
             }
         }
     };
-    /*
-        Method:进入新手教程
-    */
+    /**
+     * 进入新手教程
+     * Enter the Newbie Guide
+     */
     education.prototype.childrenCreated = function () {
         _super.prototype.childrenCreated.call(this);
         //返回人机界面
@@ -396,9 +402,10 @@ var education = (function (_super) {
         this.addChild(this.edubutton);
         this.edubutton.addEventListener(egret.TouchEvent.TOUCH_TAP, this.start_edu, this);
     };
-    /*
-        Method:开始进行新手教程
-    */
+    /**
+     * 开始进行新手教程
+     * Start the Newbie Guide
+     */
     education.prototype.start_edu = function () {
         var _this = this;
         this.edubutton.visible = false;
@@ -428,9 +435,10 @@ var education = (function (_super) {
     return education;
 }(eui.Component));
 __reflect(education.prototype, "education", ["eui.UIComponent", "egret.DisplayObject"]);
-/*
-    Module:挑战赛模块
-*/
+/**
+ * 排位赛模块
+ * Challenge Competition Module
+ */
 var Game_test = (function (_super) {
     __extends(Game_test, _super);
     // 加载相关的UI界面资源
@@ -452,9 +460,10 @@ var Game_test = (function (_super) {
     Game_test.prototype.partAdded = function (partName, instance) {
         _super.prototype.partAdded.call(this, partName, instance);
     };
-    /*
-        Method:处理函数
-    */
+    /**
+     * 处理用户操作函数
+     * Deal with operations
+     */
     Game_test.prototype.High_l = function (tx) {
         var shp = new egret.Shape;
         shp.graphics.beginFill(0xffa631);
@@ -463,9 +472,10 @@ var Game_test = (function (_super) {
         this.sudokoTable.addChildAt(shp, 0);
         this.sudokoTable.addChild(tx);
     };
-    /*
-        Method:添加数独边框
-    */
+    /**
+     * 添加数独边框
+     * Add a Sudoku margins
+     */
     Game_test.prototype.Hline = function () {
         var shp = new egret.Shape;
         shp.graphics.lineStyle(8, 0xa78e44);
@@ -486,9 +496,10 @@ var Game_test = (function (_super) {
         shp.graphics.lineTo(this.root_x + 6 * this.blocks_x, this.root_y + 9 * this.blocks_y);
         this.sudokoTable.addChild(shp);
     };
-    /*
-        Method:判断提交是否正确
-    */
+    /**
+     * 判断提交是否正确
+     * judge the answer
+     */
     Game_test.prototype.isRight = function () {
         // 判断每一行是否满足对应的游戏规则
         for (var i = 0; i < 9; i++) {
@@ -549,9 +560,10 @@ var Game_test = (function (_super) {
         }
         return true;
     };
-    /*
-        Method:显示比对结果
-    */
+    /**
+     * 显示比对结果
+     * show the comparing result
+     */
     Game_test.prototype.show_panal = function (e) {
         var panel = new eui.Panel();
         // 用户提交的题解完全正确
@@ -861,9 +873,10 @@ var challenges = (function (_super) {
     return challenges;
 }(eui.Component));
 __reflect(challenges.prototype, "challenges", ["eui.UIComponent", "egret.DisplayObject"]);
-/*
-    Module:人机对抗模块
-*/
+/**
+ * 随机数独模块
+ * Random Sudoku Module
+ */
 var play_with_computers = (function (_super) {
     __extends(play_with_computers, _super);
     function play_with_computers() {
@@ -874,9 +887,10 @@ var play_with_computers = (function (_super) {
     play_with_computers.prototype.partAdded = function (partName, instance) {
         _super.prototype.partAdded.call(this, partName, instance);
     };
-    /*
-        Method:返回主界面
-    */
+    /**
+     * 返回主界面
+     * Go back to the main menu
+     */
     play_with_computers.prototype.childrenCreated = function () {
         _super.prototype.childrenCreated.call(this);
         this.quit_to_main.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
@@ -895,9 +909,10 @@ var play_with_computers = (function (_super) {
     return play_with_computers;
 }(eui.Component));
 __reflect(play_with_computers.prototype, "play_with_computers", ["eui.UIComponent", "egret.DisplayObject"]);
-/*
-    Module:玩家匹配模块
-*/
+/**
+ * 玩家匹配模块
+ * Player VS Player Module
+ */
 var play_with_man = (function (_super) {
     __extends(play_with_man, _super);
     function play_with_man() {
@@ -908,9 +923,10 @@ var play_with_man = (function (_super) {
     play_with_man.prototype.partAdded = function (partName, instance) {
         _super.prototype.partAdded.call(this, partName, instance);
     };
-    /*
-        Method:返回主界面
-    */
+    /**
+     * 返回主菜单
+     * Go back to the main menu
+     */
     play_with_man.prototype.childrenCreated = function () {
         _super.prototype.childrenCreated.call(this);
         this.quit_to_main.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
@@ -957,9 +973,10 @@ var random = (function (_super) {
     random.prototype.partAdded = function (partName, instance) {
         _super.prototype.partAdded.call(this, partName, instance);
     };
-    /*
-        Method:添加数独边框
-    */
+    /**
+     * 添加数独边框
+     * Add Sudoku margins
+     */
     random.prototype.Hline = function () {
         var shp = new egret.Shape;
         shp.graphics.lineStyle(8, 0xa78e44);
@@ -980,9 +997,10 @@ var random = (function (_super) {
         shp.graphics.lineTo(this.root_x + 6 * this.blocks_x, this.root_y + 9 * this.blocks_y);
         this.sudokoTable1.addChild(shp);
     };
-    /*
-        Method:判断提交是否正确
-    */
+    /**
+     * 判断提交是否正确
+     * Judge the answer
+     */
     random.prototype.isRight = function () {
         // 判断每一行是否满足对应的游戏规则
         for (var i = 0; i < 9; i++) {
@@ -1043,9 +1061,10 @@ var random = (function (_super) {
         }
         return true;
     };
-    /*
-        Method:显示比对结果
-    */
+    /**
+     * 显示比对结果
+     * Show the comparing result
+     */
     random.prototype.show_panal = function (e) {
         var panel = new eui.Panel();
         // 用户提交的题解完全正确
@@ -1063,17 +1082,21 @@ var random = (function (_super) {
         }
         panel.addChild(panel.closeButton);
     };
-    /*
-        Method: 生成随机数
-    */
+    /**
+     * 生成随机数
+     * Generate a random number
+     * @param min 随机数的最小值
+     * @param max 随机数的最大值
+     */
     random.prototype.random_num = function (min, max) {
         var Range = max - min;
         var Rand = Math.random();
         return (min + Math.round(Rand * Range));
     };
-    /*
-        Method: 生成数独
-    */
+    /**
+     * 生成数独
+     * Generate a Sudoku
+     */
     random.prototype.gen_sudoko = function () {
         if (this.a_lable) {
             this.sudokoTable1.width = 9 * this.blocks_x;
@@ -1158,6 +1181,10 @@ var random = (function (_super) {
             }
         }
     };
+    /**
+     * 随机数独模块整体控制
+     * Random Sudoku Control
+     */
     random.prototype.childrenCreated = function () {
         var _this = this;
         _super.prototype.childrenCreated.call(this);
