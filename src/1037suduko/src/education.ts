@@ -5,9 +5,9 @@ class education extends eui.Component implements eui.UIComponent{
     // UI界面相关对象初始化
     public quit_to_PC:eui.Button;
     public edubutton:eui.Button = new eui.Button;
-    public easy:eui.Button = new eui.Button;
-    public medium:eui.Button = new eui.Button;
-    public hard:eui.Button = new eui.Button;
+    public easy:eui.Button;
+    public medium:eui.Button;
+    public hard:eui.Button;
     public submit:eui.Button;
     public sudokoTable:eui.Group;
     public a:string;

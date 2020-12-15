@@ -377,7 +377,7 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.label = "返回";
 		t.width = 136;
 		t.x = 250;
-		t.y = 881;
+		t.y = 891;
 		return t;
 	};
 	_proto._Label1_i = function () {
@@ -420,8 +420,8 @@ var egret = window.egret;window.skins=window.skins||{};
 		this.easy = t;
 		t.label = "简单";
 		t.visible = false;
-		t.x = 134;
-		t.y = 103;
+		t.x = 133;
+		t.y = 113;
 		return t;
 	};
 	_proto.medium_i = function () {
@@ -429,8 +429,8 @@ var egret = window.egret;window.skins=window.skins||{};
 		this.medium = t;
 		t.label = "中等";
 		t.visible = false;
-		t.x = 272;
-		t.y = 103;
+		t.x = 271;
+		t.y = 113;
 		return t;
 	};
 	_proto.hard_i = function () {
@@ -439,8 +439,8 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.label = "困难";
 		t.skinName = "skins.ButtonSkin";
 		t.visible = false;
-		t.x = 410;
-		t.y = 103;
+		t.x = 409;
+		t.y = 113;
 		return t;
 	};
 	_proto.mode_id_i = function () {
@@ -689,11 +689,11 @@ var egret = window.egret;window.skins=window.skins||{};
 	__extends(randomSkin, _super);
 	function randomSkin() {
 		_super.call(this);
-		this.skinParts = ["quit_to_PC"];
+		this.skinParts = ["quit_to_PC","submit1","mode_id","sudokoTable1","easy","medium","hard"];
 		
 		this.height = 1136;
 		this.width = 640;
-		this.elementsContent = [this._Image1_i(),this._Label1_i(),this.quit_to_PC_i()];
+		this.elementsContent = [this._Image1_i(),this.quit_to_PC_i(),this._Label1_i(),this.submit1_i(),this.mode_id_i(),this.sudokoTable1_i(),this.easy_i(),this.medium_i(),this.hard_i()];
 	}
 	var _proto = randomSkin.prototype;
 
@@ -709,19 +709,6 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.y = -157;
 		return t;
 	};
-	_proto._Label1_i = function () {
-		var t = new eui.Label();
-		t.anchorOffsetX = 0;
-		t.anchorOffsetY = 0;
-		t.height = 130;
-		t.text = "随机数独";
-		t.textAlign = "center";
-		t.verticalAlign = "middle";
-		t.width = 204;
-		t.x = 222;
-		t.y = 204;
-		return t;
-	};
 	_proto.quit_to_PC_i = function () {
 		var t = new eui.Button();
 		this.quit_to_PC = t;
@@ -733,6 +720,85 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.width = 136;
 		t.x = 250;
 		t.y = 881;
+		return t;
+	};
+	_proto._Label1_i = function () {
+		var t = new eui.Label();
+		t.anchorOffsetX = 160;
+		t.bold = true;
+		t.height = 40;
+		t.text = "随机数独";
+		t.textAlign = "center";
+		t.verticalAlign = "middle";
+		t.width = 320;
+		t.x = 320;
+		t.y = 30;
+		return t;
+	};
+	_proto.submit1_i = function () {
+		var t = new eui.Button();
+		this.submit1 = t;
+		t.alpha = 0.8;
+		t.anchorOffsetX = 108.5;
+		t.anchorOffsetY = 0;
+		t.height = 63;
+		t.horizontalCenter = 0;
+		t.label = "提交题解";
+		t.visible = true;
+		t.width = 217;
+		t.y = 803;
+		return t;
+	};
+	_proto.mode_id_i = function () {
+		var t = new eui.Label();
+		this.mode_id = t;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 61;
+		t.size = 25;
+		t.text = "模式：简单";
+		t.textAlign = "left";
+		t.verticalAlign = "middle";
+		t.visible = true;
+		t.width = 149;
+		t.x = 454;
+		t.y = 48;
+		return t;
+	};
+	_proto.sudokoTable1_i = function () {
+		var t = new eui.Group();
+		this.sudokoTable1 = t;
+		t.visible = true;
+		t.x = 50;
+		t.y = 120;
+		return t;
+	};
+	_proto.easy_i = function () {
+		var t = new eui.Button();
+		this.easy = t;
+		t.label = "简单";
+		t.visible = true;
+		t.x = 133;
+		t.y = 113;
+		return t;
+	};
+	_proto.medium_i = function () {
+		var t = new eui.Button();
+		this.medium = t;
+		t.label = "中等";
+		t.visible = true;
+		t.x = 271;
+		t.y = 113;
+		return t;
+	};
+	_proto.hard_i = function () {
+		var t = new eui.Button();
+		this.hard = t;
+		t.label = "困难";
+		t.skinName = "skins.ButtonSkin";
+		t.visible = true;
+		t.x = 409;
+		t.y = 113;
 		return t;
 	};
 	return randomSkin;
