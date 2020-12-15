@@ -547,7 +547,7 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.text = "距离结束还剩: xx时 xx分 xx秒";
 		t.textAlign = "left";
 		t.verticalAlign = "middle";
-		t.width = 238;
+		t.width = 290;
 		t.y = 142.065;
 		return t;
 	};

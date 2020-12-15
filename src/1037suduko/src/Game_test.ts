@@ -166,34 +166,10 @@ class Game_test extends eui.Component implements eui.UIComponent{
         this.timeout.text = "距离挑战结束还剩: "+ (24-1-this.endtime.getHours()).toString() + "时 " + 
                             (60-1-this.endtime.getMinutes()).toString() + "分 " + (60-1-this.endtime.getSeconds()).toString() + "秒";
     }
-    protected childrenCreated(): void{
-        super.childrenCreated();
-        this.quit_to_main.addEventListener(egret.TouchEvent.TOUCH_TAP, ()=>{
-            timer.stop();
-            SceneManager.removeScene(new Startscence());
-        }, this);
-        var timer:egret.Timer = new egret.Timer(300, 0);    //0.3s执行1次
-        timer.addEventListener(egret.TimerEvent.TIMER, ()=>{ 
-            this.printtime();
-        }, this);
-        timer.start();
-        timer.addEventListener(egret.Event.CHANGE, ()=>{ 
-            this.printtime();
-        }, this);
-        //添加监听，监听用户的输入
+
+    private gensudoko():void{
         this.sudokoTable.width = 360;
         this.sudokoTable.height = 360;
-        /*
-        var url = "resource/texts/s_answer.txt";
-        var  request:egret.HttpRequest = new egret.HttpRequest();
-        request.responseType = egret.HttpResponseType.TEXT;
-        request.open(url, egret.HttpMethod.GET);
-        request.once(egret.Event.COMPLETE, (evt:egret.Event)=>{
-            var request:egret.HttpRequest = evt.currentTarget;
-            this.sudoku = request.response;
-            egret.log(this.sudoku);
-        }, null);
-        */
         for(var i = 0; i<9; i++){
             for(var j = 0; j<9; j++){
                 var s2 = new eui.TextInput();  
@@ -212,7 +188,40 @@ class Game_test extends eui.Component implements eui.UIComponent{
                 this.ss.addItemAt(s2, i*9+j);
             }
         }
+        
         this.Hline();
+    }
+
+    private read_from_file():void{
+        /*
+        var url = "resource/texts/s_answer.txt";
+        var  request:egret.HttpRequest = new egret.HttpRequest();
+        request.responseType = egret.HttpResponseType.TEXT;
+        request.open(url, egret.HttpMethod.GET);
+        request.once(egret.Event.COMPLETE, (evt:egret.Event)=>{
+            var request:egret.HttpRequest = evt.currentTarget;
+            this.sudoku = request.response;
+            egret.log(this.sudoku);
+        }, null);
+        */
+    }
+
+    protected childrenCreated(): void{
+        super.childrenCreated();
+        this.quit_to_main.addEventListener(egret.TouchEvent.TOUCH_TAP, ()=>{
+            timer.stop();
+            SceneManager.removeScene(new Startscence());
+        }, this);
+        var timer:egret.Timer = new egret.Timer(300, 0);    //0.3s执行1次
+        timer.addEventListener(egret.TimerEvent.TIMER, ()=>{ 
+            this.printtime();
+        }, this);
+        timer.start();
+        timer.addEventListener(egret.Event.CHANGE, ()=>{ 
+            this.printtime();
+        }, this);
+        this.read_from_file();
+        this.gensudoko();
         this.submit.addEventListener(egret.TouchEvent.TOUCH_TAP, ()=>{
             if(this.isRight()){
                 this.show_panal("Y");
