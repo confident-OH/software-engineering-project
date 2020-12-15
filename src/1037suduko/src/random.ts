@@ -1,3 +1,9 @@
+/*
+ * 模块名：random
+ * 功能：随机数独页面的游戏界面和游戏底层逻辑
+ * 
+ * 
+ */
 class random extends eui.Component implements eui.UIComponent{
     public quit_to_PC:eui.Button;
     public easy:eui.Button;

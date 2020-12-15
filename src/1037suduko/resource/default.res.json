@@ -127,9 +127,9 @@
 			"name": "track_sb_png"
 		},
 		{
-			"url": "assets/education.jpg",
+			"url": "assets/game_background.jpg",
 			"type": "image",
-			"name": "education_jpg"
+			"name": "game_background"
 		},
 		{
 			"url": "assets/soduko_bg.jpg",
