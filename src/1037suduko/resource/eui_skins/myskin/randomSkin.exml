@@ -4,11 +4,12 @@
 	height="1136" xmlns:e="http://ns.egret.com/eui">
 	<e:Image source="soduko_bg_jpg" x="-143.54" y="-157" anchorOffsetX="0" width="868.54" anchorOffsetY="0" height="1454" fillMode="scale"/>
 	<e:Button label="返回" x="250" y="881" anchorOffsetX="0" width="136" anchorOffsetY="0" height="57" alpha="0.8" id="quit_to_PC"/>
-	<e:Label text="随机数独" x="320" y="30" width="320" textAlign="center" bold="true" verticalAlign="middle" height="40" anchorOffsetX="160"/>
 	<e:Button label="提交题解" y="803" anchorOffsetX="108.5" width="217" anchorOffsetY="0" height="63" alpha="0.8" id="submit1" horizontalCenter="0" visible="true"/>
-	<e:Label id="mode_id" text="模式：简单" x="454" y="48" anchorOffsetX="0" width="149" anchorOffsetY="0" height="61" verticalAlign="middle" textAlign="left" size="25" visible="true"/>
-	<e:Group x="50" y="120" id="sudokoTable1" visible="true"/>
-	<e:Button id="easy" label="简单" x="133" y="113" visible="true"/>
-	<e:Button id="medium" label="中等" y="113" x="271" visible="true"/>
-	<e:Button id="hard" label="困难" x="409" y="113" skinName="skins.ButtonSkin" visible="true"/>
+	<e:Label id="mode_id" text="模式：简单" x="457.374" y="127.928" anchorOffsetX="0" width="149" anchorOffsetY="0" height="61" verticalAlign="middle" textAlign="left" size="25" visible="true"/>
+	<e:Group x="47" y="202" id="sudokoTable1" visible="true"/>
+	<e:Button id="easy" label="简单" x="133" y="184" visible="true"/>
+	<e:Button id="medium" label="中等" y="184" x="271" visible="true"/>
+	<e:Button id="hard" label="困难" x="409" y="184" skinName="skins.ButtonSkin" visible="true"/>
+	<e:Button label="&lt;" x="30" y="30" anchorOffsetX="0" width="40" anchorOffsetY="0" height="40" alpha="0.8" id="quit_to_PC" scaleX="2" scaleY="2"/>
+	<e:Image source="random_title" x="320" y="40" width="300" height="100" anchorOffsetX="150"/>
 </e:Skin>

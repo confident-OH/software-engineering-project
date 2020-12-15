@@ -5,8 +5,8 @@
 	<e:Image x="320" y="640" visible="true" fillMode="scale" width="720" height="1280" anchorOffsetX="360" anchorOffsetY="640" source="start_background"/>
 	<e:Image source="start_icon" x="320" y="182.5" width="120" height="120" anchorOffsetX="60" anchorOffsetY="60" scaleX="1.6" scaleY="1.6" alpha="0.8"/>
 	<e:Image x="320" y="360" anchorOffsetX="210" width="420" anchorOffsetY="70" height="140" source="PVE_title"/>
-	<e:Button id="new_man_b" label="新手教程" x="320" y="580" anchorOffsetX="150" width="300" anchorOffsetY="40" height="80" alpha="0.8"/>
-	<e:Button id="randam_sb" label="随机数独" x="320" y="740" anchorOffsetX="150" width="300" anchorOffsetY="40" height="80" alpha="0.8"/>
-	<e:Button id="soduko_chb" label="数独闯关" x="320" y="900" anchorOffsetX="150" width="300" anchorOffsetY="40" height="80" alpha="0.8"/>
+	<e:Button id="new_man_b" label="新手教程" x="320" y="580" anchorOffsetX="75" width="150" anchorOffsetY="20" height="40" alpha="0.8" scaleX="2" scaleY="2"/>
+	<e:Button id="randam_sb" label="随机数独" x="320" y="740" anchorOffsetX="75" width="150" anchorOffsetY="20" height="40" alpha="0.8" scaleX="2" scaleY="2"/>
+	<e:Button id="soduko_chb" label="数独闯关" x="320" y="900" anchorOffsetX="75" width="150" anchorOffsetY="20" height="40" alpha="0.8" scaleX="2" scaleY="2"/>
 	<e:Button label="&lt;" x="30" y="30" anchorOffsetX="0" width="40" anchorOffsetY="0" height="40" alpha="0.8" id="quit_to_main" scaleX="2" scaleY="2"/>
 </e:Skin>

@@ -127,11 +127,6 @@
 			"name": "track_sb_png"
 		},
 		{
-			"url": "assets/PC_bg.jpg",
-			"type": "image",
-			"name": "PC_bg_jpg"
-		},
-		{
 			"url": "assets/education.jpg",
 			"type": "image",
 			"name": "education_jpg"
@@ -160,6 +155,26 @@
 			"url": "assets/PVE_title.png",
 			"type": "image",
 			"name": "PVE_title"
+		},
+		{
+			"url": "assets/chanllenge_title.png",
+			"type": "image",
+			"name": "chanllenge_title"
+		},
+		{
+			"url": "assets/random_title.png",
+			"type": "image",
+			"name": "random_title"
+		},
+		{
+			"url": "assets/championship_title.png",
+			"type": "image",
+			"name": "championship_title"
+		},
+		{
+			"url": "assets/education_title.png",
+			"type": "image",
+			"name": "education_title"
 		},
 		{
 			"url": "assets/menu_background.jpg",

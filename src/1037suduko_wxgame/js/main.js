@@ -427,13 +427,14 @@ var education = (function (_super) {
 }(eui.Component));
 __reflect(education.prototype, "education", ["eui.UIComponent", "egret.DisplayObject"]);
 /*
-    Module:游戏模块
+    Module:挑战赛模块
 */
 var Game_test = (function (_super) {
     __extends(Game_test, _super);
     // 加载相关的UI界面资源
     function Game_test() {
         var _this = _super.call(this) || this;
+        _this.endtime = new Date();
         // 数独块UI界面大小相关设置
         _this.blocks_x = 60;
         _this.blocks_y = 60;
@@ -566,12 +567,19 @@ var Game_test = (function (_super) {
         }
         panel.addChild(panel.closeButton);
     };
+    Game_test.prototype.printtime = function () {
+    };
     Game_test.prototype.childrenCreated = function () {
         var _this = this;
         _super.prototype.childrenCreated.call(this);
         this.quit_to_main.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
             SceneManager.removeScene(new Startscence());
         }, this);
+        var timer = new egret.Timer(1000, 1000000); //1s执行1次
+        timer.addEventListener(egret.TimerEvent.TIMER, function () {
+            _this.printtime();
+        }, this);
+        timer.start();
         //添加监听，监听用户的输入
         this.sudokoTable.width = 360;
         this.sudokoTable.height = 360;
@@ -604,12 +612,6 @@ var Game_test = (function (_super) {
                 this.ss.addItemAt(s2, i * 9 + j);
             }
         }
-        /*//点击测试
-        for(var i = 0; i<9; i++){
-            for(var j = 0; j < 9; j++){
-                this.sudokoTable.getElementAt(9*i+j).addEventListener(egret.Event.CHANGING, this.onChang.bind(this,i,j,false), this);
-            }
-        }*/
         this.Hline();
         this.submit.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
             if (_this.isRight()) {
@@ -619,6 +621,8 @@ var Game_test = (function (_super) {
                 _this.show_panal("N");
             }
         }, this);
+        var timer = new egret.Timer(500, 5);
+        //注册事件侦听器
     };
     return Game_test;
 }(eui.Component));
