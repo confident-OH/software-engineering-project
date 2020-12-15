@@ -281,6 +281,8 @@ class education extends eui.Component implements eui.UIComponent{
             SceneManager.removeScene(new play_with_computers());
         }, this)
         this.edubutton.label = "开始!";
+        this.edubutton.scaleX = 2;
+        this.edubutton.scaleY = 2;
         this.edubutton.horizontalCenter = 0;
         this.edubutton.verticalCenter = 0;
         this.addChild(this.edubutton);
