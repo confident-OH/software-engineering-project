@@ -122,21 +122,6 @@
 			"name": "track_sb_png"
 		},
 		{
-			"url": "assets/bg.jpg",
-			"type": "image",
-			"name": "bg_jpg"
-		},
-		{
-			"url": "assets/egret_icon.png",
-			"type": "image",
-			"name": "egret_icon_png"
-		},
-		{
-			"url": "assets/001.jpg",
-			"type": "image",
-			"name": "001_jpg"
-		},
-		{
 			"url": "assets/PC_bg.jpg",
 			"type": "image",
 			"name": "PC_bg_jpg"
@@ -147,14 +132,14 @@
 			"name": "education_jpg"
 		},
 		{
-			"url": "assets/Competition.jpg",
-			"type": "image",
-			"name": "Competition_jpg"
-		},
-		{
 			"url": "assets/soduko_bg.jpg",
 			"type": "image",
 			"name": "soduko_bg_jpg"
+		},
+		{
+			"url": "assets/above-blue.png",
+			"type": "image",
+			"name": "start_image"
 		},
 		{
 			"name": "description_json",

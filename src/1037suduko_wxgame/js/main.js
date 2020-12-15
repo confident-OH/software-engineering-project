@@ -267,7 +267,7 @@ var education = (function (_super) {
         panel.addChild(panel.closeButton);
     };
     /*
-        Method:进入新手教程的button
+        Method:进入新手教程
     */
     education.prototype.childrenCreated = function () {
         _super.prototype.childrenCreated.call(this);
@@ -744,6 +744,9 @@ var challenges = (function (_super) {
     return challenges;
 }(eui.Component));
 __reflect(challenges.prototype, "challenges", ["eui.UIComponent", "egret.DisplayObject"]);
+/*
+    Module:人机对抗模块
+*/
 var play_with_computers = (function (_super) {
     __extends(play_with_computers, _super);
     function play_with_computers() {
@@ -754,9 +757,11 @@ var play_with_computers = (function (_super) {
     play_with_computers.prototype.partAdded = function (partName, instance) {
         _super.prototype.partAdded.call(this, partName, instance);
     };
+    /*
+        Method:返回主界面
+    */
     play_with_computers.prototype.childrenCreated = function () {
         _super.prototype.childrenCreated.call(this);
-        //返回主界面
         this.quit_to_main.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
             SceneManager.removeScene(new Startscence());
         }, this);
@@ -773,6 +778,9 @@ var play_with_computers = (function (_super) {
     return play_with_computers;
 }(eui.Component));
 __reflect(play_with_computers.prototype, "play_with_computers", ["eui.UIComponent", "egret.DisplayObject"]);
+/*
+    Module:玩家匹配模块
+*/
 var play_with_man = (function (_super) {
     __extends(play_with_man, _super);
     function play_with_man() {
@@ -783,9 +791,11 @@ var play_with_man = (function (_super) {
     play_with_man.prototype.partAdded = function (partName, instance) {
         _super.prototype.partAdded.call(this, partName, instance);
     };
+    /*
+        Method:返回主界面
+    */
     play_with_man.prototype.childrenCreated = function () {
         _super.prototype.childrenCreated.call(this);
-        //返回主界面
         this.quit_to_main.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
             SceneManager.removeScene(new Startscence());
         }, this);

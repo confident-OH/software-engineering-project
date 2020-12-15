@@ -677,65 +677,65 @@ var egret = window.egret;window.skins=window.skins||{};
 	__extends(StartscenseSkin, _super);
 	function StartscenseSkin() {
 		_super.call(this);
-		this.skinParts = ["Startscence","StartPlay","StartPlay1","StartPlay2"];
+		this.skinParts = ["StartPlay","StartPlay1","StartPlay2"];
 		
-		this.height = 1236.88;
-		this.width = 708;
-		this.elementsContent = [this.Startscence_i(),this.StartPlay_i(),this.StartPlay1_i(),this.StartPlay2_i()];
+		this.height = 1136;
+		this.width = 640;
+		this.elementsContent = [this._Image1_i(),this.StartPlay_i(),this.StartPlay1_i(),this.StartPlay2_i()];
 	}
 	var _proto = StartscenseSkin.prototype;
 
-	_proto.Startscence_i = function () {
+	_proto._Image1_i = function () {
 		var t = new eui.Image();
-		this.Startscence = t;
-		t.anchorOffsetY = 0;
-		t.bottom = -44.11999999999989;
+		t.anchorOffsetX = 360;
+		t.anchorOffsetY = 640;
 		t.fillMode = "scale";
-		t.left = 0;
-		t.right = 0;
-		t.source = "resource/assets/001.jpg";
-		t.top = 0;
-		t.touchEnabled = true;
+		t.height = 1280;
+		t.source = "start_image";
+		t.visible = true;
+		t.width = 720;
+		t.x = 320;
+		t.y = 640;
 		return t;
 	};
 	_proto.StartPlay_i = function () {
 		var t = new eui.Button();
 		this.StartPlay = t;
 		t.alpha = 0.8;
-		t.anchorOffsetX = 0;
+		t.anchorOffsetX = 160;
 		t.anchorOffsetY = 0;
 		t.enable = true;
-		t.height = 81;
+		t.height = 80;
 		t.label = "人机练习";
-		t.width = 250;
-		t.x = 201;
-		t.y = 305;
+		t.width = 320;
+		t.x = 320;
+		t.y = 660;
 		return t;
 	};
 	_proto.StartPlay1_i = function () {
 		var t = new eui.Button();
 		this.StartPlay1 = t;
 		t.alpha = 0.8;
-		t.anchorOffsetX = 0;
+		t.anchorOffsetX = 160;
 		t.anchorOffsetY = 0;
-		t.height = 81;
+		t.height = 80;
 		t.label = "匹配模式";
-		t.width = 250;
-		t.x = 201;
-		t.y = 503;
+		t.width = 320;
+		t.x = 320;
+		t.y = 780;
 		return t;
 	};
 	_proto.StartPlay2_i = function () {
 		var t = new eui.Button();
 		this.StartPlay2 = t;
 		t.alpha = 0.8;
-		t.anchorOffsetX = 0;
+		t.anchorOffsetX = 160;
 		t.anchorOffsetY = 0;
-		t.height = 81;
+		t.height = 80;
 		t.label = "比赛";
-		t.width = 250;
-		t.x = 201;
-		t.y = 700;
+		t.width = 320;
+		t.x = 320;
+		t.y = 900;
 		return t;
 	};
 	return StartscenseSkin;
