@@ -27,6 +27,11 @@
 //
 //////////////////////////////////////////////////////////////////////////////////////
 
+/**
+ * UI资源加载
+ * 
+ * Load resource for UI
+ */
 class LoadingUI extends egret.Sprite implements RES.PromiseTaskReporter {
 
     public constructor() {
