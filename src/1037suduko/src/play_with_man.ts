@@ -28,5 +28,4 @@ class play_with_man extends eui.Component implements eui.UIComponent{
             SceneManager.removeScene(new Startscence());
         }, this)
     }
-
 }

@@ -420,6 +420,7 @@ var education = (function (_super) {
      */
     education.prototype.start_edu = function () {
         var _this = this;
+        // 显示出数独游戏框图
         this.edubutton.visible = false;
         this.submit.visible = true;
         this.easy.visible = true;
@@ -472,19 +473,6 @@ var Game_test = (function (_super) {
     }
     Game_test.prototype.partAdded = function (partName, instance) {
         _super.prototype.partAdded.call(this, partName, instance);
-    };
-    /**
-     * 处理用户操作
-     *
-     * Deal with operations
-     */
-    Game_test.prototype.High_l = function (tx) {
-        var shp = new egret.Shape;
-        shp.graphics.beginFill(0xffa631);
-        shp.graphics.drawRect(tx.x, tx.y, tx.width, tx.height);
-        shp.graphics.endFill();
-        this.sudokoTable.addChildAt(shp, 0);
-        this.sudokoTable.addChild(tx);
     };
     /**
      * 添加数独边框
@@ -603,35 +591,14 @@ var Game_test = (function (_super) {
         this.timeout.text = "距离挑战结束还剩: " + (24 - 1 - this.endtime.getHours()).toString() + "时 " +
             (60 - 1 - this.endtime.getMinutes()).toString() + "分 " + (60 - 1 - this.endtime.getSeconds()).toString() + "秒";
     };
-    Game_test.prototype.childrenCreated = function () {
-        var _this = this;
-        _super.prototype.childrenCreated.call(this);
-        this.quit_to_main.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
-            timer.stop();
-            SceneManager.removeScene(new Startscence());
-        }, this);
-        var timer = new egret.Timer(300, 0); //0.3s执行1次
-        timer.addEventListener(egret.TimerEvent.TIMER, function () {
-            _this.printtime();
-        }, this);
-        timer.start();
-        timer.addEventListener(egret.Event.CHANGE, function () {
-            _this.printtime();
-        }, this);
-        //添加监听，监听用户的输入
+    /**
+     * 生成数独框图
+     *
+     * generate the sudoku
+     */
+    Game_test.prototype.gensudoko = function () {
         this.sudokoTable.width = 360;
         this.sudokoTable.height = 360;
-        /*
-        var url = "resource/texts/s_answer.txt";
-        var  request:egret.HttpRequest = new egret.HttpRequest();
-        request.responseType = egret.HttpResponseType.TEXT;
-        request.open(url, egret.HttpMethod.GET);
-        request.once(egret.Event.COMPLETE, (evt:egret.Event)=>{
-            var request:egret.HttpRequest = evt.currentTarget;
-            this.sudoku = request.response;
-            egret.log(this.sudoku);
-        }, null);
-        */
         for (var i = 0; i < 9; i++) {
             for (var j = 0; j < 9; j++) {
                 var s2 = new eui.TextInput();
@@ -650,7 +617,79 @@ var Game_test = (function (_super) {
                 this.ss.addItemAt(s2, i * 9 + j);
             }
         }
+        //生成数独边框线
         this.Hline();
+    };
+    /**
+     * 从文件中读取数独(待完成)
+     *
+     * read the sudoku from a text file
+     */
+    Game_test.prototype.read_from_file = function () {
+        /*
+        var url = "resource/texts/s_answer.txt";
+        var  request:egret.HttpRequest = new egret.HttpRequest();
+        request.responseType = egret.HttpResponseType.TEXT;
+        request.open(url, egret.HttpMethod.GET);
+        request.once(egret.Event.COMPLETE, (evt:egret.Event)=>{
+            var request:egret.HttpRequest = evt.currentTarget;
+            this.sudoku = request.response;
+            egret.log(this.sudoku);
+        }, null);
+        */
+    };
+    Game_test.prototype.is_input_error = function (i, j, sudoku_a, scene) {
+        var x = i, y = j;
+        egret.log(x);
+        egret.log(y);
+        var item = sudoku_a.getItemAt(x * 9 + y);
+        egret.log(item.text);
+        if (!((item.text[0] >= '1' && item.text[0] <= '9') || item.text.length == 0)) {
+            item.textColor = 0xDC143C;
+            var error_p = new eui.Panel;
+            error_p.title = "非法输入，请输入数字1~9";
+            error_p.horizontalCenter = 0;
+            error_p.verticalCenter = 0;
+            scene.addChild(error_p);
+            error_p.addChild(error_p.closeButton);
+        }
+        else {
+            item.textColor = 0xffffff;
+        }
+    };
+    /**
+     * 判断用户是否出现非法输入
+     *
+     * judge the user input.
+     */
+    Game_test.prototype.test_user_input = function () {
+        for (var i = 0; i < 9; i++) {
+            for (var j = 0; j < 9; j++) {
+                var block_i = this.ss.getItemAt(i * 9 + j);
+                block_i.addEventListener(egret.Event.CHANGE, this.is_input_error.bind(egret.Event.CHANGE, i, j, this.ss, this, this), this);
+            }
+        }
+    };
+    /**
+     * 主函数
+     *
+     * Main
+     */
+    Game_test.prototype.childrenCreated = function () {
+        var _this = this;
+        _super.prototype.childrenCreated.call(this);
+        this.quit_to_main.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
+            timer.stop();
+            SceneManager.removeScene(new Startscence());
+        }, this);
+        var timer = new egret.Timer(300, 0); //0.3s执行1次
+        timer.addEventListener(egret.TimerEvent.TIMER, function () {
+            _this.printtime();
+        }, this);
+        timer.start();
+        this.read_from_file();
+        this.gensudoko();
+        this.test_user_input();
         this.submit.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
             if (_this.isRight()) {
                 _this.show_panal("Y");
@@ -659,8 +698,6 @@ var Game_test = (function (_super) {
                 _this.show_panal("N");
             }
         }, this);
-        var timer = new egret.Timer(500, 5);
-        //注册事件侦听器
     };
     return Game_test;
 }(eui.Component));
@@ -693,6 +730,11 @@ __reflect(Game_test.prototype, "Game_test", ["eui.UIComponent", "egret.DisplayOb
 //  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 //////////////////////////////////////////////////////////////////////////////////////
+/**
+ * UI资源加载
+ *
+ * Load resource for UI
+ */
 var LoadingUI = (function (_super) {
     __extends(LoadingUI, _super);
     function LoadingUI() {
@@ -870,6 +912,11 @@ var Main = (function (_super) {
     return Main;
 }(eui.UILayer));
 __reflect(Main.prototype, "Main");
+/**
+ * 排位赛类
+ *
+ * Challenge Class
+ */
 var challenges = (function (_super) {
     __extends(challenges, _super);
     function challenges() {
@@ -1090,6 +1137,7 @@ var random = (function (_super) {
     };
     /**
      * 显示比对结果
+     *
      * Show the comparing result
      */
     random.prototype.show_panal = function (e) {
@@ -1111,6 +1159,7 @@ var random = (function (_super) {
     };
     /**
      * 生成随机数
+     *
      * Generate a random number
      * @param min 随机数的最小值
      * @param max 随机数的最大值
@@ -1122,6 +1171,7 @@ var random = (function (_super) {
     };
     /**
      * 生成数独
+     *
      * Generate a Sudoku
      */
     random.prototype.gen_sudoko = function () {
@@ -1263,10 +1313,9 @@ var SceneManager = (function () {
 }());
 __reflect(SceneManager.prototype, "SceneManager");
 /*
- * 模块名：Startscence
- * 功能：提供进入页面
- *
- *
+ * 进入页面类
+ 
+ * Startscence Class
  */
 var Startscence = (function (_super) {
     __extends(Startscence, _super);
