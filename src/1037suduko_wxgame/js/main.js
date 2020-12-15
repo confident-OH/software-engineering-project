@@ -569,7 +569,7 @@ var Game_test = (function (_super) {
     };
     Game_test.prototype.printtime = function () {
         this.endtime = new Date;
-        this.timeout.text = "距离结束还剩: " + (24 - 1 - this.endtime.getHours()).toString() + "时 " +
+        this.timeout.text = "距离挑战结束还剩: " + (24 - 1 - this.endtime.getHours()).toString() + "时 " +
             (60 - 1 - this.endtime.getMinutes()).toString() + "分 " + (60 - 1 - this.endtime.getSeconds()).toString() + "秒";
     };
     Game_test.prototype.childrenCreated = function () {
