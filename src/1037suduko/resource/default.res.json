@@ -142,9 +142,29 @@
 			"name": "soduko_bg_jpg"
 		},
 		{
-			"url": "assets/above-blue.png",
+			"url": "assets/main_icon.png",
 			"type": "image",
-			"name": "start_image"
+			"name": "start_icon"
+		},
+		{
+			"url": "assets/main_background.jpg",
+			"type": "image",
+			"name": "start_background"
+		},
+		{
+			"url": "assets/PVP_title.png",
+			"type": "image",
+			"name": "PVP_title"
+		},
+		{
+			"url": "assets/PVE_title.png",
+			"type": "image",
+			"name": "PVE_title"
+		},
+		{
+			"url": "assets/menu_background.jpg",
+			"type": "image",
+			"name": "menu_background"
 		},
 		{
 			"name": "description_json",
