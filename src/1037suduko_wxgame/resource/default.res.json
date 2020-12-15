@@ -57,6 +57,11 @@
 			"name": "radiobutton_select_up_png"
 		},
 		{
+			"url": "assets/coolHue-FCCF31-F55555.png",
+			"type": "image",
+			"name": "mine_select_down_png"
+		},
+		{
 			"url": "assets/RadioButton/radiobutton_unselect.png",
 			"type": "image",
 			"name": "radiobutton_unselect_png"
