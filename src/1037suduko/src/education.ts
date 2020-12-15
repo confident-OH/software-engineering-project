@@ -287,6 +287,41 @@ class education extends eui.Component implements eui.UIComponent{
             }
         }
     }
+
+    private is_input_error(i:number, j:number, sudoku_a:eui.ArrayCollection, scene:egret.Stage):void{
+        var x:number = i, y:number = j;
+        egret.log(x);
+        egret.log(y);
+        var item:eui.TextInput = sudoku_a.getItemAt(x*9+y);
+        egret.log(item.text);
+        if(!((item.text[0]>='1'&&item.text[0]<='9')||item.text.length == 0)){
+            item.textColor = 0xDC143C;
+            let error_p:eui.Panel = new eui.Panel;
+            error_p.title = "非法输入，请输入数字1~9";
+            error_p.horizontalCenter = 0;
+            error_p.verticalCenter = 0;
+            scene.addChild(error_p);
+            error_p.addChild(error_p.closeButton);
+        }else{
+            item.textColor = 0xffffff;
+        }
+    }
+
+    /**
+     * 判断用户是否出现非法输入
+     * 
+     * judge the user input.
+     */
+    private test_user_input():void{
+        for(var i = 0; i<9; i++){
+            for(var j = 0; j<9; j++){
+                var block_i = this.ss.getItemAt(i*9+j);
+                block_i.addEventListener(egret.Event.CHANGE, 
+                    this.is_input_error.bind(egret.Event.CHANGE, i, j, this.ss, this, this), this);
+            }
+        }
+    }
+
     /**
      * 进入新手教程
      * 
@@ -306,6 +341,7 @@ class education extends eui.Component implements eui.UIComponent{
         this.addChild(this.edubutton);
         this.edubutton.addEventListener(egret.TouchEvent.TOUCH_TAP, this.start_edu, this);
     }
+    
 
     /**
      * 开始进行新手教程
@@ -329,6 +365,7 @@ class education extends eui.Component implements eui.UIComponent{
         this.medium.addEventListener(egret.TouchEvent.TOUCH_TAP, ()=>{this.opt = 2;this.gen_sudoko();}, this);
         this.hard.addEventListener(egret.TouchEvent.TOUCH_TAP, ()=>{this.opt = 3;this.gen_sudoko();}, this);
         //提交数独题目
+        this.test_user_input();
         this.submit.addEventListener(egret.TouchEvent.TOUCH_TAP, ()=>{
             if(this.isRight()){
                 this.show_panal("Y");

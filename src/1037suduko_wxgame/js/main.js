@@ -395,6 +395,38 @@ var education = (function (_super) {
             }
         }
     };
+    education.prototype.is_input_error = function (i, j, sudoku_a, scene) {
+        var x = i, y = j;
+        egret.log(x);
+        egret.log(y);
+        var item = sudoku_a.getItemAt(x * 9 + y);
+        egret.log(item.text);
+        if (!((item.text[0] >= '1' && item.text[0] <= '9') || item.text.length == 0)) {
+            item.textColor = 0xDC143C;
+            var error_p = new eui.Panel;
+            error_p.title = "非法输入，请输入数字1~9";
+            error_p.horizontalCenter = 0;
+            error_p.verticalCenter = 0;
+            scene.addChild(error_p);
+            error_p.addChild(error_p.closeButton);
+        }
+        else {
+            item.textColor = 0xffffff;
+        }
+    };
+    /**
+     * 判断用户是否出现非法输入
+     *
+     * judge the user input.
+     */
+    education.prototype.test_user_input = function () {
+        for (var i = 0; i < 9; i++) {
+            for (var j = 0; j < 9; j++) {
+                var block_i = this.ss.getItemAt(i * 9 + j);
+                block_i.addEventListener(egret.Event.CHANGE, this.is_input_error.bind(egret.Event.CHANGE, i, j, this.ss, this, this), this);
+            }
+        }
+    };
     /**
      * 进入新手教程
      *
@@ -437,6 +469,7 @@ var education = (function (_super) {
         this.medium.addEventListener(egret.TouchEvent.TOUCH_TAP, function () { _this.opt = 2; _this.gen_sudoko(); }, this);
         this.hard.addEventListener(egret.TouchEvent.TOUCH_TAP, function () { _this.opt = 3; _this.gen_sudoko(); }, this);
         //提交数独题目
+        this.test_user_input();
         this.submit.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
             if (_this.isRight()) {
                 _this.show_panal("Y");
@@ -1259,6 +1292,38 @@ var random = (function (_super) {
             }
         }
     };
+    random.prototype.is_input_error = function (i, j, sudoku_a, scene) {
+        var x = i, y = j;
+        egret.log(x);
+        egret.log(y);
+        var item = sudoku_a.getItemAt(x * 9 + y);
+        egret.log(item.text);
+        if (!((item.text[0] >= '1' && item.text[0] <= '9') || item.text.length == 0)) {
+            item.textColor = 0xDC143C;
+            var error_p = new eui.Panel;
+            error_p.title = "非法输入，请输入数字1~9";
+            error_p.horizontalCenter = 0;
+            error_p.verticalCenter = 0;
+            scene.addChild(error_p);
+            error_p.addChild(error_p.closeButton);
+        }
+        else {
+            item.textColor = 0xffffff;
+        }
+    };
+    /**
+     * 判断用户是否出现非法输入
+     *
+     * judge the user input.
+     */
+    random.prototype.test_user_input = function () {
+        for (var i = 0; i < 9; i++) {
+            for (var j = 0; j < 9; j++) {
+                var block_i = this.ss.getItemAt(i * 9 + j);
+                block_i.addEventListener(egret.Event.CHANGE, this.is_input_error.bind(egret.Event.CHANGE, i, j, this.ss, this, this), this);
+            }
+        }
+    };
     /**
      * 随机数独模块整体控制
      * Random Sudoku Control
@@ -1280,6 +1345,8 @@ var random = (function (_super) {
         this.easy.addEventListener(egret.TouchEvent.TOUCH_TAP, function () { _this.opt = 1; _this.gen_sudoko(); }, this);
         this.medium.addEventListener(egret.TouchEvent.TOUCH_TAP, function () { _this.opt = 2; _this.gen_sudoko(); }, this);
         this.hard.addEventListener(egret.TouchEvent.TOUCH_TAP, function () { _this.opt = 3; _this.gen_sudoko(); }, this);
+        //检测非法输入
+        this.test_user_input();
         //提交数独题目
         this.submit1.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
             if (_this.isRight()) {
