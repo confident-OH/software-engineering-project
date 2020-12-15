@@ -12,7 +12,6 @@ class education extends eui.Component implements eui.UIComponent{
     public hard:eui.Button;
     public submit:eui.Button;
     public sudokoTable:eui.Group;
-    public a:string;
     public a_lable:boolean = true;
     public nums_t = 4;
     public mode_id:eui.Label;

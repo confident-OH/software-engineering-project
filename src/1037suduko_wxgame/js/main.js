@@ -125,8 +125,9 @@ var AssetAdapter = (function () {
 }());
 __reflect(AssetAdapter.prototype, "AssetAdapter", ["eui.IAssetAdapter"]);
 /**
- * 新手教程模块
- * Newbie Guide Module
+ * 新手教程类
+ *
+ * Newbie Guide Class
  */
 var education = (function (_super) {
     __extends(education, _super);
@@ -169,6 +170,7 @@ var education = (function (_super) {
     };
     /**
      * 添加数独边框
+     *
      * Add Sudoku margins
      */
     education.prototype.Hline = function () {
@@ -193,6 +195,7 @@ var education = (function (_super) {
     };
     /**
      * 判断提交是否正确
+     *
      * Judge the answer
      */
     education.prototype.isRight = function () {
@@ -257,6 +260,7 @@ var education = (function (_super) {
     };
     /**
      * 显示比对结果
+     *
      * Show the comparing result
      */
     education.prototype.show_panal = function (e) {
@@ -276,9 +280,11 @@ var education = (function (_super) {
         }
         panel.addChild(panel.closeButton);
     };
-    /*
-        Method:用户进入新手教程后的初始欢迎界面
-    */
+    /**
+     * 用户进入新手教程后的初始欢迎界面
+     *
+     * Welcome UI
+     */
     education.prototype.show_panal2 = function (e) {
         var panel = new eui.Panel();
         panel.title = "Title";
@@ -288,9 +294,13 @@ var education = (function (_super) {
         panel.title = "欢迎来到新手教程";
         panel.addChild(panel.closeButton);
     };
-    /*
-        Method: 生成随机数
-    */
+    /**
+     * 生成随机数
+     *
+     * Generate a random number
+     * @param min 随机数的最小值
+     * @param max 随机数的最大值
+     */
     education.prototype.random_num = function (min, max) {
         var Range = max - min;
         var Rand = Math.random();
@@ -298,6 +308,7 @@ var education = (function (_super) {
     };
     /**
      * 生成数独
+     *
      * Generate a Sudoku
      */
     education.prototype.gen_sudoko = function () {
@@ -386,6 +397,7 @@ var education = (function (_super) {
     };
     /**
      * 进入新手教程
+     *
      * Enter the Newbie Guide
      */
     education.prototype.childrenCreated = function () {
@@ -404,6 +416,7 @@ var education = (function (_super) {
     };
     /**
      * 开始进行新手教程
+     *
      * Start the Newbie Guide
      */
     education.prototype.start_edu = function () {
@@ -436,8 +449,9 @@ var education = (function (_super) {
 }(eui.Component));
 __reflect(education.prototype, "education", ["eui.UIComponent", "egret.DisplayObject"]);
 /**
- * 排位赛模块
- * Challenge Competition Module
+ * 排位赛类
+ *
+ * Challenge Competition Class
  */
 var Game_test = (function (_super) {
     __extends(Game_test, _super);
@@ -461,7 +475,8 @@ var Game_test = (function (_super) {
         _super.prototype.partAdded.call(this, partName, instance);
     };
     /**
-     * 处理用户操作函数
+     * 处理用户操作
+     *
      * Deal with operations
      */
     Game_test.prototype.High_l = function (tx) {
@@ -474,6 +489,7 @@ var Game_test = (function (_super) {
     };
     /**
      * 添加数独边框
+     *
      * Add a Sudoku margins
      */
     Game_test.prototype.Hline = function () {
@@ -498,6 +514,7 @@ var Game_test = (function (_super) {
     };
     /**
      * 判断提交是否正确
+     *
      * judge the answer
      */
     Game_test.prototype.isRight = function () {
@@ -562,6 +579,7 @@ var Game_test = (function (_super) {
     };
     /**
      * 显示比对结果
+     *
      * show the comparing result
      */
     Game_test.prototype.show_panal = function (e) {
@@ -634,9 +652,6 @@ var Game_test = (function (_super) {
             _this.printtime();
         }, this);
         timer.start();
-        timer.addEventListener(egret.Event.CHANGE, function () {
-            _this.printtime();
-        }, this);
         this.read_from_file();
         this.gensudoko();
         this.submit.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
@@ -647,8 +662,6 @@ var Game_test = (function (_super) {
                 _this.show_panal("N");
             }
         }, this);
-        var timer = new egret.Timer(500, 5);
-        //注册事件侦听器
     };
     return Game_test;
 }(eui.Component));
@@ -879,8 +892,9 @@ var challenges = (function (_super) {
 }(eui.Component));
 __reflect(challenges.prototype, "challenges", ["eui.UIComponent", "egret.DisplayObject"]);
 /**
- * 随机数独模块
- * Random Sudoku Module
+ * 随机数独类
+ *
+ * Random Sudoku Class
  */
 var play_with_computers = (function (_super) {
     __extends(play_with_computers, _super);
@@ -894,6 +908,7 @@ var play_with_computers = (function (_super) {
     };
     /**
      * 返回主界面
+     *
      * Go back to the main menu
      */
     play_with_computers.prototype.childrenCreated = function () {
@@ -915,8 +930,9 @@ var play_with_computers = (function (_super) {
 }(eui.Component));
 __reflect(play_with_computers.prototype, "play_with_computers", ["eui.UIComponent", "egret.DisplayObject"]);
 /**
- * 玩家匹配模块
- * Player VS Player Module
+ * 玩家匹配类
+ *
+ * Player VS Player Class
  */
 var play_with_man = (function (_super) {
     __extends(play_with_man, _super);
@@ -930,6 +946,7 @@ var play_with_man = (function (_super) {
     };
     /**
      * 返回主菜单
+     *
      * Go back to the main menu
      */
     play_with_man.prototype.childrenCreated = function () {

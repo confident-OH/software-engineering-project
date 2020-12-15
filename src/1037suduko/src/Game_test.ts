@@ -169,7 +169,7 @@ class Game_test extends eui.Component implements eui.UIComponent{
     private printtime():void{
         this.endtime = new Date;
         this.timeout.text = "距离挑战结束还剩: "+ (24-1-this.endtime.getHours()).toString() + "时 " + 
-                            (60-1-this.endtime.getMinutes()).toString() + "分 " + (60-1-this.endtime.getSeconds()).toString() + "秒";
+                    (60-1-this.endtime.getMinutes()).toString() + "分 " + (60-1-this.endtime.getSeconds()).toString() + "秒";
     }
 
     private gensudoko():void{
@@ -193,7 +193,7 @@ class Game_test extends eui.Component implements eui.UIComponent{
                 this.ss.addItemAt(s2, i*9+j);
             }
         }
-        
+        //生成数独边框线
         this.Hline();
     }
 
@@ -222,9 +222,6 @@ class Game_test extends eui.Component implements eui.UIComponent{
             this.printtime();
         }, this);
         timer.start();
-        timer.addEventListener(egret.Event.CHANGE, ()=>{ 
-            this.printtime();
-        }, this);
         this.read_from_file();
         this.gensudoko();
         this.submit.addEventListener(egret.TouchEvent.TOUCH_TAP, ()=>{
@@ -234,7 +231,5 @@ class Game_test extends eui.Component implements eui.UIComponent{
                 this.show_panal("N");
             }
         }, this);
-        var timer:egret.Timer = new egret.Timer(500,5);
-        //注册事件侦听器
     }
 }
