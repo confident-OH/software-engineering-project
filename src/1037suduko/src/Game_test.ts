@@ -1,14 +1,24 @@
+/*
+    Module:游戏模块
+*/
 class Game_test extends eui.Component implements eui.UIComponent{
+    // UI界面相关对象初始化
     public quit_to_main:eui.Button;
     public sudokoTable:eui.Group;
     public submit:eui.Button;
+
+    // UI界面大小相关设置
     public blocks_x = 55;
     public blocks_y = 55;
     public root_x = 20;
     public root_y = 40;
+
+    // 硬编码的9x9数独题面棋盘，a代表需要用户填的空格
     public sudoku:string = "7,3,2,6,a,a,a,a,9,a,a,a,9,a,a,2,6,3,a,a,a,1,a,a,a,5,a,9,a,a,2,3,a,7,1,a,5,7,a,4,a,a,6,a,8,4,2,1,8,a,6,a,a,5,a,6,5,3,8,a,9,7,1,3,9,7,a,1,2,4,8,a,8,1,a,a,6,9,5,a,2";
     public sus = this.sudoku.split(',');   // 数独题面数组
     public ss = new eui.ArrayCollection();  //记录各块的数据
+
+    // 加载相关的UI界面资源
     constructor(){
         super();
         this.skinName = "resource/eui_skins/myskin/game_test1Skin.exml";
@@ -17,11 +27,9 @@ class Game_test extends eui.Component implements eui.UIComponent{
         super.partAdded(partName, instance);
     }
     
-    //处理函数
     /*
-    private onChang(a,b){
-        egret.log(a,b);
-    }*/
+        Method:处理函数
+    */
     private High_l(tx:eui.TextInput):void {
         var shp:egret.Shape = new egret.Shape;
         shp.graphics.beginFill(0xffa631);
@@ -30,24 +38,41 @@ class Game_test extends eui.Component implements eui.UIComponent{
         this.sudokoTable.addChildAt(shp, 0);
         this.sudokoTable.addChild(tx);
     }
+
+    /*
+        Method:添加数独边框
+    */
     private Hline():void{
         var shp:egret.Shape = new egret.Shape;
         shp.graphics.lineStyle(8, 0xa78e44);
         shp.graphics.moveTo(this.root_x, this.root_y+3*this.blocks_y);
-        shp.graphics.lineTo(this.root_x+9*this.blocks_x, this.root_y+3*this.blocks_y); //横线1
+
+        // 添加横线1
+        shp.graphics.lineTo(this.root_x+9*this.blocks_x, this.root_y+3*this.blocks_y);
         this.sudokoTable.addChild(shp);
         shp.graphics.moveTo(this.root_x, this.root_y+6*this.blocks_y);
-        shp.graphics.lineTo(this.root_x+9*this.blocks_x, this.root_y+6*this.blocks_y); //横线2
+
+        // 添加横线2
+        shp.graphics.lineTo(this.root_x+9*this.blocks_x, this.root_y+6*this.blocks_y); 
         this.sudokoTable.addChild(shp);
         shp.graphics.moveTo(this.root_x+3*this.blocks_x, this.root_y);
-        shp.graphics.lineTo(this.root_x+3*this.blocks_x, this.root_y+9*this.blocks_y); //竖线1
+
+        // 添加竖线1
+        shp.graphics.lineTo(this.root_x+3*this.blocks_x, this.root_y+9*this.blocks_y);
         this.sudokoTable.addChild(shp);
         shp.graphics.moveTo(this.root_x+6*this.blocks_x, this.root_y);
-        shp.graphics.lineTo(this.root_x+6*this.blocks_x, this.root_y+9*this.blocks_y); //竖线2
+
+        // 添加竖线2
+        shp.graphics.lineTo(this.root_x+6*this.blocks_x, this.root_y+9*this.blocks_y);
         this.sudokoTable.addChild(shp);
         
     }
+
+    /*
+        Method:判断提交是否正确
+    */
     private isRight():Boolean{
+        // 判断每一行是否满足对应的游戏规则
         for(var i = 0; i<9; i++){
             var judges = new Int32Array(10);
             for(var j = 1; j<=9; j++){
@@ -65,6 +90,8 @@ class Game_test extends eui.Component implements eui.UIComponent{
                 }
             }
         }
+
+        // 判断每一列是否满足对应的游戏规则
         for(var j = 0; j<9; j++){
             var judges = new Int32Array(10);
             for(var i = 1; i<=9; i++){
@@ -82,6 +109,8 @@ class Game_test extends eui.Component implements eui.UIComponent{
                 }
             }
         }
+
+        // 判断每个小的九宫格是否满足对应的游戏规则
         for(var i = 0; i<9; i++){
             var judges = new Int32Array(10);
             for(var j = 1; j<=9; j++){
@@ -101,14 +130,21 @@ class Game_test extends eui.Component implements eui.UIComponent{
         }
         return true;
     }
+
+    /*
+        Method:显示比对结果
+    */
     private show_panal(e: string):void{
         let panel = new eui.Panel();
+
+        // 用户提交的题解完全正确
         if(e == "Y"){
             panel.title = "恭喜您完成本届数独挑战";
             panel.horizontalCenter = 0;
             panel.verticalCenter = 0;
             this.addChild(panel);
         }
+        // 用户提交的题解未完全匹配
         else{
             panel.title = "数独错误";
             panel.horizontalCenter = 0;

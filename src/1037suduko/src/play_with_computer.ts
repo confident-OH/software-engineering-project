@@ -1,3 +1,6 @@
+/*
+    Module:人机对抗模块
+*/
 class play_with_computers extends eui.Component implements eui.UIComponent{
     public new_man_b:eui.Button;
     public randam_sb:eui.Button;
@@ -9,10 +12,14 @@ class play_with_computers extends eui.Component implements eui.UIComponent{
     }
     protected partAdded(partName: string, instance: any):void{
         super.partAdded(partName, instance);
-    } 
+    }
+
+    /*
+        Method:返回主界面
+    */
     protected childrenCreated(): void{
         super.childrenCreated();
-        //返回主界面
+        
         this.quit_to_main.addEventListener(egret.TouchEvent.TOUCH_TAP, ()=>{
             SceneManager.removeScene(new Startscence());
         }, this)
