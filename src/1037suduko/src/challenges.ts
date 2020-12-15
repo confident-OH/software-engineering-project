@@ -1,3 +1,8 @@
+/**
+ * 排位赛类
+ * 
+ * Challenge Class
+ */
 class challenges extends eui.Component implements eui.UIComponent{
     public quit_to_PC:eui.Button;
     constructor(){
@@ -16,5 +21,4 @@ class challenges extends eui.Component implements eui.UIComponent{
             SceneManager.removeScene(new play_with_computers);
         }, this)
     }
-    
 }

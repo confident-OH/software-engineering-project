@@ -146,6 +146,7 @@ class random extends eui.Component implements eui.UIComponent{
 
     /**
      * 显示比对结果
+     * 
      * Show the comparing result
      */
     private show_panal(e: string):void{
@@ -170,6 +171,7 @@ class random extends eui.Component implements eui.UIComponent{
 
     /**
      * 生成随机数
+     * 
      * Generate a random number
      * @param min 随机数的最小值
      * @param max 随机数的最大值
@@ -182,6 +184,7 @@ class random extends eui.Component implements eui.UIComponent{
 
     /**
      * 生成数独
+     * 
      * Generate a Sudoku
      */
     private gen_sudoko():void{

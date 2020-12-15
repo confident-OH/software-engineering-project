@@ -1,8 +1,7 @@
 /*
- * 模块名：Startscence
- * 功能：提供进入页面
- * 
- * 
+ * 进入页面类
+ 
+ * Startscence Class
  */
 class Startscence extends eui.Component implements eui.UIComponent{
     public StartPlay:eui.Button;
