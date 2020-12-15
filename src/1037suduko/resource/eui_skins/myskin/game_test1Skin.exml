@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <e:Skin class="game_test1Skin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui">
-    <e:Image source="education_jpg" x="-6.635" y="-80" anchorOffsetX="0" width="653.635" anchorOffsetY="0" height="1322"
-             visible="true" />
+    <e:Image x="320" y="-80" anchorOffsetX="360" width="720" anchorOffsetY="0" height="1280"
+             visible="true"  source="game_background"/>
     <e:Button label="&lt;" x="40" y="40" anchorOffsetX="0" width="30" anchorOffsetY="0" height="30" alpha="0.8"
               id="quit_to_main"  scaleX="2" scaleY="2"/>
 	<e:Button label="提交题解" y="960" anchorOffsetX="55" width="110" anchorOffsetY="20" height="40" alpha="0.8" id="submit" horizontalCenter="0" scaleX="1.5" scaleY="1.5"/>

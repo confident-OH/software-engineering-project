@@ -294,14 +294,14 @@ var egret = window.egret;window.skins=window.skins||{};
 
 	_proto._Image1_i = function () {
 		var t = new eui.Image();
-		t.anchorOffsetX = 0;
+		t.anchorOffsetX = 360;
 		t.anchorOffsetY = 0;
-		t.fillMode = "scale";
-		t.height = 1454;
-		t.source = "soduko_bg_jpg";
-		t.width = 868.54;
-		t.x = -143.54;
-		t.y = -157;
+		t.height = 1280;
+		t.source = "game_background";
+		t.visible = true;
+		t.width = 720;
+		t.x = 320;
+		t.y = -80;
 		return t;
 	};
 	_proto._Image2_i = function () {
@@ -350,7 +350,7 @@ var egret = window.egret;window.skins=window.skins||{};
 		
 		this.height = 1136;
 		this.width = 640;
-		this.elementsContent = [this._Image1_i(),this.quit_to_PC_i(),this._Image2_i(),this.sudokoTable_i(),this.submit_i(),this.easy_i(),this.medium_i(),this.hard_i(),this.mode_id_i()];
+		this.elementsContent = [this._Image1_i(),this._Image2_i(),this.quit_to_PC_i(),this.sudokoTable_i(),this.submit_i(),this.easy_i(),this.medium_i(),this.hard_i(),this.mode_id_i()];
 	}
 	var _proto = educationSkin.prototype;
 
@@ -360,10 +360,20 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.anchorOffsetY = 0;
 		t.fillMode = "scale";
 		t.height = 1454;
-		t.source = "soduko_bg_jpg";
+		t.source = "game_background";
 		t.width = 868.54;
 		t.x = -143.54;
 		t.y = -157;
+		return t;
+	};
+	_proto._Image2_i = function () {
+		var t = new eui.Image();
+		t.anchorOffsetX = 150;
+		t.height = 100;
+		t.source = "education_title";
+		t.width = 300;
+		t.x = 320;
+		t.y = 40;
 		return t;
 	};
 	_proto.quit_to_PC_i = function () {
@@ -381,22 +391,12 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.y = 30;
 		return t;
 	};
-	_proto._Image2_i = function () {
-		var t = new eui.Image();
-		t.anchorOffsetX = 150;
-		t.height = 100;
-		t.source = "education_title";
-		t.width = 300;
-		t.x = 320;
-		t.y = 40;
-		return t;
-	};
 	_proto.sudokoTable_i = function () {
 		var t = new eui.Group();
 		this.sudokoTable = t;
 		t.visible = true;
 		t.x = 50;
-		t.y = 200;
+		t.y = 240;
 		return t;
 	};
 	_proto.submit_i = function () {
@@ -413,7 +413,7 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.visible = true;
 		t.width = 110;
 		t.x = 320;
-		t.y = 900;
+		t.y = 1000;
 		return t;
 	};
 	_proto.easy_i = function () {
@@ -478,13 +478,13 @@ var egret = window.egret;window.skins=window.skins||{};
 
 	_proto._Image1_i = function () {
 		var t = new eui.Image();
-		t.anchorOffsetX = 0;
+		t.anchorOffsetX = 360;
 		t.anchorOffsetY = 0;
-		t.height = 1322;
-		t.source = "education_jpg";
+		t.height = 1280;
+		t.source = "game_background";
 		t.visible = true;
-		t.width = 653.635;
-		t.x = -6.635;
+		t.width = 720;
+		t.x = 320;
 		t.y = -80;
 		return t;
 	};
@@ -781,22 +781,10 @@ var egret = window.egret;window.skins=window.skins||{};
 		
 		this.height = 1136;
 		this.width = 640;
-		this.elementsContent = [this._Image1_i(),this.quit_to_PC_i(),this.submit1_i(),this.mode_id_i(),this.sudokoTable1_i(),this.easy_i(),this.medium_i(),this.hard_i(),this.quit_to_PC_i(),this._Image2_i()];
+		this.elementsContent = [this.quit_to_PC_i(),this._Image1_i(),this.submit1_i(),this.mode_id_i(),this.sudokoTable1_i(),this.easy_i(),this.medium_i(),this.hard_i(),this.quit_to_PC_i(),this._Image2_i()];
 	}
 	var _proto = randomSkin.prototype;
 
-	_proto._Image1_i = function () {
-		var t = new eui.Image();
-		t.anchorOffsetX = 0;
-		t.anchorOffsetY = 0;
-		t.fillMode = "scale";
-		t.height = 1454;
-		t.source = "soduko_bg_jpg";
-		t.width = 868.54;
-		t.x = -143.54;
-		t.y = -157;
-		return t;
-	};
 	_proto.quit_to_PC_i = function () {
 		var t = new eui.Button();
 		this.quit_to_PC = t;
@@ -808,6 +796,18 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.width = 136;
 		t.x = 250;
 		t.y = 881;
+		return t;
+	};
+	_proto._Image1_i = function () {
+		var t = new eui.Image();
+		t.anchorOffsetX = 360;
+		t.anchorOffsetY = 0;
+		t.height = 1280;
+		t.source = "game_background";
+		t.visible = true;
+		t.width = 720;
+		t.x = 320;
+		t.y = -80;
 		return t;
 	};
 	_proto.submit1_i = function () {
