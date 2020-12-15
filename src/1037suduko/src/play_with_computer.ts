@@ -1,6 +1,9 @@
 /*
-    Module:人机对抗模块
-*/
+ * 模块名：play_with_computers
+ * 功能：单人数独解题模式
+ * 
+ * 
+ */
 class play_with_computers extends eui.Component implements eui.UIComponent{
     public new_man_b:eui.Button;
     public randam_sb:eui.Button;

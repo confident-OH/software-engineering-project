@@ -1,6 +1,9 @@
 /*
-    Module:玩家匹配模块
-*/
+ * 模块名：play_with_man
+ * 功能：提供匹配子模式的跳转页面
+ * 
+ * 
+ */
 class play_with_man extends eui.Component implements eui.UIComponent{
     public random_mb:eui.Button;
     public open_house:eui.Button;

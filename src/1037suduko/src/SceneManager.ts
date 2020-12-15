@@ -1,3 +1,8 @@
+/*
+ * 模块名：SceneManager
+ * 功能：提供页面跳转的API函数
+ * 
+ */
 class SceneManager {
 	public static stage:egret.Stage;
 
@@ -13,14 +18,3 @@ class SceneManager {
 	}
 }
 
-/*
-abstract class Scene extends eui.Component{
-	public constructor() {
-		super();
-		this.addEventListener(egret.Event.COMPLETE,this.onSkinLoaded,this);
-	}
-
-	//皮肤加载完成的回调
-	public abstract onSkinLoaded():void;
-}
-*/
