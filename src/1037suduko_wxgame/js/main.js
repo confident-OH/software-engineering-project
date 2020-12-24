@@ -635,10 +635,12 @@ var Game_test = (function (_super) {
         for (var i = 0; i < 9; i++) {
             for (var j = 0; j < 9; j++) {
                 var s2 = new eui.TextInput();
+                s2.skinName = "sudokoBlank";
                 if (this.sus[9 * i + j] != 'a') {
                     s2.text = this.sus[9 * i + j];
                     s2.textColor = 0x00ffff;
                     s2.touchChildren = false;
+                    s2.skinName = "skins.TextInputSkin";
                 }
                 s2.maxChars = 1;
                 s2.x = this.root_x + j * this.blocks_x;
