@@ -689,12 +689,12 @@ var egret = window.egret;window.skins=window.skins||{};
 	_proto.edubutton_i = function () {
 		var t = new eui.Button();
 		this.edubutton = t;
-		t.anchorOffsetX = 100;
+		t.anchorOffsetX = 110;
 		t.anchorOffsetY = 0;
 		t.height = 80;
 		t.label = "  开始！";
 		t.skinName = "ButtonPx40Skin";
-		t.width = 200;
+		t.width = 220;
 		t.x = 320;
 		t.y = 580;
 		return t;

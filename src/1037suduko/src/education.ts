@@ -301,11 +301,19 @@ class education extends eui.Component implements eui.UIComponent{
         if(!((item.text[0]>='1'&&item.text[0]<='9')||item.text.length == 0)){
             item.textColor = 0xDC143C;
             let error_p:eui.Panel = new eui.Panel;
-            error_p.title = "非法输入，请输入数字1~9";
+            error_p.title = "不恰当的输入";
+            let tex:eui.EditableText = new eui.EditableText;
+            tex.x = 50;
+            tex.y = 70;
+            tex.width = 400;
+            tex.textColor = 0x000000;
+            tex.text = "数独仅包含数字1~9哦~~"
+            tex.touchEnabled = false;
+            error_p.addChild(tex);
             error_p.horizontalCenter = 0;
             error_p.verticalCenter = 0;
             scene.addChild(error_p);
-            error_p.addChild(error_p.closeButton);
+            //error_p.addChild(error_p.closeButton);
         }else{
             item.textColor = 0xffffff;
         }
