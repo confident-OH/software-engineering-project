@@ -1169,7 +1169,7 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.anchorOffsetX = 160;
 		t.anchorOffsetY = 0;
 		t.height = 80;
-		t.label = "人机练习";
+		t.label = "人机模式";
 		t.skinName = "ButtonPx40Skin";
 		t.width = 320;
 		t.x = 320;
