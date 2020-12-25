@@ -165,7 +165,15 @@ class education extends eui.Component implements eui.UIComponent{
         }
         // 用户提交的题解未完全匹配
         else{
-            panel.title = "失败乃成功之母，亲亲再尝试一下哦";
+            panel.title = "答案错误";
+            let tex:eui.EditableText = new eui.EditableText;
+            tex.x = 50;
+            tex.y = 70;
+            tex.width = 400;
+            tex.textColor = 0x000000;
+            tex.text = "失败乃成功之母，亲亲再尝试一下哦~~"
+            tex.touchEnabled = false;
+            panel.addChild(tex);
             panel.horizontalCenter = 0;
             panel.verticalCenter = 0;
             this.addChild(panel);
