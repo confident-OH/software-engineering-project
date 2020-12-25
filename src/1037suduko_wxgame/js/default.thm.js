@@ -1064,7 +1064,7 @@ var egret = window.egret;window.skins=window.skins||{};
 		
 		this.height = 1136;
 		this.width = 640;
-		this.elementsContent = [this._Image1_i(),this.StartPlay_i(),this.StartPlay1_i(),this.StartPlay2_i(),this._Image2_i()];
+		this.elementsContent = [this._Image1_i(),this._Image2_i(),this.StartPlay_i(),this.StartPlay1_i(),this.StartPlay2_i(),this._Image3_i(),this._Image4_i()];
 	}
 	var _proto = StartscenseSkin.prototype;
 
@@ -1079,6 +1079,18 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.width = 720;
 		t.x = 320;
 		t.y = 640;
+		return t;
+	};
+	_proto._Image2_i = function () {
+		var t = new eui.Image();
+		t.anchorOffsetX = 270;
+		t.anchorOffsetY = 270;
+		t.height = 540;
+		t.source = "start_icon";
+		t.visible = true;
+		t.width = 540;
+		t.x = 320.003;
+		t.y = 270;
 		return t;
 	};
 	_proto.StartPlay_i = function () {
@@ -1123,16 +1135,24 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.y = 900;
 		return t;
 	};
-	_proto._Image2_i = function () {
+	_proto._Image3_i = function () {
 		var t = new eui.Image();
-		t.anchorOffsetX = 270;
-		t.anchorOffsetY = 270;
-		t.height = 540;
-		t.source = "start_icon";
-		t.visible = true;
-		t.width = 540;
+		t.source = "menu_title";
+		t.x = 112.511;
+		t.y = 58.773;
+		return t;
+	};
+	_proto._Image4_i = function () {
+		var t = new eui.Image();
+		t.anchorOffsetX = 260;
+		t.anchorOffsetY = 0;
+		t.height = 240;
+		t.scaleX = 1.2;
+		t.scaleY = 1.2;
+		t.source = "main_title";
+		t.width = 520;
 		t.x = 320;
-		t.y = 300;
+		t.y = 350;
 		return t;
 	};
 	return StartscenseSkin;

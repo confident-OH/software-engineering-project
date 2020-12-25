@@ -180,6 +180,11 @@
 			"url": "assets/button_touched_deep.png",
 			"type": "image",
 			"name": "buttonDeep"
+		},
+		{
+			"url": "assets/main_title.png",
+			"type": "image",
+			"name": "main_title"
 		}
 	]
 }
