@@ -2,8 +2,7 @@
 <e:Skin class="game_test1Skin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui">
     <e:Image x="320" y="-80" anchorOffsetX="360" width="720" anchorOffsetY="0" height="1280"
              visible="true"  source="game_background"/>
-    <e:Button label="&lt;" x="40" y="40" anchorOffsetX="0" width="80" anchorOffsetY="0" height="80" alpha="0.8"
-              id="quit_to_main"  skinName="ButtonPx40Skin"/>
+	<e:Button x="30" y="30" anchorOffsetX="0" width="90" anchorOffsetY="0" height="90" alpha="0.8" id="quit_to_main" skinName="ButtonBack"/>
 	<e:Button label="提交题解" y="940" anchorOffsetX="80" width="160" anchorOffsetY="30" height="60" alpha="0.8" id="submit" horizontalCenter="0" skinName="ButtonPx30Skin"/>
     <e:Group x="50" y="182" id="sudokoTable">
     </e:Group>

@@ -8,5 +8,5 @@
 	<e:Button id="new_man_b" label="新手教程" x="320" y="580" anchorOffsetX="150" width="300" anchorOffsetY="40" height="80" alpha="0.8" skinName="ButtonPx40Skin"/>
 	<e:Button id="randam_sb" label="随机数独" x="320" y="740" anchorOffsetX="150" width="300" anchorOffsetY="40" height="80" alpha="0.8" skinName="ButtonPx40Skin"/>
 	<e:Button id="soduko_chb" label="数独闯关" x="320" y="900" anchorOffsetX="150" width="300" anchorOffsetY="40" height="80" alpha="0.8" skinName="ButtonPx40Skin"/>
-	<e:Button label="&lt;" x="30" y="30" anchorOffsetX="0" width="80" anchorOffsetY="0" height="80" alpha="0.8" id="quit_to_main" skinName="ButtonPx40Skin"/>
+	<e:Button x="30" y="30" anchorOffsetX="0" width="90" anchorOffsetY="0" height="90" alpha="0.8" id="quit_to_main" skinName="ButtonBack"/>
 </e:Skin>

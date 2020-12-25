@@ -7,6 +7,6 @@
 	<e:Button id="random_mb" label="随机匹配" x="320" y="580" anchorOffsetX="150" width="300" anchorOffsetY="40" height="80" alpha="0.8" skinName="ButtonPx40Skin"/>
 	<e:Button id="open_house" label="开房间" x="320" y="740" anchorOffsetX="150" width="300" anchorOffsetY="40" height="80" alpha="0.8" skinName="ButtonPx40Skin"/>
 	<e:Button id="rank" label="天梯模式" x="320" y="900" anchorOffsetX="150" width="300" anchorOffsetY="40" height="80" alpha="0.8" skinName="ButtonPx40Skin"/>
-	<e:Button label="&lt;" x="30" y="30" anchorOffsetX="0" width="80" anchorOffsetY="0" height="80" alpha="0.8" id="quit_to_main" skinName="ButtonPx40Skin"/>
 	<e:Image source="PVP_title" x="320" y="360" anchorOffsetX="210" width="420" anchorOffsetY="70" height="140"/>
+	<e:Button x="30" y="30" anchorOffsetX="0" width="90" anchorOffsetY="0" height="90" alpha="0.8" id="quit_to_main" skinName="ButtonBack"/>
 </e:Skin>

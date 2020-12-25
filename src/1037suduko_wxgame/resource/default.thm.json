@@ -30,6 +30,7 @@
 		"resource/eui_skins/HScrollBarSkin.exml",
 		"resource/eui_skins/HSliderSkin.exml",
 		"resource/eui_skins/ItemRendererSkin.exml",
+		"resource/eui_skins/myskin/ButtonBackSkin.exml",
 		"resource/eui_skins/myskin/ButtonPx30Skin.exml",
 		"resource/eui_skins/myskin/ButtonPx40Skin.exml",
 		"resource/eui_skins/myskin/challengeSkin.exml",

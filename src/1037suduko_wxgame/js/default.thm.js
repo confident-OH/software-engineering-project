@@ -281,6 +281,81 @@ var egret = window.egret;window.skins=window.skins||{};
 		return t;
 	};
 	return ItemRendererSkin;
+})(eui.Skin);generateEUI.paths['resource/eui_skins/myskin/ButtonBackSkin.exml'] = window.ButtonBack = (function (_super) {
+	__extends(ButtonBack, _super);
+	function ButtonBack() {
+		_super.call(this);
+		this.skinParts = ["image_u","labelDisplay","iconDisplay","image_d"];
+		
+		this.minHeight = 50;
+		this.minWidth = 100;
+		this.elementsContent = [this.labelDisplay_i(),this.iconDisplay_i()];
+		this.image_u_i();
+		
+		this.image_d_i();
+		
+		this.states = [
+			new eui.State ("up",
+				[
+					new eui.AddItems("image_u","",0,"")
+				])
+			,
+			new eui.State ("down",
+				[
+					new eui.AddItems("image_d","",1,""),
+					new eui.SetProperty("image_u","source","button_down_png")
+				])
+			,
+			new eui.State ("disabled",
+				[
+					new eui.SetProperty("image_u","alpha",0.5)
+				])
+		];
+	}
+	var _proto = ButtonBack.prototype;
+
+	_proto.image_u_i = function () {
+		var t = new eui.Image();
+		this.image_u = t;
+		t.percentHeight = 100;
+		t.scale9Grid = new egret.Rectangle(1,3,8,8);
+		t.source = "back_button";
+		t.percentWidth = 100;
+		return t;
+	};
+	_proto.labelDisplay_i = function () {
+		var t = new eui.Label();
+		this.labelDisplay = t;
+		t.bottom = 8;
+		t.left = 8;
+		t.right = 8;
+		t.size = 40;
+		t.textAlign = "center";
+		t.textColor = 0xFFFFFF;
+		t.top = 8;
+		t.verticalAlign = "middle";
+		return t;
+	};
+	_proto.iconDisplay_i = function () {
+		var t = new eui.Image();
+		this.iconDisplay = t;
+		t.horizontalCenter = 0;
+		t.verticalCenter = 0;
+		return t;
+	};
+	_proto.image_d_i = function () {
+		var t = new eui.Image();
+		this.image_d = t;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.percentHeight = 100;
+		t.source = "back_button_down";
+		t.percentWidth = 100;
+		t.x = 0;
+		t.y = 0;
+		return t;
+	};
+	return ButtonBack;
 })(eui.Skin);generateEUI.paths['resource/eui_skins/myskin/ButtonPx30Skin.exml'] = window.ButtonPx30Skin = (function (_super) {
 	__extends(ButtonPx30Skin, _super);
 	function ButtonPx30Skin() {
@@ -471,10 +546,9 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.alpha = 0.8;
 		t.anchorOffsetX = 0;
 		t.anchorOffsetY = 0;
-		t.height = 80;
-		t.label = "<";
-		t.skinName = "ButtonPx40Skin";
-		t.width = 80;
+		t.height = 90;
+		t.skinName = "ButtonBack";
+		t.width = 90;
 		t.x = 30;
 		t.y = 30;
 		return t;
@@ -500,7 +574,7 @@ var egret = window.egret;window.skins=window.skins||{};
 		
 		this.height = 1136;
 		this.width = 640;
-		this.elementsContent = [this._Image1_i(),this._Image2_i(),this.quit_to_PC_i(),this.sudokoTable_i(),this.submit_i(),this.easy_i(),this.medium_i(),this.hard_i(),this.mode_id_i(),this.edubutton_i()];
+		this.elementsContent = [this._Image1_i(),this.quit_to_PC_i(),this._Image2_i(),this.sudokoTable_i(),this.submit_i(),this.easy_i(),this.medium_i(),this.hard_i(),this.mode_id_i(),this.edubutton_i()];
 	}
 	var _proto = educationSkin.prototype;
 
@@ -516,6 +590,19 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.y = -80;
 		return t;
 	};
+	_proto.quit_to_PC_i = function () {
+		var t = new eui.Button();
+		this.quit_to_PC = t;
+		t.alpha = 0.8;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 90;
+		t.skinName = "ButtonBack";
+		t.width = 90;
+		t.x = 30;
+		t.y = 30;
+		return t;
+	};
 	_proto._Image2_i = function () {
 		var t = new eui.Image();
 		t.anchorOffsetX = 150;
@@ -524,20 +611,6 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.width = 300;
 		t.x = 320;
 		t.y = 80;
-		return t;
-	};
-	_proto.quit_to_PC_i = function () {
-		var t = new eui.Button();
-		this.quit_to_PC = t;
-		t.alpha = 0.8;
-		t.anchorOffsetX = 0;
-		t.anchorOffsetY = 0;
-		t.height = 80;
-		t.label = "<";
-		t.skinName = "ButtonPx40Skin";
-		t.width = 80;
-		t.x = 30;
-		t.y = 30;
 		return t;
 	};
 	_proto.sudokoTable_i = function () {
@@ -657,12 +730,11 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.alpha = 0.8;
 		t.anchorOffsetX = 0;
 		t.anchorOffsetY = 0;
-		t.height = 80;
-		t.label = "<";
-		t.skinName = "ButtonPx40Skin";
-		t.width = 80;
-		t.x = 40;
-		t.y = 40;
+		t.height = 90;
+		t.skinName = "ButtonBack";
+		t.width = 90;
+		t.x = 30;
+		t.y = 30;
 		return t;
 	};
 	_proto.submit_i = function () {
@@ -811,10 +883,9 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.alpha = 0.8;
 		t.anchorOffsetX = 0;
 		t.anchorOffsetY = 0;
-		t.height = 80;
-		t.label = "<";
-		t.skinName = "ButtonPx40Skin";
-		t.width = 80;
+		t.height = 90;
+		t.skinName = "ButtonBack";
+		t.width = 90;
 		t.x = 30;
 		t.y = 30;
 		return t;
@@ -828,7 +899,7 @@ var egret = window.egret;window.skins=window.skins||{};
 		
 		this.height = 1136;
 		this.width = 640;
-		this.elementsContent = [this._Image1_i(),this._Image2_i(),this.random_mb_i(),this.open_house_i(),this.rank_i(),this.quit_to_main_i(),this._Image3_i()];
+		this.elementsContent = [this._Image1_i(),this._Image2_i(),this.random_mb_i(),this.open_house_i(),this.rank_i(),this._Image3_i(),this.quit_to_main_i()];
 	}
 	var _proto = play_with_manSkin.prototype;
 
@@ -901,20 +972,6 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.y = 900;
 		return t;
 	};
-	_proto.quit_to_main_i = function () {
-		var t = new eui.Button();
-		this.quit_to_main = t;
-		t.alpha = 0.8;
-		t.anchorOffsetX = 0;
-		t.anchorOffsetY = 0;
-		t.height = 80;
-		t.label = "<";
-		t.skinName = "ButtonPx40Skin";
-		t.width = 80;
-		t.x = 30;
-		t.y = 30;
-		return t;
-	};
 	_proto._Image3_i = function () {
 		var t = new eui.Image();
 		t.anchorOffsetX = 210;
@@ -926,6 +983,19 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.y = 360;
 		return t;
 	};
+	_proto.quit_to_main_i = function () {
+		var t = new eui.Button();
+		this.quit_to_main = t;
+		t.alpha = 0.8;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 90;
+		t.skinName = "ButtonBack";
+		t.width = 90;
+		t.x = 30;
+		t.y = 30;
+		return t;
+	};
 	return play_with_manSkin;
 })(eui.Skin);generateEUI.paths['resource/eui_skins/myskin/randomSkin.exml'] = window.randomSkin = (function (_super) {
 	__extends(randomSkin, _super);
@@ -935,7 +1005,7 @@ var egret = window.egret;window.skins=window.skins||{};
 		
 		this.height = 1136;
 		this.width = 640;
-		this.elementsContent = [this.quit_to_PC_i(),this._Image1_i(),this.submit1_i(),this.mode_id_i(),this.sudokoTable1_i(),this.easy_i(),this.medium_i(),this.hard_i(),this.quit_to_PC_i(),this._Image2_i()];
+		this.elementsContent = [this.quit_to_PC_i(),this._Image1_i(),this.submit1_i(),this.mode_id_i(),this.sudokoTable1_i(),this.easy_i(),this.medium_i(),this.hard_i(),this._Image2_i(),this.quit_to_PC_i()];
 	}
 	var _proto = randomSkin.prototype;
 
@@ -1031,20 +1101,6 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.y = 210;
 		return t;
 	};
-	_proto.quit_to_PC_i = function () {
-		var t = new eui.Button();
-		this.quit_to_PC = t;
-		t.alpha = 0.8;
-		t.anchorOffsetX = 0;
-		t.anchorOffsetY = 0;
-		t.height = 80;
-		t.label = "<";
-		t.skinName = "ButtonPx40Skin";
-		t.width = 80;
-		t.x = 30;
-		t.y = 30;
-		return t;
-	};
 	_proto._Image2_i = function () {
 		var t = new eui.Image();
 		t.anchorOffsetX = 150;
@@ -1053,6 +1109,19 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.width = 300;
 		t.x = 320;
 		t.y = 80;
+		return t;
+	};
+	_proto.quit_to_PC_i = function () {
+		var t = new eui.Button();
+		this.quit_to_PC = t;
+		t.alpha = 0.8;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.height = 90;
+		t.skinName = "ButtonBack";
+		t.width = 90;
+		t.x = 30;
+		t.y = 30;
 		return t;
 	};
 	return randomSkin;

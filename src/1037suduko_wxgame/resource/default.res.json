@@ -185,6 +185,16 @@
 			"url": "assets/main_title.png",
 			"type": "image",
 			"name": "main_title"
+		},
+		{
+			"url": "assets/back_button.png",
+			"type": "image",
+			"name": "back_button"
+		},
+		{
+			"url": "assets/back_button_down.png",
+			"type": "image",
+			"name": "back_button_down"
 		}
 	]
 }
