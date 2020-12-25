@@ -215,14 +215,14 @@ class education extends eui.Component implements eui.UIComponent{
                     var s2 = new eui.TextInput();  
                     if(this.sus[9*i+j] != 'a'){
                         s2.text = this.sus[9*i+j];
-                        s2.textColor = 0x000000;
-                        s2.touchChildren = false;
                         s2.skinName = "sudokoSolidBlank";
+                        s2.textColor = 0x4D83D2;
+                        s2.touchChildren = false;
                     }else{
                         s2.text = "";
-                        s2.textColor = 0x000000;
-                        s2.touchChildren = true;
                         s2.skinName = "sudokoEditableBlank";
+                        s2.textColor = 0xffffff;
+                        s2.touchChildren = true;
                     }
                     s2.maxChars = 1;
                     s2.x = this.root_x+j*this.blocks_x;
@@ -272,14 +272,14 @@ class education extends eui.Component implements eui.UIComponent{
                     var s2:eui.TextInput = this.ss.getItemAt(i*9+j);
                     if(this.sus[9*i+j] != 'a'){
                         s2.text = this.sus[9*i+j];
-                        s2.textColor = 0x000000;
-                        s2.touchChildren = false;
                         s2.skinName = "sudokoSolidBlank";
+                        s2.textColor = 0x4D83D2;
+                        s2.touchChildren = false;
                     }else{
                         s2.text = "";
-                        s2.textColor = 0x000000;
-                        s2.touchChildren = true;
                         s2.skinName = "sudokoEditableBlank";
+                        s2.textColor = 0xffffff;
+                        s2.touchChildren = true;
                     }
                     s2.maxChars = 1;
                     s2.x = this.root_x+j*this.blocks_x;

@@ -563,7 +563,7 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.visible = true;
 		t.width = 180;
 		t.x = 320;
-		t.y = 1000;
+		t.y = 940;
 		return t;
 	};
 	_proto.easy_i = function () {
@@ -1188,13 +1188,14 @@ var egret = window.egret;window.skins=window.skins||{};
 	_proto.textDisplay_i = function () {
 		var t = new eui.EditableText();
 		this.textDisplay = t;
+		t.bold = true;
 		t.height = 24;
 		t.horizontalCenter = "1";
 		t.left = "10";
 		t.right = "10";
 		t.size = 28;
 		t.textAlign = "center";
-		t.textColor = 0xEDEEFF;
+		t.textColor = 0xFFFFFF;
 		t.verticalAlign = "middle";
 		t.verticalCenter = "1";
 		t.percentWidth = 100;
@@ -1272,6 +1273,7 @@ var egret = window.egret;window.skins=window.skins||{};
 	_proto.textDisplay_i = function () {
 		var t = new eui.EditableText();
 		this.textDisplay = t;
+		t.bold = true;
 		t.height = 24;
 		t.horizontalCenter = "1";
 		t.left = "10";
