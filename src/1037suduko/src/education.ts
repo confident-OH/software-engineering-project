@@ -59,26 +59,26 @@ class education extends eui.Component implements eui.UIComponent{
      */
     private Hline():void{
         var shp:egret.Shape = new egret.Shape;
-        shp.graphics.lineStyle(8, 0xa78e44);
-        shp.graphics.moveTo(this.root_x, this.root_y+3*this.blocks_y);
+        shp.graphics.lineStyle(10, 0xffffff);
+        shp.graphics.moveTo(this.root_x+5, this.root_y+3*this.blocks_y);
 
         // 横线1
-        shp.graphics.lineTo(this.root_x+9*this.blocks_x, this.root_y+3*this.blocks_y); 
+        shp.graphics.lineTo(this.root_x+9*this.blocks_x-5, this.root_y+3*this.blocks_y); 
         this.sudokoTable.addChild(shp);
-        shp.graphics.moveTo(this.root_x, this.root_y+6*this.blocks_y);
+        shp.graphics.moveTo(this.root_x+5, this.root_y+6*this.blocks_y);
 
         // 横线2
-        shp.graphics.lineTo(this.root_x+9*this.blocks_x, this.root_y+6*this.blocks_y); 
+        shp.graphics.lineTo(this.root_x+9*this.blocks_x-5, this.root_y+6*this.blocks_y); 
         this.sudokoTable.addChild(shp);
-        shp.graphics.moveTo(this.root_x+3*this.blocks_x, this.root_y);
+        shp.graphics.moveTo(this.root_x+3*this.blocks_x, this.root_y+5);
 
         // 竖线1
-        shp.graphics.lineTo(this.root_x+3*this.blocks_x, this.root_y+9*this.blocks_y); 
+        shp.graphics.lineTo(this.root_x+3*this.blocks_x, this.root_y+9*this.blocks_y-5); 
         this.sudokoTable.addChild(shp);
-        shp.graphics.moveTo(this.root_x+6*this.blocks_x, this.root_y);
+        shp.graphics.moveTo(this.root_x+6*this.blocks_x, this.root_y+5);
 
         // 竖线2
-        shp.graphics.lineTo(this.root_x+6*this.blocks_x, this.root_y+9*this.blocks_y); 
+        shp.graphics.lineTo(this.root_x+6*this.blocks_x, this.root_y+9*this.blocks_y-5); 
         this.sudokoTable.addChild(shp);
         
     }
@@ -215,12 +215,14 @@ class education extends eui.Component implements eui.UIComponent{
                     var s2 = new eui.TextInput();  
                     if(this.sus[9*i+j] != 'a'){
                         s2.text = this.sus[9*i+j];
-                        s2.textColor = 0x00ffff;
+                        s2.textColor = 0x000000;
                         s2.touchChildren = false;
+                        s2.skinName = "sudokoSolidBlank";
                     }else{
                         s2.text = "";
                         s2.textColor = 0x000000;
                         s2.touchChildren = true;
+                        s2.skinName = "sudokoEditableBlank";
                     }
                     s2.maxChars = 1;
                     s2.x = this.root_x+j*this.blocks_x;

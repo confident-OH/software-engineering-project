@@ -96,7 +96,7 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.anchorOffsetX = 0;
 		t.anchorOffsetY = 0;
 		t.percentHeight = 100;
-		t.source = "mine_select_down_png";
+		t.source = "buttonLight";
 		t.percentWidth = 100;
 		t.x = 0;
 		t.y = 0;
@@ -349,7 +349,7 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.anchorOffsetX = 0;
 		t.anchorOffsetY = 0;
 		t.percentHeight = 100;
-		t.source = "mine_select_down_png";
+		t.source = "buttonLight";
 		t.percentWidth = 100;
 		t.x = 0;
 		t.y = 0;
@@ -424,7 +424,7 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.anchorOffsetX = 0;
 		t.anchorOffsetY = 0;
 		t.percentHeight = 100;
-		t.source = "mine_select_down_png";
+		t.source = "buttonLight";
 		t.percentWidth = 100;
 		t.x = 0;
 		t.y = 0;
@@ -462,7 +462,7 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.source = "chanllenge_title";
 		t.width = 300;
 		t.x = 320;
-		t.y = 40;
+		t.y = 80;
 		return t;
 	};
 	_proto.quit_to_PC_i = function () {
@@ -523,7 +523,7 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.source = "education_title";
 		t.width = 300;
 		t.x = 320;
-		t.y = 40;
+		t.y = 80;
 		return t;
 	};
 	_proto.quit_to_PC_i = function () {
@@ -573,7 +573,7 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.label = "简单";
 		t.visible = true;
 		t.x = 160;
-		t.y = 170;
+		t.y = 210;
 		return t;
 	};
 	_proto.medium_i = function () {
@@ -583,7 +583,7 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.label = "中等";
 		t.visible = true;
 		t.x = 320;
-		t.y = 170;
+		t.y = 210;
 		return t;
 	};
 	_proto.hard_i = function () {
@@ -594,7 +594,7 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.skinName = "skins.ButtonSkin";
 		t.visible = true;
 		t.x = 480;
-		t.y = 170;
+		t.y = 210;
 		return t;
 	};
 	_proto.mode_id_i = function () {
@@ -610,7 +610,7 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.visible = true;
 		t.width = 150;
 		t.x = 480;
-		t.y = 80;
+		t.y = 120;
 		return t;
 	};
 	_proto.edubutton_i = function () {
@@ -669,22 +669,21 @@ var egret = window.egret;window.skins=window.skins||{};
 		var t = new eui.Button();
 		this.submit = t;
 		t.alpha = 0.8;
-		t.anchorOffsetX = 55;
-		t.anchorOffsetY = 20;
-		t.height = 40;
+		t.anchorOffsetX = 80;
+		t.anchorOffsetY = 30;
+		t.height = 60;
 		t.horizontalCenter = 0;
 		t.label = "提交题解";
-		t.scaleX = 1.5;
-		t.scaleY = 1.5;
-		t.width = 110;
-		t.y = 960;
+		t.skinName = "ButtonPx30Skin";
+		t.width = 160;
+		t.y = 940;
 		return t;
 	};
 	_proto.sudokoTable_i = function () {
 		var t = new eui.Group();
 		this.sudokoTable = t;
 		t.x = 50;
-		t.y = 142;
+		t.y = 182;
 		return t;
 	};
 	_proto._Image2_i = function () {
@@ -694,7 +693,7 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.source = "championship_title";
 		t.width = 370;
 		t.x = 320;
-		t.y = 40;
+		t.y = 80;
 		return t;
 	};
 	_proto.timeout_i = function () {
@@ -710,7 +709,7 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.textAlign = "left";
 		t.verticalAlign = "middle";
 		t.width = 290;
-		t.y = 142.065;
+		t.y = 180;
 		return t;
 	};
 	return game_test1Skin;
@@ -977,7 +976,7 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.skinName = "ButtonPx30Skin";
 		t.visible = true;
 		t.width = 217;
-		t.y = 803;
+		t.y = 940;
 		return t;
 	};
 	_proto.mode_id_i = function () {
@@ -992,8 +991,8 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.verticalAlign = "middle";
 		t.visible = true;
 		t.width = 149;
-		t.x = 457.374;
-		t.y = 127.928;
+		t.x = 480;
+		t.y = 120;
 		return t;
 	};
 	_proto.sudokoTable1_i = function () {
@@ -1001,7 +1000,7 @@ var egret = window.egret;window.skins=window.skins||{};
 		this.sudokoTable1 = t;
 		t.visible = true;
 		t.x = 47;
-		t.y = 202;
+		t.y = 240;
 		return t;
 	};
 	_proto.easy_i = function () {
@@ -1010,7 +1009,7 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.label = "简单";
 		t.visible = true;
 		t.x = 133;
-		t.y = 184;
+		t.y = 210;
 		return t;
 	};
 	_proto.medium_i = function () {
@@ -1019,7 +1018,7 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.label = "中等";
 		t.visible = true;
 		t.x = 271;
-		t.y = 184;
+		t.y = 210;
 		return t;
 	};
 	_proto.hard_i = function () {
@@ -1029,7 +1028,7 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.skinName = "skins.ButtonSkin";
 		t.visible = true;
 		t.x = 409;
-		t.y = 184;
+		t.y = 210;
 		return t;
 	};
 	_proto.quit_to_PC_i = function () {
@@ -1053,7 +1052,7 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.source = "random_title";
 		t.width = 300;
 		t.x = 320;
-		t.y = 40;
+		t.y = 80;
 		return t;
 	};
 	return randomSkin;
@@ -1137,9 +1136,9 @@ var egret = window.egret;window.skins=window.skins||{};
 		return t;
 	};
 	return StartscenseSkin;
-})(eui.Skin);generateEUI.paths['resource/eui_skins/myskin/SudokoBlankSkin.exml'] = window.sudokoBlank = (function (_super) {
-	__extends(sudokoBlank, _super);
-	function sudokoBlank() {
+})(eui.Skin);generateEUI.paths['resource/eui_skins/myskin/SudokoEditableBlankSkin.exml'] = window.sudokoEditableBlank = (function (_super) {
+	__extends(sudokoEditableBlank, _super);
+	function sudokoEditableBlank() {
 		_super.call(this);
 		this.skinParts = ["textDisplay","promptDisplay"];
 		
@@ -1165,13 +1164,13 @@ var egret = window.egret;window.skins=window.skins||{};
 				])
 		];
 	}
-	var _proto = sudokoBlank.prototype;
+	var _proto = sudokoEditableBlank.prototype;
 
 	_proto._Image1_i = function () {
 		var t = new eui.Image();
 		t.percentHeight = 100;
 		t.scale9Grid = new egret.Rectangle(1,3,8,8);
-		t.source = "mine_select_down_png";
+		t.source = "buttonDeep";
 		t.percentWidth = 100;
 		return t;
 	};
@@ -1193,8 +1192,10 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.horizontalCenter = "1";
 		t.left = "10";
 		t.right = "10";
-		t.size = 20;
-		t.textColor = 0x000000;
+		t.size = 28;
+		t.textAlign = "center";
+		t.textColor = 0xEDEEFF;
+		t.verticalAlign = "middle";
 		t.verticalCenter = "1";
 		t.percentWidth = 100;
 		return t;
@@ -1217,7 +1218,91 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.percentWidth = 100;
 		return t;
 	};
-	return sudokoBlank;
+	return sudokoEditableBlank;
+})(eui.Skin);generateEUI.paths['resource/eui_skins/myskin/SudokoSolidBlankSkin.exml'] = window.sudokoSolidBlank = (function (_super) {
+	__extends(sudokoSolidBlank, _super);
+	function sudokoSolidBlank() {
+		_super.call(this);
+		this.skinParts = ["textDisplay","promptDisplay"];
+		
+		this.minHeight = 40;
+		this.minWidth = 300;
+		this.elementsContent = [this._Image1_i(),this._Rect1_i(),this.textDisplay_i(),this.promptDisplay_i()];
+		this.states = [
+			new eui.State ("normal",
+				[
+				])
+			,
+			new eui.State ("disabled",
+				[
+					new eui.SetProperty("textDisplay","textColor",0xff0000)
+				])
+			,
+			new eui.State ("normalWithPrompt",
+				[
+				])
+			,
+			new eui.State ("disabledWithPrompt",
+				[
+				])
+		];
+	}
+	var _proto = sudokoSolidBlank.prototype;
+
+	_proto._Image1_i = function () {
+		var t = new eui.Image();
+		t.fillMode = "scale";
+		t.percentHeight = 100;
+		t.scale9Grid = new egret.Rectangle(1,3,8,8);
+		t.source = "buttonLight";
+		t.percentWidth = 100;
+		return t;
+	};
+	_proto._Rect1_i = function () {
+		var t = new eui.Rect();
+		t.fillAlpha = 0;
+		t.fillColor = 0x3D5D98;
+		t.percentHeight = 100;
+		t.strokeColor = 0xFFFFFF;
+		t.strokeWeight = 2;
+		t.visible = true;
+		t.percentWidth = 100;
+		return t;
+	};
+	_proto.textDisplay_i = function () {
+		var t = new eui.EditableText();
+		this.textDisplay = t;
+		t.height = 24;
+		t.horizontalCenter = "1";
+		t.left = "10";
+		t.right = "10";
+		t.size = 28;
+		t.textAlign = "center";
+		t.textColor = 0x4D83D2;
+		t.verticalAlign = "middle";
+		t.verticalCenter = "1";
+		t.percentWidth = 100;
+		return t;
+	};
+	_proto.promptDisplay_i = function () {
+		var t = new eui.Label();
+		this.promptDisplay = t;
+		t.alpha = 0.8;
+		t.bold = true;
+		t.height = 24;
+		t.left = 10;
+		t.maxChars = 1;
+		t.right = 10;
+		t.size = 50;
+		t.textAlign = "center";
+		t.textColor = 0xa9a9a9;
+		t.touchEnabled = false;
+		t.verticalAlign = "middle";
+		t.verticalCenter = 0;
+		t.percentWidth = 100;
+		return t;
+	};
+	return sudokoSolidBlank;
 })(eui.Skin);generateEUI.paths['resource/eui_skins/PanelSkin.exml'] = window.skins.PanelSkin = (function (_super) {
 	__extends(PanelSkin, _super);
 	function PanelSkin() {

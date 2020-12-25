@@ -7,5 +7,5 @@
              size="20"
              textColor="0xFFFFFF" verticalAlign="middle" textAlign="center" bold="true"/>
     <e:Image id="iconDisplay" horizontalCenter="0" verticalCenter="0"/>
-	<e:Image id="image_d" source="mine_select_down_png" x="0" y="0" anchorOffsetX="0" width="100%" anchorOffsetY="0" height="100%" includeIn="down"/>
+	<e:Image id="image_d" x="0" y="0" anchorOffsetX="0" width="100%" anchorOffsetY="0" height="100%" includeIn="down" source="buttonLight"/>
 </e:Skin>
