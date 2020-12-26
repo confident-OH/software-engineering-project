@@ -138,18 +138,18 @@ class Game_test extends eui.Component implements eui.UIComponent {
         // 用户提交的题解完全正确
         if (e == "Y") {
             panel.title = "答案正确";
-            panel.width = 480;
-            let tex: eui.Label = new eui.Label;
+            panel.width = 400;
+            let tex:eui.Label = new eui.Label;
             tex.textAlign = egret.HorizontalAlign.CENTER;
             tex.x = 20;
             tex.y = 90;
-            tex.width = 440;
+            tex.width = 360;
             tex.textColor = 0x000000;
-            tex.text = "恭喜您完成教程\n快去排位赛与其他人切磋吧！"
+            tex.text = "恭喜您，挑战成功！\n欢迎您明天再来挑战。"
             panel.addChild(tex);
             panel.horizontalCenter = 0;
             panel.verticalCenter = 0;
-            this.addChild(panel);
+             this.addChild(panel);
         }
         // 用户提交的题解未完全匹配
         else {
@@ -265,7 +265,7 @@ class Game_test extends eui.Component implements eui.UIComponent {
             error_p.horizontalCenter = 0;
             error_p.verticalCenter = 0;
             scene.addChild(error_p);
-            error_p.addChild(error_p.closeButton);
+            //error_p.addChild(error_p.closeButton);
         } else {
             item.textColor = 0xffffff;
         }
