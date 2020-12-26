@@ -1365,6 +1365,7 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.bold = true;
 		t.height = 24;
 		t.horizontalCenter = "1";
+		t.inputType = "tel";
 		t.left = "10";
 		t.right = "10";
 		t.size = 28;

@@ -145,15 +145,14 @@ class Game_test extends eui.Component implements eui.UIComponent{
         // 用户提交的题解未完全匹配
         else{
             panel.title = "答案错误";
-            panel.width = 540;
-            let tex:eui.EditableText = new eui.EditableText;
-            tex.horizontalCenter = 1;
-            tex.x = 20;
+            panel.width = 400;
+            let tex:eui.Label = new eui.Label;
+            tex.textAlign = egret.HorizontalAlign.CENTER;
+            tex.y = 20;
             tex.y = 90;
-            tex.width = 500;
+            tex.width = 360;
             tex.textColor = 0x000000;
-            tex.text = "失败乃成功之母，亲亲再尝试一下哦~~"
-            tex.touchEnabled = false;
+            tex.text = "失败乃成功之母\n　亲亲再尝试一下哦~~"
             panel.addChild(tex);
             panel.horizontalCenter = 0;
             panel.verticalCenter = 0;
@@ -178,7 +177,7 @@ class Game_test extends eui.Component implements eui.UIComponent{
         this.sudokoTable.height = 360;
         for(var i = 0; i<9; i++){
             for(var j = 0; j<9; j++){
-                var s2 = new eui.TextInput();  
+                var s2 = new eui.TextInput();
                 s2.skinName = "sudokoEditableBlank";
                 if(this.sus[9*i+j] != 'a'){//若该位置数字以确定，不可更改
                     s2.text = this.sus[9*i+j];
@@ -191,7 +190,8 @@ class Game_test extends eui.Component implements eui.UIComponent{
                 s2.y = this.root_y+i*this.blocks_y;
                 s2.width = this.blocks_x;
                 s2.height = this.blocks_y;
-                s2.inputType = egret.TextFieldInputType.TEL;
+                s2.textDisplay.type = egret.TextFieldType.INPUT;
+                s2.textDisplay.inputType = egret.TextFieldInputType.TEL;
                 this.sudokoTable.addChild(s2);
                 this.ss.addItemAt(s2, i*9+j);
             }
