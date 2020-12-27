@@ -1,0 +1,59 @@
+@startuml
+scale 2
+class User{
+    +ID: interger
+    +points: interger
+    +lever: interger
+    +rank: interger
+    +records: array
+    +passed: interger
+    -match()
+}
+
+class Stage{
+    +ID: interger
+    -clues: array
+    +difficulty: interger
+    -hint: array
+    -answer: array
+    -rankinglist: array
+    -judgeAnswer()
+}
+
+class Random{
+    +hardness: interger
+    -clues: array
+    -answer: array
+    -generate()
+    -jugde()
+}
+
+class Guide{
+    -steps: array
+    -helper: string
+    -guide()
+}
+
+class Competition{
+    -clues: array
+    -timer()
+    -pause()
+    -continue()
+    -compare()
+    -dealWithResult()
+}
+
+class Ladder{
+    +result: interger
+    -submitAndStop()
+}
+
+Stage "1" --- "1" User: play
+Random "1" --- "1" User: play
+Guide "1" --- "1" User: learn
+Ladder "1" --- "2" User: play
+Random "1" <|-- "1" Competition
+Stage <|-- Guide
+Competition "1" o-- "2" User
+Competition <|-- Ladder
+@enduml
