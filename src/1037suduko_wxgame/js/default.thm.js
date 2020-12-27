@@ -514,7 +514,7 @@ var egret = window.egret;window.skins=window.skins||{};
 		
 		this.height = 1136;
 		this.width = 640;
-		this.elementsContent = [this._Image1_i(),this._Image2_i(),this.quit_to_PC_i()];
+		this.elementsContent = [this._Image1_i(),this.quit_to_PC_i()];
 	}
 	var _proto = challengeSkin.prototype;
 
@@ -528,16 +528,6 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.width = 720;
 		t.x = 320;
 		t.y = -80;
-		return t;
-	};
-	_proto._Image2_i = function () {
-		var t = new eui.Image();
-		t.anchorOffsetX = 150;
-		t.height = 100;
-		t.source = "chanllenge_title";
-		t.width = 300;
-		t.x = 320;
-		t.y = 80;
 		return t;
 	};
 	_proto.quit_to_PC_i = function () {
@@ -1365,7 +1355,6 @@ var egret = window.egret;window.skins=window.skins||{};
 		t.bold = true;
 		t.height = 24;
 		t.horizontalCenter = "1";
-		t.inputType = "tel";
 		t.left = "10";
 		t.right = "10";
 		t.size = 28;

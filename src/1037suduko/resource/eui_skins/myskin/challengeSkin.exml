@@ -3,6 +3,5 @@
 	 width="640"
 	height="1136" xmlns:e="http://ns.egret.com/eui">
 	<e:Image x="320" y="-80" anchorOffsetX="360" width="720" anchorOffsetY="0" height="1280" visible="true" source="game_background"/>
-	<e:Image x="320" y="80" width="300" height="100" anchorOffsetX="150" source="chanllenge_title"/>
 	<e:Button x="30" y="30" anchorOffsetX="0" width="90" anchorOffsetY="0" height="90" alpha="0.8" id="quit_to_PC" skinName="ButtonBack"/>
 </e:Skin>
