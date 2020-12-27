@@ -1,0 +1,30 @@
+@startuml
+scale 2
+start
+:开始游戏;
+while (退出游戏？) is (否)
+fork
+:练习模块;
+fork
+:新手教程;
+fork again
+:随机数独;
+fork again
+:数独闯关;
+end fork
+:完成练习;
+fork again
+:匹配模块;
+fork
+:任意对抗;
+fork again
+:好友比拼;
+fork again
+:数独闯关;
+end fork
+:完成闯关;
+end fork
+end while
+:退出游戏;
+stop
+@enduml
