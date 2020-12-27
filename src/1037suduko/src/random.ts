@@ -175,7 +175,7 @@ class random extends eui.Component implements eui.UIComponent {
             panel.width = 400;
             let tex: eui.Label = new eui.Label;
             tex.textAlign = egret.HorizontalAlign.CENTER;
-            tex.y = 20;
+            tex.x = 20;
             tex.y = 90;
             tex.width = 360;
             tex.textColor = 0x000000;
